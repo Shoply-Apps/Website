@@ -76,8 +76,8 @@
 
     /* Key points */
     .strip { padding: 22px 0; border-bottom: 1px solid var(--line); }
-    .strip ul { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px 36px; list-style: none; margin: 0 auto; color: var(--muted); font-size: 15px; }
-    .strip li { display: flex; align-items: center; gap: 8px; }
+    .strip ul { display: flex; flex-wrap: nowrap; justify-content: space-between; gap: 24px; list-style: none; margin: 0 auto; color: var(--muted); font-size: 15px; }
+    .strip li { display: flex; align-items: center; gap: 8px; white-space: nowrap; }
     .strip svg { width: 18px; height: 18px; color: var(--green); flex: none; }
 
     /* App section, styled like a page inside the app (Shopify admin look) */
@@ -144,6 +144,9 @@
     .foot ul a:hover { color: var(--ink); }
     .fine { margin: 16px 0 0; font-size: 13px; }
 
+    @media (max-width: 1000px) {
+      .strip ul { display: grid; grid-template-columns: repeat(2, max-content); justify-content: center; gap: 10px 32px; }
+    }
     @media (max-width: 900px) {
       .hero-inner { grid-template-columns: 1fr; gap: 28px; text-align: center; }
       .hero .lead { margin-left: auto; margin-right: auto; }
@@ -155,6 +158,7 @@
       .app-head .btn { grid-column: 1 / -1; justify-self: start; }
     }
     @media (max-width: 720px) {
+      .strip ul { grid-template-columns: max-content; }
       .wrap { padding: 0 16px; }
       .nav ul { display: none; }
       section { padding: 52px 0; }
@@ -244,10 +248,10 @@
 
     <div class="strip">
       <ul class="wrap">
-        <li><svg aria-hidden="true"><use href="#i-check"/></svg>Built only on Shopify's own tools</li>
-        <li><svg aria-hidden="true"><use href="#i-check"/></svg>Checks every product for 27 problems</li>
+        <li><svg aria-hidden="true"><use href="#i-check"/></svg>Built on Shopify's own tools</li>
+        <li><svg aria-hidden="true"><use href="#i-check"/></svg>27 checks on every product</li>
         <li><svg aria-hidden="true"><use href="#i-check"/></svg>Every change can be undone</li>
-        <li><svg aria-hidden="true"><use href="#i-check"/></svg>Works right inside your Shopify admin</li>
+        <li><svg aria-hidden="true"><use href="#i-check"/></svg>Works inside your Shopify admin</li>
       </ul>
     </div>
 
