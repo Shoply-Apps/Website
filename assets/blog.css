@@ -83,13 +83,13 @@ footer { border-top: 1px solid var(--line); padding: 28px 0; color: var(--muted)
   .nav { gap: 12px; }
   .nav ul li:not(.keep) { display: none; }
   .nav ul a { padding: 8px 10px; }
-  .brand, .nav .btn { white-space: nowrap; }
-  .nav .btn { padding: 9px 14px; font-size: 14px; }
+  .brand { white-space: nowrap; }
+  .nav .btn { display: none; }
+  .nav ul { margin-left: auto; }
   body { font-size: 16px; }
   .post h2 { font-size: 22px; }
   .tldr, .post-cta { padding: 18px; }
 }
-@media (max-width: 379px) { .nav .btn { display: none; } .nav ul { margin-left: auto; } }
 /* Blog index groups */
 .cards h2.group { font-size: 15px; letter-spacing: .08em; text-transform: uppercase; color: #9a5b00; margin: 24px 0 0; }
 .cards h2.group:first-child { margin-top: 0; }

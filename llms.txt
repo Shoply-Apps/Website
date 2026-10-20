@@ -20,6 +20,8 @@ Our first app, **Shoply: Item Scan & Analytics**, is coming soon to the Shopify 
 
 ### Starting and growing a Shopify store
 
+- [How to price your products: pricing strategies for Shopify stores](https://shoplyapps.com/blog/how-to-price-products/)
+- [Shopify store launch checklist: what to check before you go live](https://shoplyapps.com/blog/shopify-store-launch-checklist/)
 - [How to start dropshipping on Shopify: a step-by-step guide](https://shoplyapps.com/blog/how-to-start-dropshipping-on-shopify/)
 - [Dropshipping profit margins: how to price products so you actually make money](https://shoplyapps.com/blog/dropshipping-profit-margins/)
 - [How to find winning dropshipping products without guessing](https://shoplyapps.com/blog/how-to-find-winning-dropshipping-products/)
@@ -34,8 +36,9 @@ Our first app, **Shoply: Item Scan & Analytics**, is coming soon to the Shopify 
 - [Why shoppers abandon carts on Shopify, and how to fix it](https://shoplyapps.com/blog/reduce-cart-abandonment-shopify/)
 - [Shopify abandoned cart recovery: emails that bring shoppers back](https://shoplyapps.com/blog/shopify-abandoned-cart-recovery/)
 
-### Product photos and email marketing
+### Product pages, photos and email
 
+- [How to write product descriptions that sell (with examples)](https://shoplyapps.com/blog/how-to-write-product-descriptions/)
 - [Shopify product photography: better product photos on a small budget](https://shoplyapps.com/blog/shopify-product-photography/)
 - [Shopify product image sizes: dimensions, file size and consistency](https://shoplyapps.com/blog/shopify-product-image-size-guide/)
 - [Shopify email marketing for beginners: build a list and send emails that sell](https://shoplyapps.com/blog/shopify-email-marketing-guide/)
@@ -56,6 +59,7 @@ Our first app, **Shoply: Item Scan & Analytics**, is coming soon to the Shopify 
 
 ### Catalog health: pricing, stock and product pages
 
+- [Shopify inventory management for small stores: a simple system](https://shoplyapps.com/blog/shopify-inventory-management/)
 - [Shopify catalog health: a monthly checklist to protect your margins](https://shoplyapps.com/blog/shopify-catalog-health-checklist/)
 - [How to find Shopify products you're selling below cost (and fix them)](https://shoplyapps.com/blog/shopify-products-selling-below-cost/)
 - [Out of stock and oversold on Shopify: how to stop losing sales](https://shoplyapps.com/blog/shopify-out-of-stock-oversold/)

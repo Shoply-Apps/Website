@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Shopify Inventory Management for Small Stores</title>
+  <meta name="description" content="Shopify inventory management for small stores: SKUs, ABC analysis, cycle counts, reorder points, dead stock and a simple weekly and monthly routine.">
+  <link rel="canonical" href="https://shoplyapps.com/blog/shopify-inventory-management/">
+  <link rel="alternate" type="application/rss+xml" title="Shoply Apps blog" href="https://shoplyapps.com/blog/feed.xml">
+  <link rel="icon" href="/assets/shoply-apps-favicon.svg" type="image/svg+xml">
+  <meta name="theme-color" content="#15223d">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Shoply Apps">
+  <meta property="og:title" content="Shopify inventory management for small stores: a simple system">
+  <meta property="og:description" content="Shopify inventory management for small stores: SKUs, ABC analysis, cycle counts, reorder points, dead stock and a simple weekly and monthly routine.">
+  <meta property="og:url" content="https://shoplyapps.com/blog/shopify-inventory-management/">
+  <meta property="og:image" content="https://shoplyapps.com/assets/blog/shopify-inventory-management.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="article:published_time" content="2026-10-20">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="stylesheet" href="/assets/blog.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BlogPosting",
+        "headline": "Shopify inventory management for small stores: a simple system",
+        "description": "Shopify inventory management for small stores: SKUs, ABC analysis, cycle counts, reorder points, dead stock and a simple weekly and monthly routine.",
+        "datePublished": "2026-10-20",
+        "dateModified": "2026-10-20",
+        "url": "https://shoplyapps.com/blog/shopify-inventory-management/",
+        "mainEntityOfPage": "https://shoplyapps.com/blog/shopify-inventory-management/",
+        "image": "https://shoplyapps.com/assets/blog/shopify-inventory-management.jpg",
+        "inLanguage": "en",
+        "author": { "@type": "Organization", "@id": "https://shoplyapps.com/#org", "name": "Shoply Apps", "url": "https://shoplyapps.com/" },
+        "publisher": { "@id": "https://shoplyapps.com/#org" }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://shoplyapps.com/" },
+          { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://shoplyapps.com/blog/" },
+          { "@type": "ListItem", "position": 3, "name": "Inventory management", "item": "https://shoplyapps.com/blog/shopify-inventory-management/" }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {"@type": "Question", "name": "Does Shopify have built-in inventory management?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. When track quantity is turned on, Shopify counts stock for each variant at each location, updates it as orders come in and keeps a history of adjustments. For ABC analysis, cycle counts and reorder planning, most small stores add a simple spreadsheet or an inventory app."}},
+          {"@type": "Question", "name": "How often should a small store count its inventory?", "acceptedAnswer": {"@type": "Answer", "text": "A common approach is to count A items (your biggest earners) weekly or monthly, B items every month or two, and C items once a quarter. A full count once a year is still useful as a complete check."}},
+          {"@type": "Question", "name": "What is a good SKU format for a small store?", "acceptedAnswer": {"@type": "Answer", "text": "Build each SKU from the same parts in the same order, such as category, style, size and colour: MUG-STO-350-SAGE. Use only capital letters, numbers and hyphens, give every variant its own SKU and never reuse an old SKU for a different product."}},
+          {"@type": "Question", "name": "How much stock should I keep?", "acceptedAnswer": {"@type": "Answer", "text": "Enough to cover your supplier lead time plus a safety buffer for your best sellers, and far less for slow movers. Reorder when stock reaches the reorder point: average daily sales × lead time in days + safety stock."}}
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header>
+    <div class="wrap nav">
+      <a class="brand" href="/" aria-label="Shoply Apps home"><img src="/assets/shoply-apps-logo.svg" width="32" height="32" alt="">shoply apps</a>
+      <ul>
+        <li><a href="/#apps">Our apps</a></li>
+        <li><a href="/#item-scan">Item Scan &amp; Analytics</a></li>
+        <li class="keep"><a href="/blog/" aria-current="page">Blog</a></li>
+      </ul>
+      <a class="btn" href="/#apps">See our apps</a>
+    </div>
+  </header>
+
+  <main>
+    <article class="post">
+      <p class="crumbs"><a href="/">Home</a> / <a href="/blog/">Blog</a></p>
+      <h1>Shopify inventory management for small stores: a simple system</h1>
+      <p class="meta">By the Shoply Apps team · <time datetime="2026-10-20">20 October 2026</time> · 9 min read</p>
+
+      <figure class="post-hero"><img src="/assets/blog/shopify-inventory-management.webp" width="1200" height="630" alt="Inventory overview with stock levels, days of stock left and reorder suggestions" fetchpriority="high"></figure>
+
+      <section class="tldr">
+        <h2>Key takeaways</h2>
+        <ul>
+          <li>Shopify inventory management works per variant and per location, so turn on track quantity for every physical product and give each variant a unique SKU.</li>
+          <li>Use ABC analysis to rank products by share of revenue, then count and reorder your A items most often and your C items least.</li>
+          <li>Replace one stressful yearly count with small cycle counts, and fix every discrepancy by finding its cause, not just changing the number.</li>
+          <li>Reorder at the reorder point (average daily sales × lead time + safety stock), and clear dead stock early, because stock on shelves is cash you cannot spend.</li>
+          <li>A spreadsheet plus a weekly, monthly and quarterly routine is enough for most small stores; move to an inventory app when locations, suppliers or SKUs multiply.</li>
+        </ul>
+      </section>
+
+      <p>Shopify inventory management means knowing what you have, where it is, what it is worth and when to buy more, and having Shopify's numbers match the shelf. This guide sets out a simple system a small store can run in a couple of hours a week.</p>
+
+      <h2 id="how-shopify-tracks-inventory">How does Shopify track inventory?</h2>
+      <p>Shopify tracks stock for each variant at each location, but only when the "track quantity" setting is turned on for that variant. A variant is one buyable version of a product, such as a mug in sage, 350 ml. If tracking is off, Shopify does not count anything, and the product can keep selling forever.</p>
+      <p>With tracking on, Shopify lowers the count when orders come in, shows how much stock is reserved for orders not yet shipped, and keeps a history of inventory adjustments for each variant, so you can see when a number changed and why. You can also choose whether each variant keeps selling at zero.</p>
+      <p>Three settings to check on every physical product:</p>
+      <ul>
+        <li><strong>Track quantity</strong> is on.</li>
+        <li><strong>Selling when out of stock</strong> is off, unless you mean it.</li>
+        <li><strong>Stock sits at the right location</strong>, if you have more than one, such as a home stockroom and a shop.</li>
+      </ul>
+
+      <h2 id="sku-naming">How should you name SKUs?</h2>
+      <p>Build every SKU from the same few parts in the same order, so anyone can read it at a glance. A SKU (stock keeping unit) is your own code for one variant. Shopify does not require one, but counting, reordering and spreadsheet work all get easier with it.</p>
+      <p class="formula">CATEGORY-STYLE-SIZE-COLOUR<br>MUG-STO-350-SAGE<br>MUG-STO-350-SAND<br>TEA-POT-1000-WHT</p>
+      <p>Rules that keep SKUs clean:</p>
+      <ul>
+        <li>Capital letters, numbers and hyphens only. No spaces or special characters.</li>
+        <li>One SKU per variant, never shared and never reused for a different product.</li>
+        <li>Avoid letters that look like numbers, such as O and 0, in the same position.</li>
+      </ul>
+      <p>Barcodes go one step further. A barcode turns the code into something a scanner or phone camera can read, which cuts typing mistakes when you receive or count stock. Products from brands usually already carry a GTIN (the global number behind UPC and EAN barcodes); enter it in the variant's barcode field, which also helps your listings, as explained in our guide to <a href="/blog/google-shopping-product-data-shopify/">GTIN, brand and product category</a>. For your own products, you can print internal barcode labels from your SKUs.</p>
+
+      <h2 id="organise-stock">How do you organise stock so counts stay right?</h2>
+      <p>Give every SKU one home, and record every movement in Shopify when it happens.</p>
+      <ul>
+        <li><strong>Locations:</strong> set up each place you hold stock as its own location in Shopify, so you know which shelf to ship from.</li>
+        <li><strong>Bins and shelves:</strong> label shelves (A1, A2, B1) and keep a column in your spreadsheet for each SKU's bin.</li>
+        <li><strong>Receiving:</strong> record incoming stock when it arrives so counts stay right. Count the delivery against what you ordered before you add it, and note any shortfall to the supplier.</li>
+        <li><strong>Damage and samples:</strong> adjust the count with a short reason, such as "damaged" or "given to photographer", so the adjustment history makes sense later.</li>
+      </ul>
+
+      <h2 id="abc-analysis">What is ABC analysis, and how do you use it?</h2>
+      <p>ABC analysis is a common method that ranks products by their share of revenue so you spend most of your attention where most of the money is. Roughly: A items make up the top 80% or so of revenue, B items the next 10 to 15%, and C items the rest.</p>
+      <p>To do it, export a sales report by product for the last 12 months, sort by revenue, and add a running total. Here is an example for a small homeware store:</p>
+      <table>
+        <thead>
+          <tr><th>Product (example)</th><th>Revenue, 12 months</th><th>Share</th><th>Running total</th><th>Class</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Stoneware mug 350 ml</td><td>$18,000</td><td>36%</td><td>36%</td><td>A</td></tr>
+          <tr><td>Ceramic teapot</td><td>$12,000</td><td>24%</td><td>60%</td><td>A</td></tr>
+          <tr><td>Pour-over coffee set</td><td>$9,000</td><td>18%</td><td>78%</td><td>A</td></tr>
+          <tr><td>Linen tea towel</td><td>$3,500</td><td>7%</td><td>85%</td><td>B</td></tr>
+          <tr><td>Cork coaster set</td><td>$2,500</td><td>5%</td><td>90%</td><td>B</td></tr>
+          <tr><td>Soy candle</td><td>$2,000</td><td>4%</td><td>94%</td><td>C</td></tr>
+          <tr><td>Wooden spoon set</td><td>$1,800</td><td>3.6%</td><td>97.6%</td><td>C</td></tr>
+          <tr><td>Mug cleaning brush</td><td>$1,200</td><td>2.4%</td><td>100%</td><td>C</td></tr>
+        </tbody>
+      </table>
+      <p>Three products bring in 78% of the $50,000. Those are the ones you never want to run out of and should count most often; a small miscount on a C item costs little. Redo the analysis every quarter, because a new product can jump from C to A quickly.</p>
+
+      <h2 id="cycle-counting">Cycle counting or a full count: which is better?</h2>
+      <p>For most small stores, cycle counting is better: you count a small group of products often, instead of everything once a year. Short counts catch errors while they are still easy to explain.</p>
+      <ul>
+        <li><strong>A items:</strong> weekly or monthly.</li>
+        <li><strong>B items:</strong> every month or two.</li>
+        <li><strong>C items:</strong> once a quarter.</li>
+      </ul>
+      <p>A full count once a year is still useful as a complete check, and your accountant may want a stock figure at year end. Ask them what they need.</p>
+      <p>When a count does not match Shopify, do not just overwrite the number. Recount first, then check for orders waiting to ship, deliveries not yet received and stock in the wrong bin. If the gap is real, adjust it with a reason. If the same SKU is wrong twice, fix the process behind it, such as receiving or returns.</p>
+
+      <h2 id="reorder-planning">How do you know when to reorder?</h2>
+      <p>Reorder when stock falls to the reorder point: the units you will sell while waiting for the next delivery, plus a safety buffer. Lead time is the number of days from placing an order to having stock ready to sell. Safety stock covers late deliveries and busy weeks.</p>
+      <p class="formula">Days of stock left = units on hand ÷ average daily sales<br>Reorder point = average daily sales × lead time (days) + safety stock</p>
+      <p>An example: the stoneware mug sells 3 a day, the supplier takes 21 days, and you keep 7 days of safety stock.</p>
+      <ul>
+        <li>Safety stock = 3 × 7 = 21 units</li>
+        <li>Reorder point = 3 × 21 + 21 = 84 units</li>
+        <li>With 120 on hand, you have 40 days of stock left, and about 12 days before you should order.</li>
+      </ul>
+      <p>Two adjustments matter. Use recent sales for average daily sales, and plan ahead for seasonal demand: if a product sold twice as much last December, order for that rate before the season starts, not when it arrives. Our guide to <a href="/blog/shopify-out-of-stock-oversold/">out of stock and oversold products</a> covers these formulas and safety stock in more depth.</p>
+
+      <h2 id="dead-stock">What should you do with dead stock and slow movers?</h2>
+      <p>Act early: decide what to do with any product that has not sold in 60 to 90 days, before it costs you more in space and cash. Dead stock is stock that no longer sells; slow movers still sell, but far too slowly for the amount you hold.</p>
+      <ul>
+        <li><strong>Bundle</strong> it with a best seller, such as a brush with every mug set.</li>
+        <li><strong>Discount</strong> it, but check the sale price against your cost first. Our guide to <a href="/blog/shopify-products-selling-below-cost/">finding products sold below cost</a> shows how to protect your margin.</li>
+        <li><strong>Return it to the supplier</strong>, if your terms allow.</li>
+        <li><strong>Donate it</strong> and free the space. Ask your accountant how to record it.</li>
+      </ul>
+      <p>Then learn from it: order smaller first batches of new products, and only scale up once they sell.</p>
+
+      <h2 id="cash-flow">How much cash is tied up in your inventory?</h2>
+      <p>Every unit on the shelf is money you have already spent and cannot use for ads, new products or bills. Multiply units on hand by cost per item for each SKU and add them up. For example:</p>
+      <table>
+        <thead>
+          <tr><th>Product (example)</th><th>Units on hand</th><th>Cost per item</th><th>Cash tied up</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Stoneware mug</td><td>120</td><td>$7</td><td>$840</td></tr>
+          <tr><td>Ceramic teapot</td><td>40</td><td>$18</td><td>$720</td></tr>
+          <tr><td>Soy candle</td><td>150</td><td>$6</td><td>$900</td></tr>
+          <tr><td><strong>Total</strong></td><td>310</td><td></td><td><strong>$2,460</strong></td></tr>
+        </tbody>
+      </table>
+      <p>In this example, the candle, a C item that sells slowly, holds more cash than the best-selling mug. Selling off 100 candles frees about $600 to spend on mugs that actually sell. This only works if cost per item is filled in for every variant. If holding stock feels too heavy, compare the trade-offs in <a href="/blog/dropshipping-vs-holding-inventory/">dropshipping vs holding inventory</a>.</p>
+
+      <h2 id="routine">What does a simple Shopify inventory management routine look like?</h2>
+      <p>A small, regular routine keeps inventory management for small business manageable. Here is one you can copy:</p>
+      <table>
+        <thead>
+          <tr><th>How often</th><th>Task</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Weekly</td><td>Check days of stock left for A items and place orders at the reorder point. Cycle count a few A items. Record any deliveries received.</td></tr>
+          <tr><td>Monthly</td><td>Cycle count B items. Look for oversold variants, low stock and products with tracking turned off. Review the adjustment history for unexplained changes.</td></tr>
+          <tr><td>Quarterly</td><td>Redo the ABC analysis. Count C items. List products with no sales in 60 to 90 days and decide on each one. Recalculate cash tied up in stock.</td></tr>
+          <tr><td>Yearly</td><td>Full stock count. Review lead times and safety stock with each supplier. Plan seasonal orders.</td></tr>
+        </tbody>
+      </table>
+      <p>The monthly checks fit naturally into a wider <a href="/blog/shopify-catalog-health-checklist/">catalog health checklist</a>. We are also building <a href="/blog/shoply-item-scan-analytics/">Shoply: Item Scan &amp; Analytics</a>, coming soon to the Shopify App Store, which flags oversold, low stock, will sell out soon, not selling in 60 days, inventory not tracked and stock on products not for sale, so these checks take minutes instead of an afternoon.</p>
+
+      <h2 id="spreadsheet-or-app">Is a spreadsheet enough, or do you need an inventory app?</h2>
+      <p>A spreadsheet is enough while you have one or two locations, a handful of suppliers and up to a few hundred SKUs. Add columns for bin, lead time, reorder point and ABC class to a product export.</p>
+      <p>Consider an inventory app or system when:</p>
+      <ul>
+        <li>You sell on several channels and stock must stay in sync.</li>
+        <li>You manage many purchase orders, suppliers or locations.</li>
+        <li>You need bundles or kits that draw down component stock.</li>
+      </ul>
+      <p>Options range from Shopify App Store apps that add forecasting to full inventory management systems. Whatever you pick, the habits in this guide still apply: clean SKUs, regular counts and a reorder point for every product that matters.</p>
+
+      <h2 id="faq">FAQ</h2>
+      <h3>Does Shopify have built-in inventory management?</h3>
+      <p>Yes. When track quantity is turned on, Shopify counts stock for each variant at each location, updates it as orders come in and keeps a history of adjustments. For ABC analysis, cycle counts and reorder planning, most small stores add a simple spreadsheet or an inventory app.</p>
+      <h3>How often should a small store count its inventory?</h3>
+      <p>A common approach is to count A items (your biggest earners) weekly or monthly, B items every month or two, and C items once a quarter. A full count once a year is still useful as a complete check.</p>
+      <h3>What is a good SKU format for a small store?</h3>
+      <p>Build each SKU from the same parts in the same order, such as category, style, size and colour: MUG-STO-350-SAGE. Use only capital letters, numbers and hyphens, give every variant its own SKU and never reuse an old SKU for a different product.</p>
+      <h3>How much stock should I keep?</h3>
+      <p>Enough to cover your supplier lead time plus a safety buffer for your best sellers, and far less for slow movers. Reorder when stock reaches the reorder point: average daily sales × lead time in days + safety stock.</p>
+
+      <section class="post-cta">
+        <h2>Catch stock problems before customers do</h2>
+        <p>Shoply: Item Scan &amp; Analytics, coming soon to the Shopify App Store, scans every product for oversold, low stock, untracked inventory and products that have stopped selling, and ranks each problem by the money at stake each month.</p>
+        <a class="btn btn-amber" href="mailto:info@shoplyapps.com?subject=Notify%20me%20when%20Shoply%3A%20Item%20Scan%20%26%20Analytics%20is%20live">Notify me at launch</a>
+      </section>
+
+      <nav class="related" aria-label="Related articles">
+        <h2>Keep reading</h2>
+        <ul>
+          <li><a href="/blog/shopify-out-of-stock-oversold/">Out of stock and oversold on Shopify: how to stop losing sales</a></li>
+          <li><a href="/blog/shopify-catalog-health-checklist/">Shopify catalog health: a monthly checklist to protect your margins</a></li>
+          <li><a href="/blog/dropshipping-vs-holding-inventory/">Dropshipping vs holding inventory: which is right for your Shopify store?</a></li>
+        </ul>
+      </nav>
+    </article>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <div class="foot">
+        <a class="brand" href="/" aria-label="Shoply Apps home"><img src="/assets/shoply-apps-logo.svg" width="26" height="26" alt="">shoply apps</a>
+        <ul>
+          <li><a href="/#apps">Our apps</a></li>
+          <li><a href="/blog/">Blog</a></li>
+          <li><a href="/#faq">FAQ</a></li>
+          <li><a href="/privacy.html">Privacy</a></li>
+          <li><a href="/terms.html">Terms</a></li>
+          <li><a href="mailto:info@shoplyapps.com">info@shoplyapps.com</a></li>
+        </ul>
+      </div>
+      <p class="fine">© 2026 Shoply Apps. Shopify is a trademark of Shopify Inc.</p>
+    </div>
+  </footer>
+</body>
+</html>

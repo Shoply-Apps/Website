@@ -4,9 +4,10 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Shoply Apps · Simple Shopify apps for healthier stores</title>
-  <meta name="description" content="Shoply Apps builds focused Shopify apps that work inside your admin and use only Shopify's own tools. Our first app, Shoply: Item Scan & Analytics, finds the products quietly costing you money.">
+  <meta name="description" content="Simple Shopify apps that work inside your admin. Shoply: Item Scan &amp; Analytics finds products costing you money, plus free guides for Shopify stores.">
   <link rel="icon" href="assets/shoply-apps-favicon.svg" type="image/svg+xml">
   <link rel="canonical" href="https://shoplyapps.com/">
+  <link rel="alternate" type="application/rss+xml" title="Shoply Apps blog" href="https://shoplyapps.com/blog/feed.xml">
   <meta name="theme-color" content="#15223d">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Shoply Apps">
@@ -189,6 +190,9 @@
     .hero h1 em { font-style: normal; color: var(--amber); }
     .hero .lead { color: #c9d1e1; margin: 14px 0 24px; }
     .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; }
+    .hero-guides { display: inline-block; margin-top: 22px; color: #c9d1e1; font-size: 15px; line-height: 1.9; text-decoration: none; }
+    .hero-guides b { background: rgba(245,166,35,.16); color: var(--amber); border-radius: 999px; padding: 3px 10px; margin-right: 8px; font-size: 13px; letter-spacing: .02em; }
+    .hero-guides:hover { color: #fff; }
     .scan { position: relative; max-width: 420px; width: 100%; justify-self: end; padding: 16px; }
     .scan > i { position: absolute; width: 36px; height: 36px; border: 0 solid var(--amber); }
     .scan > i:nth-child(1) { top: 0; left: 0; border-width: 5px 0 0 5px; border-top-left-radius: 12px; }
@@ -349,8 +353,9 @@
       .nav { gap: 12px; }
       .nav ul li:not(.keep) { display: none; }
       .nav ul a { padding: 8px 10px; }
-      .brand, .nav .btn { white-space: nowrap; }
-      .nav .btn { padding: 9px 14px; font-size: 14px; }
+      .brand { white-space: nowrap; }
+      .nav .btn { display: none; }
+      .nav ul { margin-left: auto; }
       section { padding: 52px 0; }
       .ly { padding: 22px 0 6px; }
       .ly + section { padding-top: 26px; }
@@ -366,7 +371,6 @@
       .shelf-row img, .shelf-row i { width: 40px; height: 40px; }
       .cta-box { padding: 28px 24px; }
     }
-    @media (max-width: 379px) { .nav .btn { display: none; } .nav ul { margin-left: auto; } }
     @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .btn { transition: none; } .scan-line { animation: none; } .ly-line, .ly-line *, .ly-line::after, .ly-caret::before { transition: none !important; animation: none !important; } }
   </style>
 </head>
@@ -381,7 +385,7 @@
 
   <header>
     <div class="wrap nav">
-      <a class="brand" href="/" aria-label="Shoply Apps home"><img src="assets/shoply-apps-logo.svg" alt="">shoply apps</a>
+      <a class="brand" href="/" aria-label="Shoply Apps home"><img src="assets/shoply-apps-logo.svg" width="32" height="32" alt="">shoply apps</a>
       <ul>
         <li><a href="#apps">Our apps</a></li>
         <li><a href="#item-scan">Item Scan &amp; Analytics</a></li>
@@ -403,13 +407,14 @@
           <a class="btn btn-amber" href="#apps">See our apps <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
           <a class="btn btn-ghost" href="mailto:info@shoplyapps.com?subject=Keep%20me%20posted%20about%20Shoply%20Apps">Get launch news</a>
         </div>
+        <a class="hero-guides" href="/blog/"><b>Free guides</b> Shopify tips on dropshipping, pricing, SEO and&nbsp;more&nbsp;→</a>
         </div>
         <div class="scan">
           <i></i><i></i><i></i><i></i><span class="scan-line" aria-hidden="true"></span>
           <div class="shelf">
             <div class="shelf-top"><span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span><b>Shoply Apps</b></div>
             <a class="shelf-row" href="#item-scan">
-              <img src="assets/logo.svg" alt="">
+              <img src="assets/logo.svg" width="44" height="44" alt="">
               <span><b>Shoply: Item Scan &amp; Analytics</b><small>Finds the products quietly costing you money</small></span>
               <em>Coming soon</em>
             </a>
@@ -450,7 +455,7 @@
         </div>
         <div class="apps-grid">
           <article class="app-card">
-            <img src="assets/logo.svg" alt="Shoply: Item Scan &amp; Analytics icon">
+            <img src="assets/logo.svg" width="72" height="72" alt="Shoply: Item Scan &amp; Analytics icon">
             <div>
               <span class="badge">Coming soon to the Shopify App Store</span>
               <h3>Shoply: Item Scan &amp; Analytics</h3>
@@ -471,7 +476,7 @@
     <section class="app" id="item-scan">
       <div class="wrap">
         <div class="app-head">
-          <img src="assets/logo.svg" alt="Shoply: Item Scan &amp; Analytics icon">
+          <img src="assets/logo.svg" width="72" height="72" alt="Shoply: Item Scan &amp; Analytics icon">
           <div>
             <span class="badge">A closer look at our first app</span>
             <h2>Shoply: Item Scan &amp; Analytics</h2>
@@ -561,8 +566,11 @@
           <a class="post-card" href="/blog/how-to-start-dropshipping-on-shopify/"><img src="/assets/blog/how-to-start-dropshipping-on-shopify.webp" width="1200" height="630" alt="Dropshipping order flow from customer to your store to supplier" loading="lazy"><small>Dropshipping</small><b>How to start dropshipping on Shopify: a step-by-step guide</b><span>Suppliers, store setup, pricing for profit, a sample budget and a launch checklist.</span></a>
           <a class="post-card" href="/blog/increase-shopify-conversion-rate/"><img src="/assets/blog/increase-shopify-conversion-rate.webp" width="1200" height="630" alt="Conversion funnel from 2,500 sessions to 45 orders, a 1.8% conversion rate" loading="lazy"><small>Growth</small><b>How to increase your Shopify conversion rate: 15 practical fixes</b><span>Product pages, trust, checkout, speed and stock: fixes ranked by effort.</span></a>
           <a class="post-card" href="/blog/shopify-catalog-health-checklist/"><img src="/assets/blog/shopify-catalog-health-checklist.webp" width="1200" height="630" alt="Catalog health dashboard showing a score of 72 and problems by category with the money at stake each month" loading="lazy"><small>Checklist</small><b>Shopify catalog health: a monthly checklist to protect your margins</b><span>27 checks across pricing, stock and content, and how to fix the costly ones first.</span></a>
+          <a class="post-card" href="/blog/why-use-shopify/"><img src="/assets/blog/why-use-shopify.webp" width="1200" height="630" alt="Checklist of what Shopify includes: hosting, checkout, payments, sales channels and an app store" loading="lazy"><small>Shopify</small><b>Why use Shopify? Pros, cons and who it's best for</b><span>An honest look at what Shopify does well, where it falls short and who it suits.</span></a>
+          <a class="post-card" href="/blog/shopify-seo-guide-for-beginners/"><img src="/assets/blog/shopify-seo-guide-for-beginners.webp" width="1200" height="630" alt="Search results with a store ranking first and Search Console clicks rising over 14 weeks" loading="lazy"><small>SEO</small><b>Shopify SEO for beginners: how to get your store found on Google</b><span>Search Console, keywords, collection pages and a realistic 30-day plan.</span></a>
+          <a class="post-card" href="/blog/shopify-email-marketing-guide/"><img src="/assets/blog/shopify-email-marketing-guide.webp" width="1200" height="630" alt="Email marketing dashboard showing subscriber growth and one campaign's opens, clicks and orders" loading="lazy"><small>Email</small><b>Shopify email marketing for beginners</b><span>Build a list with consent, set up six key automations and track what sells.</span></a>
         </div>
-        <p class="posts-more"><a href="/blog/">All 26 guides →</a></p>
+        <p class="posts-more"><a href="/blog/">All 30 guides →</a></p>
       </div>
     </section>
 
@@ -614,7 +622,7 @@
   <footer>
     <div class="wrap">
       <div class="foot">
-        <a class="brand" href="/" aria-label="Shoply Apps home"><img src="assets/shoply-apps-logo.svg" alt="">shoply apps</a>
+        <a class="brand" href="/" aria-label="Shoply Apps home"><img src="assets/shoply-apps-logo.svg" width="26" height="26" alt="">shoply apps</a>
         <ul>
           <li><a href="#apps">Our apps</a></li>
           <li><a href="/blog/">Blog</a></li>

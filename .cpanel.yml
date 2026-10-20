@@ -5,7 +5,7 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home/tscrtki8z231/public_html/
-    - /bin/cp index.html privacy.html terms.html robots.txt sitemap.xml llms.txt $DEPLOYPATH
+    - /bin/cp index.html privacy.html terms.html robots.txt sitemap.xml llms.txt 0fe5b15d83c018410175042095b9e3c9.txt $DEPLOYPATH
     - /bin/mkdir -p ${DEPLOYPATH}assets
     - /bin/cp -R assets/. ${DEPLOYPATH}assets/
     - /bin/mkdir -p ${DEPLOYPATH}blog
