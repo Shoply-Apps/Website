@@ -34,6 +34,26 @@ Our first app, **Shoply: Item Scan & Analytics**, is coming soon to the Shopify 
 - [Why shoppers abandon carts on Shopify, and how to fix it](https://shoplyapps.com/blog/reduce-cart-abandonment-shopify/)
 - [Shopify abandoned cart recovery: emails that bring shoppers back](https://shoplyapps.com/blog/shopify-abandoned-cart-recovery/)
 
+### Product photos and email marketing
+
+- [Shopify product photography: better product photos on a small budget](https://shoplyapps.com/blog/shopify-product-photography/)
+- [Shopify product image sizes: dimensions, file size and consistency](https://shoplyapps.com/blog/shopify-product-image-size-guide/)
+- [Shopify email marketing for beginners: build a list and send emails that sell](https://shoplyapps.com/blog/shopify-email-marketing-guide/)
+- [Welcome email series for Shopify stores: what to send and when](https://shoplyapps.com/blog/welcome-email-series-ecommerce/)
+
+### Social media marketing
+
+- [Social media marketing for Shopify stores: a simple plan that sells](https://shoplyapps.com/blog/social-media-marketing-for-shopify/)
+- [How to sell on Instagram with Shopify: setup and posts that convert](https://shoplyapps.com/blog/sell-on-instagram-with-shopify/)
+- [TikTok marketing for Shopify stores: videos that bring sales](https://shoplyapps.com/blog/tiktok-marketing-for-shopify/)
+- [Influencer marketing for small Shopify stores: find, pay and measure](https://shoplyapps.com/blog/influencer-marketing-small-business/)
+
+### Choosing Shopify and apps
+
+- [Why use Shopify? Pros, cons and who it's best for](https://shoplyapps.com/blog/why-use-shopify/)
+- [Essential Shopify apps for a new store: what you actually need](https://shoplyapps.com/blog/essential-shopify-apps-new-store/)
+- [Shoply: Item Scan & Analytics: what it does and why we built it](https://shoplyapps.com/blog/shoply-item-scan-analytics/)
+
 ### Catalog health: pricing, stock and product pages
 
 - [Shopify catalog health: a monthly checklist to protect your margins](https://shoplyapps.com/blog/shopify-catalog-health-checklist/)

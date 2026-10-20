@@ -102,3 +102,5 @@ footer { border-top: 1px solid var(--line); padding: 28px 0; color: var(--muted)
 @media (max-width: 600px) {
   .card { grid-template-columns: 1fr; gap: 14px; }
 }
+/* Long URLs and code (e.g. UTM links) wrap instead of widening the page on phones */
+.post code, .post a, .formula { overflow-wrap: anywhere; }
