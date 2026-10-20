@@ -144,12 +144,18 @@
     /* "…ly" band: the word before "ly" swaps, the amber "ly" stays put, ending on "Build with Shoply" */
     .ly { background: var(--navy); color: #fff; padding: 64px 0; text-align: center; position: relative; overflow: hidden; }
     .ly::before { content: ""; position: absolute; inset: 0; background-image: linear-gradient(rgba(255,255,255,.04) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.04) 1px, transparent 1px); background-size: 40px 40px; }
-    .ly-line { position: relative; display: flex; justify-content: center; align-items: baseline; margin: 0; font-weight: 800; font-size: clamp(28px, 6.4vw, 64px); letter-spacing: -0.035em; line-height: 1.2; }
+    .ly-line { position: relative; display: flex; justify-content: center; align-items: baseline; width: max-content; margin: 0 auto; font-weight: 800; font-size: clamp(28px, 6.4vw, 64px); letter-spacing: -0.035em; line-height: 1.2; }
     .ly-stem { display: grid; text-align: right; overflow: hidden; padding-bottom: .08em; }
-    .ly-stem > span { grid-area: 1 / 1; white-space: nowrap; opacity: 0; transform: translateY(100%); transition: transform .5s cubic-bezier(.2,.7,.2,1), opacity .5s ease; }
+    .ly-stem > span { grid-area: 1 / 1; white-space: nowrap; opacity: 0; transform: translateY(100%); transition: transform .4s cubic-bezier(.2,.7,.2,1), opacity .4s ease; }
     .ly-stem > span.is-on { opacity: 1; transform: none; }
     .ly-stem > span.is-off { transform: translateY(-100%); }
-    .ly-end { color: var(--amber); }
+    .ly-end { color: var(--amber); transition: text-shadow .5s ease; }
+    /* Final line ("Build with Shoply") pops: a springy scale, an amber underline sweeping in, a glow on "ly" */
+    .ly-line::after { content: ""; position: absolute; left: 0; bottom: -.1em; height: .07em; width: 0; border-radius: 99px; background: var(--amber); transition: width .25s ease; }
+    .ly-line.is-final { animation: ly-pop .7s .25s ease-out both; }
+    .ly-line.is-final::after { width: 100%; transition: width .5s .4s cubic-bezier(.2,.7,.2,1); }
+    .ly-line.is-final .ly-end { text-shadow: 0 0 .35em rgba(245,166,35,.55); }
+    @keyframes ly-pop { 0% { transform: scale(1); } 45% { transform: scale(1.14); } 75% { transform: scale(.97); } 100% { transform: scale(1); } }
     .sr-only { position: absolute; width: 1px; height: 1px; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
 
     /* FAQ */
@@ -211,7 +217,7 @@
       .shelf-row img, .shelf-row i { width: 40px; height: 40px; }
       .cta-box { padding: 28px 24px; }
     }
-    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .btn { transition: none; } .scan-line { animation: none; } .ly-stem > span { transition: none; } }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .btn { transition: none; } .scan-line { animation: none; } .ly-stem > span, .ly-line, .ly-line::after { transition: none; animation: none; } }
   </style>
 </head>
 <body>
@@ -387,7 +393,7 @@
 
     <section class="ly">
       <div class="wrap">
-        <p class="ly-line"><span class="sr-only">Work creatively, launch boldly, price wisely, sell smartly, restock quickly, fix instantly, grow profitably. Build with Shoply.</span><span class="ly-stem" aria-hidden="true"><span>Work Creative</span><span>Launch Bold</span><span>Price Wise</span><span>Sell Smart</span><span>Restock Quick</span><span>Fix Instant</span><span>Grow Profitab</span><span class="is-on">Build with Shop</span></span><span class="ly-end" aria-hidden="true">ly</span></p>
+        <p class="ly-line is-final"><span class="sr-only">Work creatively, launch boldly, price wisely, sell smartly, restock quickly, fix instantly, grow profitably. Build with Shoply.</span><span class="ly-stem" aria-hidden="true"><span>Work Creative</span><span>Launch Bold</span><span>Price Wise</span><span>Sell Smart</span><span>Restock Quick</span><span>Fix Instant</span><span>Grow Profitab</span><span class="is-on">Build with Shop</span></span><span class="ly-end" aria-hidden="true">ly</span></p>
       </div>
     </section>
 
@@ -456,7 +462,8 @@
     (function () {
       var stem = document.querySelector('.ly-stem');
       if (!stem || (window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches)) return;
-      var words = stem.children, last = words.length - 1, i = 0, timer = null;
+      var line = stem.parentNode, words = stem.children, last = words.length - 1, i = 0, timer = null;
+      line.classList.remove('is-final');
       words[last].className = '';
       words[0].className = 'is-on';
       function show(n) {
@@ -465,9 +472,10 @@
         next.style.transition = 'none'; next.className = ''; void next.offsetWidth; next.style.transition = '';
         next.className = 'is-on';
         i = n;
+        line.classList.toggle('is-final', i === last);
       }
-      function tick() { show((i + 1) % words.length); timer = setTimeout(tick, i === last ? 4000 : 1600); }
-      function start() { if (!timer) timer = setTimeout(tick, 1600); }
+      function tick() { show((i + 1) % words.length); timer = setTimeout(tick, i === last ? 3000 : 1100); }
+      function start() { if (!timer) timer = setTimeout(tick, 1100); }
       if (!('IntersectionObserver' in window)) return start();
       new IntersectionObserver(function (e) {
         if (e[0].isIntersecting) start(); else { clearTimeout(timer); timer = null; }
