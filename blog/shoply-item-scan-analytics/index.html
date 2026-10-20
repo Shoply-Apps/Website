@@ -8,6 +8,10 @@
   <link rel="canonical" href="https://shoplyapps.com/blog/shoply-item-scan-analytics/">
   <link rel="alternate" type="application/rss+xml" title="Shoply Apps blog" href="https://shoplyapps.com/blog/feed.xml">
   <link rel="icon" href="/assets/shoply-apps-favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/assets/favicon-96.png" sizes="96x96" type="image/png">
+  <link rel="icon" href="/assets/favicon-48.png" sizes="48x48" type="image/png">
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
   <meta name="theme-color" content="#15223d">
   <meta property="og:type" content="article">
   <meta property="og:site_name" content="Shoply Apps">
@@ -19,7 +23,7 @@
   <meta property="og:image:height" content="630">
   <meta property="article:published_time" content="2026-10-20">
   <meta name="twitter:card" content="summary_large_image">
-  <link rel="stylesheet" href="/assets/blog.css?v=4">
+  <link rel="stylesheet" href="/assets/blog.css?v=5">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -34,24 +38,83 @@
         "mainEntityOfPage": "https://shoplyapps.com/blog/shoply-item-scan-analytics/",
         "image": "https://shoplyapps.com/assets/blog/shoply-item-scan-analytics.jpg",
         "inLanguage": "en",
-        "author": { "@type": "Organization", "@id": "https://shoplyapps.com/#org", "name": "Shoply Apps", "url": "https://shoplyapps.com/" },
-        "publisher": { "@id": "https://shoplyapps.com/#org" }
+        "author": {
+          "@type": "Organization",
+          "@id": "https://shoplyapps.com/#org",
+          "name": "Shoply Apps",
+          "url": "https://shoplyapps.com/"
+        },
+        "publisher": {
+          "@id": "https://shoplyapps.com/#org"
+        },
+        "articleSection": "Choosing Shopify and apps",
+        "wordCount": 1904,
+        "isPartOf": {
+          "@id": "https://shoplyapps.com/blog/#blog"
+        },
+        "about": {
+          "@type": "Thing",
+          "name": "Shopify"
+        }
       },
       {
         "@type": "BreadcrumbList",
         "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://shoplyapps.com/" },
-          { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://shoplyapps.com/blog/" },
-          { "@type": "ListItem", "position": 3, "name": "Shoply: Item Scan & Analytics", "item": "https://shoplyapps.com/blog/shoply-item-scan-analytics/" }
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://shoplyapps.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Blog",
+            "item": "https://shoplyapps.com/blog/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Shoply: Item Scan & Analytics",
+            "item": "https://shoplyapps.com/blog/shoply-item-scan-analytics/"
+          }
         ]
       },
       {
         "@type": "FAQPage",
         "mainEntity": [
-          {"@type": "Question", "name": "Is Shoply: Item Scan & Analytics available yet?", "acceptedAnswer": {"@type": "Answer", "text": "Not yet. It is coming soon to the Shopify App Store and will be free to install at launch. If paid plans are added later, merchants will be told well in advance, and Shopify always asks for your approval before any charge."}},
-          {"@type": "Question", "name": "Will the app change my products automatically?", "acceptedAnswer": {"@type": "Answer", "text": "No. It only changes a product when you choose a fix. Bulk changes are shown to you before they are saved, and every change is logged with its old value so it can be undone."}},
-          {"@type": "Question", "name": "Does it store my customers' personal data?", "acceptedAnswer": {"@type": "Answer", "text": "No. It reads orders only to total units sold and revenue per variant over the last 60 days. The app and its database run in Frankfurt, Germany, and uninstalling deletes your store's data straight away."}},
-          {"@type": "Question", "name": "Does it send my products to Google Shopping?", "acceptedAnswer": {"@type": "Answer", "text": "No. It checks the product data Google Shopping relies on, such as barcode (GTIN), brand and product category, but it does not submit feeds to Google Merchant Center."}}
+          {
+            "@type": "Question",
+            "name": "Is Shoply: Item Scan & Analytics available yet?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Not yet. It is coming soon to the Shopify App Store and will be free to install at launch. If paid plans are added later, merchants will be told well in advance, and Shopify always asks for your approval before any charge."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Will the app change my products automatically?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. It only changes a product when you choose a fix. Bulk changes are shown to you before they are saved, and every change is logged with its old value so it can be undone."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does it store my customers' personal data?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. It reads orders only to total units sold and revenue per variant over the last 60 days. The app and its database run in Frankfurt, Germany, and uninstalling deletes your store's data straight away."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does it send my products to Google Shopping?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. It checks the product data Google Shopping relies on, such as barcode (GTIN), brand and product category, but it does not submit feeds to Google Merchant Center."
+            }
+          }
         ]
       }
     ]
@@ -59,6 +122,7 @@
   </script>
 </head>
 <body>
+  <a class="skip" href="#main">Skip to content</a>
   <header>
     <div class="wrap nav">
       <a class="brand" href="/" aria-label="Shoply Apps home"><img src="/assets/shoply-apps-logo.svg" width="32" height="32" alt="">shoply apps</a>
@@ -70,7 +134,7 @@
     </div>
   </header>
 
-  <main>
+  <main id="main">
     <article class="post">
       <p class="crumbs"><a href="/">Home</a> / <a href="/blog/">Blog</a></p>
       <h1>Shoply: Item Scan &amp; Analytics: what it does and why we built it</h1>

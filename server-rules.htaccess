@@ -1,0 +1,34 @@
+# Recommended Apache rules for shoplyapps.com
+# NOT deployed automatically. In cPanel > File Manager > public_html, open .htaccess
+# (turn on "Show hidden files") and paste these lines at the TOP. Keep any lines cPanel
+# already added (for example PHP settings). Then check http://, www. and a missing page.
+
+# Friendly 404 page with links to the apps and guides
+ErrorDocument 404 /404.html
+
+# Send http:// and www. to https://shoplyapps.com (one canonical address for Google).
+# If the site is behind Cloudflare with "Flexible" SSL, skip this block (it can loop).
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteCond %{HTTPS} off [OR]
+  RewriteCond %{HTTP_HOST} ^www\. [NC]
+  RewriteRule ^ https://shoplyapps.com%{REQUEST_URI} [L,R=301]
+</IfModule>
+
+# Compress text files so pages load faster
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css text/plain text/xml application/xml application/rss+xml application/javascript application/json image/svg+xml
+</IfModule>
+
+# Let browsers cache images and styles (the stylesheet link is versioned, so updates still show)
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType text/html "access plus 0 seconds"
+  ExpiresByType text/css "access plus 1 month"
+  ExpiresByType image/webp "access plus 6 months"
+  ExpiresByType image/jpeg "access plus 6 months"
+  ExpiresByType image/png "access plus 6 months"
+  ExpiresByType image/svg+xml "access plus 6 months"
+  ExpiresByType application/xml "access plus 1 hour"
+  ExpiresByType application/rss+xml "access plus 1 hour"
+</IfModule>

@@ -8,6 +8,10 @@
   <link rel="canonical" href="https://shoplyapps.com/blog/free-shipping-threshold/">
   <link rel="alternate" type="application/rss+xml" title="Shoply Apps blog" href="https://shoplyapps.com/blog/feed.xml">
   <link rel="icon" href="/assets/shoply-apps-favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/assets/favicon-96.png" sizes="96x96" type="image/png">
+  <link rel="icon" href="/assets/favicon-48.png" sizes="48x48" type="image/png">
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
   <meta name="theme-color" content="#15223d">
   <meta property="og:type" content="article">
   <meta property="og:site_name" content="Shoply Apps">
@@ -19,7 +23,7 @@
   <meta property="og:image:height" content="630">
   <meta property="article:published_time" content="2026-10-20">
   <meta name="twitter:card" content="summary_large_image">
-  <link rel="stylesheet" href="/assets/blog.css?v=4">
+  <link rel="stylesheet" href="/assets/blog.css?v=5">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -34,24 +38,83 @@
         "mainEntityOfPage": "https://shoplyapps.com/blog/free-shipping-threshold/",
         "image": "https://shoplyapps.com/assets/blog/free-shipping-threshold.jpg",
         "inLanguage": "en",
-        "author": { "@type": "Organization", "@id": "https://shoplyapps.com/#org", "name": "Shoply Apps", "url": "https://shoplyapps.com/" },
-        "publisher": { "@id": "https://shoplyapps.com/#org" }
+        "author": {
+          "@type": "Organization",
+          "@id": "https://shoplyapps.com/#org",
+          "name": "Shoply Apps",
+          "url": "https://shoplyapps.com/"
+        },
+        "publisher": {
+          "@id": "https://shoplyapps.com/#org"
+        },
+        "articleSection": "Shipping and checkout",
+        "wordCount": 2001,
+        "isPartOf": {
+          "@id": "https://shoplyapps.com/blog/#blog"
+        },
+        "about": {
+          "@type": "Thing",
+          "name": "Shopify"
+        }
       },
       {
         "@type": "BreadcrumbList",
         "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://shoplyapps.com/" },
-          { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://shoplyapps.com/blog/" },
-          { "@type": "ListItem", "position": 3, "name": "Free shipping threshold", "item": "https://shoplyapps.com/blog/free-shipping-threshold/" }
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://shoplyapps.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Blog",
+            "item": "https://shoplyapps.com/blog/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Free shipping threshold",
+            "item": "https://shoplyapps.com/blog/free-shipping-threshold/"
+          }
         ]
       },
       {
         "@type": "FAQPage",
         "mainEntity": [
-          {"@type": "Question", "name": "What is a good free shipping threshold?", "acceptedAnswer": {"@type": "Answer", "text": "There is no single right number. A practical starting point is roughly 15–30% above your current average order value, so if your AOV is €38, test a threshold around €45. Then check the profit on an order just above it and measure the results."}},
-          {"@type": "Question", "name": "Should I offer free shipping on all orders instead?", "acceptedAnswer": {"@type": "Answer", "text": "Only if your prices cover the shipping cost on your smallest orders. Free shipping on everything is simple to explain, but small orders can lose money and it gives shoppers no reason to add more to their cart."}},
-          {"@type": "Question", "name": "How do I offer free shipping over a certain amount on Shopify?", "acceptedAnswer": {"@type": "Answer", "text": "In Settings, then Shipping and delivery, add a rate priced at 0 to your shipping zone with a minimum order price condition equal to your threshold. Keep a paid rate for smaller orders and place test orders to check what customers see."}},
-          {"@type": "Question", "name": "Can I set different thresholds for different countries?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Shipping rates are set per zone, so you can add a free rate with a different minimum order price in each zone, or leave free shipping out of zones where delivery is too expensive."}}
+          {
+            "@type": "Question",
+            "name": "What is a good free shipping threshold?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "There is no single right number. A practical starting point is roughly 15–30% above your current average order value, so if your AOV is €38, test a threshold around €45. Then check the profit on an order just above it and measure the results."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Should I offer free shipping on all orders instead?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Only if your prices cover the shipping cost on your smallest orders. Free shipping on everything is simple to explain, but small orders can lose money and it gives shoppers no reason to add more to their cart."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How do I offer free shipping over a certain amount on Shopify?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "In Settings, then Shipping and delivery, add a rate priced at 0 to your shipping zone with a minimum order price condition equal to your threshold. Keep a paid rate for smaller orders and place test orders to check what customers see."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I set different thresholds for different countries?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Shipping rates are set per zone, so you can add a free rate with a different minimum order price in each zone, or leave free shipping out of zones where delivery is too expensive."
+            }
+          }
         ]
       }
     ]
@@ -59,6 +122,7 @@
   </script>
 </head>
 <body>
+  <a class="skip" href="#main">Skip to content</a>
   <header>
     <div class="wrap nav">
       <a class="brand" href="/" aria-label="Shoply Apps home"><img src="/assets/shoply-apps-logo.svg" width="32" height="32" alt="">shoply apps</a>
@@ -70,7 +134,7 @@
     </div>
   </header>
 
-  <main>
+  <main id="main">
     <article class="post">
       <p class="crumbs"><a href="/">Home</a> / <a href="/blog/">Blog</a></p>
       <h1>How to set a free shipping threshold that protects your margin</h1>

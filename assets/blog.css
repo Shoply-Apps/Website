@@ -127,3 +127,12 @@ footer { border-top: 1px solid var(--line); padding: 28px 0; color: var(--muted)
   .app-tile { grid-template-columns: 1fr; gap: 12px; padding: 20px; }
   .app-icon { width: 60px; height: 60px; }
 }
+/* Keyboard users: jump past the header */
+.skip { position: absolute; left: -9999px; top: 8px; z-index: 100; background: #15223d; color: #fff; padding: 10px 16px; border-radius: 8px; font-weight: 600; }
+.skip:focus { left: 16px; }
+.apps-guides { max-width: 720px; margin: 40px auto 0; padding: 0 24px; }
+.apps-guides h2 { font-size: 22px; margin: 0 0 6px; }
+.apps-guides p { color: var(--muted); margin: 0 0 12px; }
+.apps-guides ul { margin: 0 0 14px; padding-left: 1.2em; }
+.apps-guides li { margin: 6px 0; }
+@media (max-width: 720px) { .apps-guides { padding: 0 16px; } }

@@ -11,3 +11,6 @@ cPanel clones this repo (Git Version Control, path `repositories/Website`). To p
 
 ## Working together
 Changes are committed and pushed straight to `main` (see `CLAUDE.md`).
+
+## Server rules
+`server-rules.htaccess` holds recommended Apache rules (404 page, https/non-www redirect, compression, caching). They are not deployed automatically: paste them at the top of `public_html/.htaccess` in cPanel File Manager.

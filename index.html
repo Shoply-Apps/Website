@@ -6,6 +6,10 @@
   <title>Shoply Apps · Simple Shopify apps for healthier stores</title>
   <meta name="description" content="Simple Shopify apps that work inside your admin. Shoply: Item Scan &amp; Analytics finds products costing you money, plus free guides for Shopify stores.">
   <link rel="icon" href="assets/shoply-apps-favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/assets/favicon-96.png" sizes="96x96" type="image/png">
+  <link rel="icon" href="/assets/favicon-48.png" sizes="48x48" type="image/png">
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
   <link rel="canonical" href="https://shoplyapps.com/">
   <link rel="alternate" type="application/rss+xml" title="Shoply Apps blog" href="https://shoplyapps.com/blog/feed.xml">
   <meta name="theme-color" content="#15223d">
@@ -170,6 +174,9 @@
     .btn-amber:hover { background: #ffb840; }
     .btn-ghost { background: transparent; color: #fff; border-color: rgba(255,255,255,.3); }
     .btn svg { width: 18px; height: 18px; }
+
+    .skip { position: absolute; left: -9999px; top: 8px; z-index: 100; background: #15223d; color: #fff; padding: 10px 16px; border-radius: 8px; font-weight: 600; }
+    .skip:focus { left: 16px; }
 
     /* Header */
     header { position: sticky; top: 0; z-index: 10; background: rgba(255,255,255,.92); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); border-bottom: 1px solid var(--line); }
@@ -379,6 +386,7 @@
   </style>
 </head>
 <body>
+  <a class="skip" href="#main">Skip to content</a>
   <!-- Icons used across the page -->
   <svg width="0" height="0" style="position:absolute" aria-hidden="true">
     <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></symbol>
@@ -399,7 +407,7 @@
     </div>
   </header>
 
-  <main>
+  <main id="main">
     <section class="hero">
       <div class="wrap hero-inner">
         <div class="hero-copy">

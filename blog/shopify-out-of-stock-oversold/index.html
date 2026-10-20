@@ -8,6 +8,10 @@
   <link rel="canonical" href="https://shoplyapps.com/blog/shopify-out-of-stock-oversold/">
   <link rel="alternate" type="application/rss+xml" title="Shoply Apps blog" href="https://shoplyapps.com/blog/feed.xml">
   <link rel="icon" href="/assets/shoply-apps-favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/assets/favicon-96.png" sizes="96x96" type="image/png">
+  <link rel="icon" href="/assets/favicon-48.png" sizes="48x48" type="image/png">
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
   <meta name="theme-color" content="#15223d">
   <meta property="og:type" content="article">
   <meta property="og:site_name" content="Shoply Apps">
@@ -19,7 +23,7 @@
   <meta property="og:image:height" content="630">
   <meta property="article:published_time" content="2026-10-20">
   <meta name="twitter:card" content="summary_large_image">
-  <link rel="stylesheet" href="/assets/blog.css?v=4">
+  <link rel="stylesheet" href="/assets/blog.css?v=5">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -34,24 +38,83 @@
         "mainEntityOfPage": "https://shoplyapps.com/blog/shopify-out-of-stock-oversold/",
         "image": "https://shoplyapps.com/assets/blog/shopify-out-of-stock-oversold.jpg",
         "inLanguage": "en",
-        "author": { "@type": "Organization", "@id": "https://shoplyapps.com/#org", "name": "Shoply Apps", "url": "https://shoplyapps.com/" },
-        "publisher": { "@id": "https://shoplyapps.com/#org" }
+        "author": {
+          "@type": "Organization",
+          "@id": "https://shoplyapps.com/#org",
+          "name": "Shoply Apps",
+          "url": "https://shoplyapps.com/"
+        },
+        "publisher": {
+          "@id": "https://shoplyapps.com/#org"
+        },
+        "articleSection": "Catalog health",
+        "wordCount": 1596,
+        "isPartOf": {
+          "@id": "https://shoplyapps.com/blog/#blog"
+        },
+        "about": {
+          "@type": "Thing",
+          "name": "Shopify"
+        }
       },
       {
         "@type": "BreadcrumbList",
         "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://shoplyapps.com/" },
-          { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://shoplyapps.com/blog/" },
-          { "@type": "ListItem", "position": 3, "name": "Out of stock and oversold", "item": "https://shoplyapps.com/blog/shopify-out-of-stock-oversold/" }
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://shoplyapps.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Blog",
+            "item": "https://shoplyapps.com/blog/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Out of stock and oversold",
+            "item": "https://shoplyapps.com/blog/shopify-out-of-stock-oversold/"
+          }
         ]
       },
       {
         "@type": "FAQPage",
         "mainEntity": [
-          {"@type": "Question", "name": "What does oversold mean on Shopify?", "acceptedAnswer": {"@type": "Answer", "text": "Oversold means a variant's available quantity has gone below zero: you have taken more orders than you have units. It usually happens when \"Continue selling when out of stock\" is on, or when stock counts in Shopify don't match what is on the shelf."}},
-          {"@type": "Question", "name": "Should I turn on \"Continue selling when out of stock\"?", "acceptedAnswer": {"@type": "Answer", "text": "Only for products you can deliver without stock on hand, such as pre-orders, made-to-order items or items your supplier ships quickly. For everything else, leave it off so the product shows as sold out instead of taking orders you can't fill."}},
-          {"@type": "Question", "name": "How do I know when to reorder a product?", "acceptedAnswer": {"@type": "Answer", "text": "Use a reorder point: average daily sales × supplier lead time in days + safety stock. When units on hand drop to that number, place the order. For example, 4 units a day × 14 days + 20 safety stock = reorder at 76 units."}},
-          {"@type": "Question", "name": "What counts as dead stock?", "acceptedAnswer": {"@type": "Answer", "text": "A common rule of thumb is any product with stock on hand that hasn't sold in 60 days. It ties up cash and shelf space, so discount it, bundle it, promote it or stop reordering it."}}
+          {
+            "@type": "Question",
+            "name": "What does oversold mean on Shopify?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Oversold means a variant's available quantity has gone below zero: you have taken more orders than you have units. It usually happens when \"Continue selling when out of stock\" is on, or when stock counts in Shopify don't match what is on the shelf."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Should I turn on \"Continue selling when out of stock\"?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Only for products you can deliver without stock on hand, such as pre-orders, made-to-order items or items your supplier ships quickly. For everything else, leave it off so the product shows as sold out instead of taking orders you can't fill."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How do I know when to reorder a product?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Use a reorder point: average daily sales × supplier lead time in days + safety stock. When units on hand drop to that number, place the order. For example, 4 units a day × 14 days + 20 safety stock = reorder at 76 units."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What counts as dead stock?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "A common rule of thumb is any product with stock on hand that hasn't sold in 60 days. It ties up cash and shelf space, so discount it, bundle it, promote it or stop reordering it."
+            }
+          }
         ]
       }
     ]
@@ -59,6 +122,7 @@
   </script>
 </head>
 <body>
+  <a class="skip" href="#main">Skip to content</a>
   <header>
     <div class="wrap nav">
       <a class="brand" href="/" aria-label="Shoply Apps home"><img src="/assets/shoply-apps-logo.svg" width="32" height="32" alt="">shoply apps</a>
@@ -70,7 +134,7 @@
     </div>
   </header>
 
-  <main>
+  <main id="main">
     <article class="post">
       <p class="crumbs"><a href="/">Home</a> / <a href="/blog/">Blog</a></p>
       <h1>Out of stock and oversold on Shopify: how to stop losing sales</h1>
