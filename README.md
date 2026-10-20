@@ -7,7 +7,7 @@ cPanel clones this repo (Git Version Control, path `repositories/Website`). To p
 1. In cPanel, open **Git Version Control → Manage → Pull or Deploy**.
 2. Click **Update from Remote**, then **Deploy HEAD Commit**.
 
-`.cpanel.yml` (still to add, once the site's folder is confirmed) tells cPanel which files to copy into the site's folder.
+`.cpanel.yml` tells cPanel which files to copy into `public_html` (the folder shoplyapps.com is served from). When you add a new file or folder to the site, add it to `.cpanel.yml` too.
 
 ## Working together
 Every change goes on its own branch and PR, never straight to `main`.
