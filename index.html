@@ -481,13 +481,13 @@
       function mode(m) { line.className = 'ly-line ' + m; }
       function type() {
         var w = words[i], n = text.textContent.length;
-        if (n < w.length) { mode('is-typing'); text.textContent = w.slice(0, n + 1); later(type, 45 + Math.random() * 45); return; }
-        if (i === last) { mode('is-final'); later(erase, 5500); } else { mode('is-waiting'); later(erase, 1000); }
+        if (n < w.length) { mode('is-typing'); text.textContent = w.slice(0, n + 1); later(type, 28 + Math.random() * 30); return; }
+        if (i === last) { mode('is-final'); later(erase, 4500); } else { mode('is-waiting'); later(erase, 650); }
       }
       function erase() {
         var t = text.textContent;
-        if (t) { mode('is-typing'); text.textContent = t.slice(0, -1); later(erase, 28); return; }
-        i = (i + 1) % words.length; mode('is-waiting'); later(type, 300);
+        if (t) { mode('is-typing'); text.textContent = t.slice(0, -1); later(erase, 16); return; }
+        i = (i + 1) % words.length; mode('is-waiting'); later(type, 150);
       }
       text.textContent = ''; mode('is-waiting'); pending = type;
       if (!visible) new IntersectionObserver(function (e) {
