@@ -45,10 +45,9 @@
       {
         "@type": "FAQPage",
         "mainEntity": [
-          {"@type": "Question", "name": "Where do I enter cost per item in Shopify?", "acceptedAnswer": {"@type": "Answer", "text": "Open the product in your Shopify admin and look in the pricing section of each variant. Enter what you paid for one unit in the cost per item field. Customers never see it, and Shopify uses it to show profit and margin."}},
+          {"@type": "Question", "name": "Where do I enter cost per item in Shopify?", "acceptedAnswer": {"@type": "Answer", "text": "In your Shopify admin, open the product and find the pricing section of each variant. Enter what you paid for one unit as the cost per item; customers never see it."}},
           {"@type": "Question", "name": "Is a 50% markup the same as a 50% margin?", "acceptedAnswer": {"@type": "Answer", "text": "No. A 50% markup on a $10 cost gives a $15 price, which is a 33.3% margin. To get a 50% margin you need a $20 price, because margin is profit divided by price, not by cost."}},
-          {"@type": "Question", "name": "What price do I need for a 40% margin?", "acceptedAnswer": {"@type": "Answer", "text": "Divide the cost by 0.6, which is 1 minus 0.40. A product that costs $15 needs a price of $25 for a 40% margin, before discounts, shipping and payment fees."}},
-          {"@type": "Question", "name": "Can a Shopify product be sold for $0?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. If a product's price is set to 0 and it is available, customers can add it to the cart and check out without paying for it, so check for zero prices regularly."}}
+          {"@type": "Question", "name": "What price do I need for a 40% margin?", "acceptedAnswer": {"@type": "Answer", "text": "Divide the cost by 0.6, which is 1 minus 0.40. A product that costs $15 needs a price of $25 for a 40% margin, before discounts, shipping and payment fees."}}
         ]
       }
     ]
@@ -72,145 +71,110 @@
     <article class="post">
       <p class="crumbs"><a href="/">Home</a> / <a href="/blog/">Blog</a></p>
       <h1>How to find Shopify products you're selling below cost (and fix them)</h1>
-      <p class="meta">By the Shoply Apps team · <time datetime="2026-10-20">20 October 2026</time> · 9 min read</p>
+      <p class="meta">By the Shoply Apps team · <time datetime="2026-10-20">20 October 2026</time> · 7 min read</p>
 
       <section class="tldr">
         <h2>Key takeaways</h2>
         <ul>
           <li>A product sells below cost when its price is lower than the cost per item you paid, so every sale loses money before shipping and fees.</li>
-          <li>Enter cost per item for every variant in your Shopify admin; once it is there, Shopify shows the profit and margin next to the price.</li>
+          <li>Enter cost per item for every variant; Shopify then shows profit and margin, and a CSV export lets you flag products below cost, at cost, at $0 or missing a cost.</li>
           <li>Margin is (price − cost) ÷ price and markup is (price − cost) ÷ cost, so a 40% markup gives only a 28.6% margin.</li>
-          <li>To find problems across your store, export products to CSV, add a margin column and flag rows below cost, at cost, at $0 or missing a cost.</li>
           <li>To hit a target margin, set price = cost ÷ (1 − target margin), then round up and recheck after discounts, shipping and fees.</li>
         </ul>
       </section>
 
-      <section class="tldr">
-        <h2>Key takeaways</h2>
-        <ul>
-          <li>Every Shopify product page needs a clear, unique product title, its own SEO title and meta description, a real description, alt text on every image, a product type and category, and a short, readable URL handle.</li>
-          <li>Keep SEO titles to roughly 50–60 characters and meta descriptions to roughly 150–160, because Google cuts off longer text by pixel width.</li>
-          <li>Write descriptions in your own words with a simple structure: who it is for, key benefits, specs, materials and size, then care and shipping.</li>
-          <li>Alt text should describe what is in the image in plain words, not repeat a list of keywords.</li>
-          <li>Specific facts, consistent product names and answers to common questions make your pages easier for both shoppers and AI search tools to understand and quote.</li>
-        </ul>
-      </section>
+      <p>A product sells below cost when its price is lower than what you paid for it, so every sale loses money before you even count shipping or fees. On Shopify this usually hides in plain sight: a cost that was never entered, a variant priced the same as a cheaper sibling, or a discount stacked on an already thin margin. This guide shows you how to find those products and fix them with a simple formula.</p>
 
-      <p>Product pages are where search traffic turns into sales, yet they are often the least finished part of a Shopify store. This checklist walks through each field on a product page, what good looks like, and the mistakes we see most often.</p>
+      <h2 id="what-is-cost-per-item">What is the cost per item field in Shopify, and why is it often empty?</h2>
+      <p>Cost per item is the amount you paid for one unit of a product variant, entered in the pricing section of the product in your Shopify admin. Customers never see it. It only exists so Shopify can work out your profit and margin.</p>
+      <p>It is often empty because the field is optional, products imported by CSV or from a supplier often arrive without it, and each variant has its own cost, so filling in one size does not fill in the others. Without a cost, Shopify cannot tell you whether a product makes money, and that is where losses go unnoticed.</p>
 
-      <h2 id="product-title">What makes a good Shopify product title?</h2>
-      <p>A good product title says exactly what the item is, in the words a shopper would search for, and is unique across your catalog.</p>
+      <h2 id="margin-vs-markup">What is the difference between margin and markup?</h2>
+      <p>Margin is profit as a share of the selling price; markup is profit as a share of the cost. They use the same profit figure but divide by different numbers, which is why a "50% markup" is not a 50% margin.</p>
+      <p class="formula">Profit = Price − Cost<br>Margin = (Price − Cost) ÷ Price<br>Markup = (Price − Cost) ÷ Cost</p>
+      <p>A worked example: you buy a mug for $12 and sell it for $20.</p>
       <ul>
-        <li><strong>Be specific.</strong> Include the product name plus the detail that sets it apart, such as material, size or model.</li>
-        <li><strong>Avoid duplicates.</strong> If five products are all called "Classic Mug", neither shoppers nor Google can tell them apart. Add the colour, size or design.</li>
-        <li><strong>Skip the clutter.</strong> No ALL CAPS, no "BEST SELLER!!!", no stacks of keywords.</li>
+        <li>Profit = $20 − $12 = $8</li>
+        <li>Margin = $8 ÷ $20 = 40%</li>
+        <li>Markup = $8 ÷ $12 = 66.7%</li>
       </ul>
-      <p>Example:</p>
+      <p>The common trap: if you want a 40% margin and simply add 40% to the cost, you get $12 × 1.4 = $16.80, a real margin of only 28.6%. Shopify shows margin, so this guide uses margin too.</p>
+
+      <h2 id="what-eats-margin">What eats into your margin besides the product cost?</h2>
+      <p>Discounts, shipping you pay for, and payment and transaction fees all come out of the same profit, so a product that looks healthy on its product page can lose money on a real order. The margin Shopify shows on the variant is based only on price and cost per item, not on these extras.</p>
+      <p>Here is the same $20 mug with $12 cost once real-world costs are added. The fee is an example of 3% + $0.30; check your own rate, which depends on your plan and payment provider.</p>
+      <table>
+        <thead>
+          <tr><th>Scenario</th><th>Customer pays</th><th>Costs</th><th>Profit</th><th>Margin</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>List price, no extras</td><td>$20.00</td><td>$12.00</td><td>$8.00</td><td>40%</td></tr>
+          <tr><td>Plus payment fee</td><td>$20.00</td><td>$12.90</td><td>$7.10</td><td>35.5%</td></tr>
+          <tr><td>Plus 20% discount code</td><td>$16.00</td><td>$12.78</td><td>$3.22</td><td>20.1%</td></tr>
+          <tr><td>Plus $5 of free shipping you pay for</td><td>$16.00</td><td>$17.78</td><td>−$1.78</td><td>−11.1%</td></tr>
+        </tbody>
+      </table>
+      <p>Four ordinary decisions turned a 40% product into a loss on every order. Other ways margin slips:</p>
       <ul>
-        <li>Before: <em>Mug</em></li>
-        <li>After: <em>Stoneware Coffee Mug, 350 ml, Speckled Sage</em></li>
+        <li><strong>Variants.</strong> A larger size often costs you more but gets the same price as the smallest one.</li>
+        <li><strong>Compare-at price.</strong> This is the crossed-out "was" price. If a sale ended but the lower price stayed, you are still discounting. A compare-at price equal to or lower than the price makes no sense to shoppers.</li>
+        <li><strong>Zero prices.</strong> A product saved at $0 by mistake can be checked out for free.</li>
       </ul>
 
-      <h2 id="seo-title-meta-description">How long should the SEO title and meta description be?</h2>
-      <p>Aim for roughly 50–60 characters for the SEO title and roughly 150–160 characters for the meta description. Google truncates by pixel width rather than an exact character count, so these are guides, not hard limits.</p>
-      <p>The <strong>SEO title</strong> (also called the page title) is the clickable blue headline in search results. The <strong>meta description</strong> is the short summary underneath. On Shopify you edit both in the product's search engine listing section, near the bottom of the product page in your admin. If you leave them empty, Shopify fills them in automatically, typically from the product title and the start of the description, which often reads awkwardly.</p>
-      <ul>
-        <li><strong>SEO title:</strong> put the most important words first, then add your store name if there is room. Example: <em>Stoneware Coffee Mug 350 ml, Speckled Sage | Fern &amp; Kiln</em>.</li>
-        <li><strong>Meta description:</strong> one or two sentences that say what it is and why someone should click. Example: <em>Handmade stoneware mug that holds 350 ml, with a speckled sage glaze. Dishwasher safe. Ships in 2 business days.</em></li>
-        <li><strong>Make each one unique.</strong> Copying the same description across a range of products wastes the space.</li>
-      </ul>
-      <p>Google sometimes rewrites titles and snippets, so you cannot fully control what appears, but a clear version gives it the best material.</p>
+      <h2 id="find-below-cost-products">How do you find products selling below cost in Shopify?</h2>
+      <p>The quickest manual method is to export your products to CSV, open the file in Excel or Google Sheets, and compare each variant's price with its cost per item. For one product at a time, open it in your Shopify admin and look at the variant's pricing section: once a cost is entered, Shopify shows the profit and margin right next to it.</p>
+      <h3>Step 1: export your products</h3>
+      <p>In your Shopify admin, go to Products and use the Export option to download a CSV of all products. The file has one row per variant, with columns for the price, the compare-at price and the cost per item.</p>
+      <h3>Step 2: add a margin column</h3>
+      <p>In a new column, calculate margin for each row: (price − cost) ÷ price. Leave rows where cost is blank alone for now; they need a different fix.</p>
+      <h3>Step 3: sort and flag</h3>
+      <p>Sort or filter the sheet into these groups:</p>
+      <table>
+        <thead>
+          <tr><th>Problem</th><th>How to spot it in the sheet</th><th>What to do</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Below cost</td><td>Price is lower than cost (negative margin)</td><td>Reprice now, or stop selling</td></tr>
+          <tr><td>At cost</td><td>Price equals cost (0% margin)</td><td>Reprice; you lose money once fees are paid</td></tr>
+          <tr><td>Free</td><td>Price is 0</td><td>Set a price, or make it unavailable</td></tr>
+          <tr><td>Below your target</td><td>Margin is under the number you set</td><td>Raise price, or renegotiate cost</td></tr>
+          <tr><td>Missing cost</td><td>Cost per item is blank</td><td>Fill in the cost first</td></tr>
+          <tr><td>Compare-at not higher</td><td>Compare-at price is equal to or lower than price</td><td>Raise it or clear it</td></tr>
+        </tbody>
+      </table>
+      <p>The product list in your admin can filter by things like vendor, product type or tag, which helps you work through one supplier at a time. Start with the missing costs: until they are filled in, you cannot know whether those products are profitable.</p>
 
-      <h2 id="product-description">Why do empty or very short product descriptions hurt?</h2>
-      <p>An empty or two-line description leaves shoppers without the details they need to buy, and gives search engines very little to understand what the page is about. Both lead to fewer sales from the same traffic.</p>
-      <p>You don't need long essays. A simple, repeatable structure works for most products:</p>
+      <h2 id="set-target-margin">How do you set a target margin and price to it?</h2>
+      <p>Pick the lowest margin you are willing to accept, then calculate the price that delivers it from the cost. The formula divides by what is left after the margin, not multiplies by the margin.</p>
+      <p class="formula">Price = Cost ÷ (1 − Target margin)</p>
+      <p>Back to the $12 mug, with a 45% target margin:</p>
+      <ul>
+        <li>Price = $12 ÷ (1 − 0.45) = $12 ÷ 0.55 = $21.82</li>
+        <li>Round up to a price that suits your store, such as $21.95 or $22.00.</li>
+        <li>Check: ($22 − $12) ÷ $22 = 45.5%. Target met.</li>
+      </ul>
+      <p>Leave room for the costs in the table above: if you often run 20% off or offer free shipping, your list-price margin must be high enough to survive them. If a product cannot reach your target at a price customers will pay, renegotiate the cost, bundle it or retire it.</p>
+      <p>To apply new prices, edit products one by one, use Shopify's bulk editor, or update the price column in your CSV and import it back. Test imports with a small file first and keep the original export so you can undo.</p>
+      <p>We are building a tool that does this for you. <strong>Shoply: Item Scan &amp; Analytics</strong>, coming soon to the Shopify App Store, flags products sold below cost, at cost, at $0, under your margin target or missing a cost, ranks them by what they cost you each month, and lets you raise prices to a target margin in bulk with a preview before anything changes.</p>
+
+      <h2 id="keep-it-fixed">How do you stop below-cost products coming back?</h2>
+      <p>Make cost part of every product you create, and check margins on a schedule. Below-cost prices creep back through new imports, supplier price rises and promotions that never end. A short routine:</p>
       <ol>
-        <li><strong>Who it is for:</strong> one sentence on the person or use case.</li>
-        <li><strong>Key benefits:</strong> two to four short points on why it is worth buying.</li>
-        <li><strong>Specs:</strong> dimensions, capacity, weight, compatibility.</li>
-        <li><strong>Materials and size:</strong> what it is made of, sizing notes or a fit guide.</li>
-        <li><strong>Care and shipping:</strong> how to wash or maintain it, and when it ships.</li>
+        <li><strong>When adding a product:</strong> enter the cost per item for every variant before you publish.</li>
+        <li><strong>When a supplier changes prices:</strong> update cost per item the same day and recheck the margin.</li>
+        <li><strong>Before a sale:</strong> work out the margin at the discounted price, including shipping you pay for.</li>
+        <li><strong>After a sale:</strong> reset prices and compare-at prices so the discount does not linger.</li>
+        <li><strong>Once a month:</strong> export products, recalculate margins and fix anything below cost, at cost, at $0 or missing a cost.</li>
       </ol>
-      <p>Avoid pasting the manufacturer's text word for word. The same paragraph is likely on many other stores, so your page has nothing of its own to offer. Rewrite it in your voice and add details only you know, such as how it fits or what customers ask about.</p>
-
-      <h2 id="image-alt-text">What should you write in image alt text?</h2>
-      <p>Alt text (alternative text) is a short written description of an image. Screen readers read it aloud to visually impaired shoppers, and search engines use it to understand the image. Describe what is actually in the picture, in plain words.</p>
-      <p>You can add alt text to each image in the product's media section in Shopify. Some good and bad examples:</p>
-      <table>
-        <thead>
-          <tr><th>Bad alt text</th><th>Good alt text</th></tr>
-        </thead>
-        <tbody>
-          <tr><td>(empty)</td><td>Speckled sage stoneware mug on a wooden table</td></tr>
-          <tr><td>IMG_4821.jpg</td><td>Side view of the mug showing the curved handle</td></tr>
-          <tr><td>mug coffee mug best mug ceramic mug buy mug</td><td>Mug filled with coffee next to a slice of cake, for scale</td></tr>
-        </tbody>
-      </table>
-      <p>Keep it to a sentence. Mention colour or variant when the image shows a specific one, and don't start with "Image of", since screen readers already announce that it is an image.</p>
-
-      <h2 id="product-type-category">What are product type and product category for?</h2>
-      <p>Product type and product category both organise your catalog, but they do different jobs.</p>
-      <ul>
-        <li><strong>Product type</strong> is a free-text label you choose, such as "Mug" or "Tote bag". It is handy for automated collections and storefront filters, so keep the spelling consistent ("Mug", not "Mugs" on some products and "mug" on others).</li>
-        <li><strong>Product category</strong> is picked from Shopify's standard list of categories. It helps Shopify and connected channels, such as Google, understand exactly what you sell. We cover this in more detail in <a href="/blog/google-shopping-product-data-shopify/">Google Shopping on Shopify: GTIN, brand and product category explained</a>.</li>
-      </ul>
-
-      <h2 id="url-handle">What is a good URL handle?</h2>
-      <p>The URL handle is the last part of a product's web address, for example <code>/products/stoneware-coffee-mug-sage</code>. A good handle is short, lowercase, uses hyphens between words and describes the product.</p>
-      <ul>
-        <li>Shopify creates the handle from the first title you type, so check it if you renamed the product later.</li>
-        <li>Remove filler such as "copy-of" or random numbers left over from duplicating products.</li>
-        <li>Change handles on established products only when needed. When you edit one, Shopify offers to create a redirect from the old address; keep that option on so old links and search results still work.</li>
-      </ul>
-
-      <h2 id="ai-search">How do you make product pages easy for AI search tools to quote?</h2>
-      <p>AI search tools such as ChatGPT, Perplexity and Google AI Overviews pull answers from pages that state clear, specific facts. The same habits that help shoppers help these tools understand and quote your products.</p>
-      <ul>
-        <li><strong>Use specific facts.</strong> "Holds 350 ml, 9.5 cm tall, dishwasher and microwave safe" is easier to quote than "perfect size for your morning brew".</li>
-        <li><strong>Keep names consistent.</strong> Use the same product name in the title, description, image alt text and SEO title. Switching between "sage mug", "green cup" and "Fern mug" makes it harder to tell they are one product.</li>
-        <li><strong>Answer common questions on the page.</strong> If customers often ask whether it fits a car cup holder or how long shipping takes, add a short question-and-answer section to the description.</li>
-        <li><strong>Make it readable as text.</strong> Important details like sizes and materials should be written out, not only shown inside an image.</li>
-      </ul>
-      <p>There is no guarantee any tool will quote a given page, but clear, factual content gives you the best chance.</p>
-
-      <h2 id="checklist-table">Product page SEO checklist at a glance</h2>
-      <p>Use this as a quick check before you publish a product.</p>
-      <table>
-        <thead>
-          <tr><th>Field</th><th>What good looks like</th><th>Common mistake</th></tr>
-        </thead>
-        <tbody>
-          <tr><td>Product title</td><td>Specific and unique: name plus the detail that sets it apart</td><td>Same title on several products, or keyword stuffing</td></tr>
-          <tr><td>SEO title</td><td>Roughly 50–60 characters, key words first</td><td>Left on default or far too long, so it gets cut off</td></tr>
-          <tr><td>Meta description</td><td>Roughly 150–160 characters, says what it is and why to click</td><td>Empty, or identical across many products</td></tr>
-          <tr><td>Description</td><td>Who it is for, benefits, specs, materials and size, care and shipping</td><td>Empty, one line, or copied from the manufacturer</td></tr>
-          <tr><td>Image alt text</td><td>One plain sentence describing the image</td><td>Missing, a file name, or a list of keywords</td></tr>
-          <tr><td>Product type</td><td>Consistent label used across similar products</td><td>Blank, or spelled differently on each product</td></tr>
-          <tr><td>Product category</td><td>The most specific matching category from Shopify's list</td><td>Not set at all</td></tr>
-          <tr><td>URL handle</td><td>Short, lowercase, hyphenated, descriptive</td><td>"copy-of-" prefixes or random numbers</td></tr>
-        </tbody>
-      </table>
-      <p>Checking this by hand works for a small catalog. Once you have hundreds of products, it is easy to miss gaps. Our upcoming app, Shoply: Item Scan &amp; Analytics, will flag issues like missing descriptions, images without alt text, missing SEO descriptions, SEO titles that are too long, duplicate titles and missing product types or categories across your whole catalog. It is also worth adding these checks to a regular routine, like the one in our <a href="/blog/shopify-catalog-health-checklist/">monthly catalog health checklist</a>.</p>
-
-      <h2 id="faq">FAQ</h2>
-      <h3>Does Shopify fill in the SEO title and meta description automatically?</h3>
-      <p>Yes. If you leave them empty, Shopify typically uses the product title and the start of the product description. Writing your own usually gives a clearer, better-fitting result in search.</p>
-      <h3>How long should a Shopify product description be?</h3>
-      <p>There is no fixed length. Aim for enough to cover who it is for, key benefits, specs, materials and size, and care and shipping. For most products that is a few short paragraphs or a short paragraph plus a list.</p>
-      <h3>Can I use the manufacturer's product description?</h3>
-      <p>You can use it as a source of facts, but rewrite it in your own words. Copied text appears on many other sites, so it does little to help your page stand out to shoppers or search engines.</p>
-      <h3>Should I change URL handles on existing products?</h3>
-      <p>Only when the current handle is clearly wrong or messy. When you do, keep Shopify's redirect option on so links and search results pointing to the old address still work.</p>
+      <p>For a broader monthly routine that also covers stock and product content, see our <a href="/blog/shopify-catalog-health-checklist/">Shopify catalog health checklist</a>.</p>
 
       <h2 id="faq">FAQ</h2>
       <h3>Where do I enter cost per item in Shopify?</h3>
-      <p>Open the product in your Shopify admin and look in the pricing section of each variant. Enter what you paid for one unit in the cost per item field. Customers never see it, and Shopify uses it to show profit and margin.</p>
+      <p>In your Shopify admin, open the product and find the pricing section of each variant. Enter what you paid for one unit as the cost per item; customers never see it.</p>
       <h3>Is a 50% markup the same as a 50% margin?</h3>
       <p>No. A 50% markup on a $10 cost gives a $15 price, which is a 33.3% margin. To get a 50% margin you need a $20 price, because margin is profit divided by price, not by cost.</p>
       <h3>What price do I need for a 40% margin?</h3>
       <p>Divide the cost by 0.6, which is 1 minus 0.40. A product that costs $15 needs a price of $25 for a 40% margin, before discounts, shipping and payment fees.</p>
-      <h3>Can a Shopify product be sold for $0?</h3>
-      <p>Yes. If a product's price is set to 0 and it is available, customers can add it to the cart and check out without paying for it, so check for zero prices regularly.</p>
 
       <section class="post-cta">
         <h2>Find every product you sell at a loss</h2>

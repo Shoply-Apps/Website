@@ -348,6 +348,8 @@
       .nav { gap: 12px; }
       .nav ul li:not(.keep) { display: none; }
       .nav ul a { padding: 8px 10px; }
+      .brand, .nav .btn { white-space: nowrap; }
+      .nav .btn { padding: 9px 14px; font-size: 14px; }
       section { padding: 52px 0; }
       .ly { padding: 22px 0 6px; }
       .ly + section { padding-top: 26px; }
@@ -363,6 +365,7 @@
       .shelf-row img, .shelf-row i { width: 40px; height: 40px; }
       .cta-box { padding: 28px 24px; }
     }
+    @media (max-width: 379px) { .nav .btn { display: none; } .nav ul { margin-left: auto; } }
     @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .btn { transition: none; } .scan-line { animation: none; } .ly-line, .ly-line *, .ly-line::after, .ly-caret::before { transition: none !important; animation: none !important; } }
   </style>
 </head>
