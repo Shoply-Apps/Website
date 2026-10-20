@@ -25,150 +25,141 @@
     body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--sans); font-size: 16px; line-height: 1.6; -webkit-text-size-adjust: 100%; }
     a { color: inherit; }
     img, svg { display: block; max-width: 100%; }
-    .wrap { max-width: 1160px; margin: 0 auto; padding: 0 24px; }
+    .wrap { max-width: 1120px; margin: 0 auto; padding: 0 24px; }
     h1, h2, h3 { line-height: 1.15; margin: 0; }
-    h2 { font-weight: 800; font-size: clamp(28px, 4vw, 40px); letter-spacing: -0.025em; }
-    .lead { color: var(--muted); font-size: 18px; max-width: 40em; }
-    .eyebrow { color: #b36b00; font-weight: 700; font-size: 13px; letter-spacing: .08em; text-transform: uppercase; margin: 0 0 12px; }
-    section { padding: 88px 0; scroll-margin-top: 68px; }
+    h2 { font-weight: 800; font-size: clamp(26px, 3.4vw, 36px); letter-spacing: -0.025em; }
+    .lead { color: var(--muted); font-size: 17px; max-width: 38em; margin: 12px 0 0; }
+    .eyebrow { color: #b36b00; font-weight: 700; font-size: 13px; letter-spacing: .08em; text-transform: uppercase; margin: 0 0 10px; }
+    section { padding: 72px 0; scroll-margin-top: 64px; }
     .center { text-align: center; }
     .center .lead { margin-left: auto; margin-right: auto; }
 
     /* Buttons */
-    .btn { display: inline-flex; align-items: center; gap: 10px; padding: 14px 24px; border-radius: 999px; font-weight: 600; text-decoration: none; border: 1.5px solid transparent; transition: transform .15s ease, background .15s ease; }
+    .btn { display: inline-flex; align-items: center; gap: 10px; padding: 13px 22px; border-radius: 999px; font-weight: 600; text-decoration: none; border: 1.5px solid transparent; transition: transform .15s ease, background .15s ease; }
     .btn:hover { transform: translateY(-1px); }
     .btn-dark { background: var(--navy); color: #fff; }
     .btn-dark:hover { background: var(--navy-2); }
-    .btn-ghost { border-color: var(--line); color: var(--ink); background: #fff; }
     .btn-amber { background: var(--amber); color: var(--navy); }
+    .btn-amber:hover { background: #ffb840; }
+    .btn-ghost { background: transparent; color: #fff; border-color: rgba(255,255,255,.3); }
     .btn svg { width: 18px; height: 18px; }
 
     /* Header */
     header { position: sticky; top: 0; z-index: 10; background: rgba(255,255,255,.92); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); border-bottom: 1px solid var(--line); }
-    .nav { display: flex; align-items: center; gap: 32px; height: 68px; }
+    .nav { display: flex; align-items: center; gap: 32px; height: 64px; }
     .brand { display: flex; align-items: center; gap: 10px; font-weight: 800; font-size: 21px; letter-spacing: -0.02em; text-decoration: none; }
     .brand img { width: 32px; height: 32px; }
     .nav ul { display: flex; gap: 28px; list-style: none; margin: 0; padding: 0; color: var(--muted); font-size: 15px; }
     .nav ul a { text-decoration: none; }
     .nav ul a:hover { color: var(--ink); }
-    .nav .btn { margin-left: auto; padding: 10px 18px; font-size: 15px; }
+    .nav .btn { margin-left: auto; padding: 9px 18px; font-size: 15px; }
 
-    /* Hero: navy, centred, with the app drawing inside amber scan corners (the logo's motif) */
-    .hero { padding: 0; color: #fff; background: radial-gradient(1200px 500px at 50% -10%, #2c4374 0%, var(--navy) 60%); position: relative; overflow: hidden; }
+    /* Hero: navy, centred, with the app drawing inside amber scan corners */
+    .hero { padding: 0; color: #fff; background: radial-gradient(1100px 460px at 50% -10%, #2c4374 0%, var(--navy) 60%); position: relative; overflow: hidden; }
     .hero::before { content: ""; position: absolute; inset: 0; background-image: linear-gradient(rgba(255,255,255,.04) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.04) 1px, transparent 1px); background-size: 40px 40px; mask-image: linear-gradient(#000 40%, transparent); -webkit-mask-image: linear-gradient(#000 40%, transparent); }
-    .hero-inner { position: relative; text-align: center; padding: 80px 0 0; }
-    .pill { display: inline-flex; align-items: center; gap: 8px; padding: 6px 14px 6px 6px; border: 1px solid rgba(255,255,255,.18); border-radius: 999px; font-size: 14px; color: #c9d1e1; text-decoration: none; margin-bottom: 28px; background: rgba(255,255,255,.05); }
+    .hero-inner { position: relative; text-align: center; padding: 56px 0 0; }
+    .pill { display: inline-flex; align-items: center; gap: 8px; padding: 5px 14px 5px 5px; border: 1px solid rgba(255,255,255,.18); border-radius: 999px; font-size: 14px; color: #c9d1e1; text-decoration: none; margin-bottom: 22px; background: rgba(255,255,255,.05); }
     .pill b { background: var(--amber); color: var(--navy); border-radius: 999px; padding: 2px 10px; font-size: 12px; letter-spacing: .04em; }
-    .hero h1 { font-weight: 800; font-size: clamp(38px, 6vw, 68px); letter-spacing: -0.035em; max-width: 14em; margin: 0 auto; }
+    .hero h1 { font-weight: 800; font-size: clamp(34px, 5vw, 56px); letter-spacing: -0.035em; max-width: 14em; margin: 0 auto; }
     .hero h1 em { font-style: normal; color: var(--amber); }
-    .hero .lead { color: #c9d1e1; margin: 22px auto 34px; }
+    .hero .lead { color: #c9d1e1; margin: 18px auto 28px; }
     .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
-    .hero .btn-ghost { background: transparent; color: #fff; border-color: rgba(255,255,255,.3); }
-    .hero .btn-amber:hover { background: #ffb840; }
-    .scan { position: relative; max-width: 760px; margin: 64px auto -1px; padding: 28px 28px 0; }
-    .scan i { position: absolute; width: 56px; height: 56px; border: 0 solid var(--amber); }
-    .scan i:nth-child(1) { top: 0; left: 0; border-width: 6px 0 0 6px; border-top-left-radius: 14px; }
-    .scan i:nth-child(2) { top: 0; right: 0; border-width: 6px 6px 0 0; border-top-right-radius: 14px; }
-    .scan-line { position: absolute; left: 28px; right: 28px; height: 3px; background: linear-gradient(90deg, transparent, var(--amber), transparent); top: 28px; opacity: .9; animation: sweep 4s ease-in-out infinite; z-index: 1; }
-    @keyframes sweep { 0%, 100% { top: 40px; } 50% { top: calc(100% - 30px); } }
-    .scan svg { width: 100%; height: auto; border-radius: 20px 20px 0 0; box-shadow: 0 -10px 60px rgba(0,0,0,.35); }
+    .scan { position: relative; max-width: 520px; margin: 44px auto -1px; padding: 22px 22px 0; }
+    .scan i { position: absolute; width: 44px; height: 44px; border: 0 solid var(--amber); }
+    .scan i:nth-child(1) { top: 0; left: 0; border-width: 5px 0 0 5px; border-top-left-radius: 12px; }
+    .scan i:nth-child(2) { top: 0; right: 0; border-width: 5px 5px 0 0; border-top-right-radius: 12px; }
+    .scan-line { position: absolute; left: 22px; right: 22px; height: 3px; background: linear-gradient(90deg, transparent, var(--amber), transparent); top: 22px; opacity: .9; animation: sweep 4s ease-in-out infinite; z-index: 1; }
+    @keyframes sweep { 0%, 100% { top: 34px; } 50% { top: calc(100% - 24px); } }
+    .scan svg { width: 100%; height: auto; border-radius: 18px 18px 0 0; box-shadow: 0 -10px 60px rgba(0,0,0,.35); }
 
-    /* Trust strip */
-    .strip { padding: 28px 0; border-bottom: 1px solid var(--line); }
-    .strip ul { display: flex; flex-wrap: wrap; justify-content: center; gap: 14px 40px; list-style: none; margin: 0 auto; color: var(--muted); font-size: 15px; }
+    /* Key points */
+    .strip { padding: 22px 0; border-bottom: 1px solid var(--line); }
+    .strip ul { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px 36px; list-style: none; margin: 0 auto; color: var(--muted); font-size: 15px; }
     .strip li { display: flex; align-items: center; gap: 8px; }
     .strip svg { width: 18px; height: 18px; color: var(--green); flex: none; }
 
-    /* Facts */
-    .facts { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 48px; }
-    .fact { padding: 32px; border-radius: 20px; background: var(--bg-soft); border-top: 5px solid var(--amber); text-align: left; }
-    .fact strong { display: block; font-size: 44px; font-weight: 800; letter-spacing: -0.03em; color: var(--navy); line-height: 1; margin-bottom: 12px; }
-    .fact span { color: var(--muted); }
-
-    /* Apps */
-    .apps { background: var(--bg-soft); }
-    .apps-grid { display: grid; grid-template-columns: 2fr 1fr; gap: 24px; margin-top: 48px; }
-    .app-card { background: #fff; border: 1px solid var(--line); border-radius: 24px; padding: 36px; display: grid; grid-template-columns: auto 1fr; gap: 24px; }
-    .app-card > img { width: 88px; height: 88px; border-radius: 20px; }
-    .app-card h3 { font-size: 24px; margin-bottom: 4px; }
-    .badge { display: inline-block; font-size: 12px; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; color: #9a5b00; background: var(--amber-soft); padding: 4px 10px; border-radius: 999px; margin-bottom: 12px; }
-    .app-card p { color: var(--muted); margin: 8px 0 18px; }
-    .ticks { list-style: none; margin: 0 0 24px; padding: 0; display: grid; gap: 8px; }
-    .ticks li { display: flex; gap: 10px; align-items: flex-start; }
-    .ticks svg { width: 20px; height: 20px; color: var(--green); flex: none; margin-top: 3px; }
-    .next-card { border: 2px dashed #cfd4de; border-radius: 24px; padding: 36px; display: flex; flex-direction: column; justify-content: center; color: var(--muted); }
-    .next-card h3 { color: var(--ink); font-size: 20px; margin-bottom: 8px; }
-    .next-card a { color: var(--navy); font-weight: 600; }
-
-    /* Features */
-    .groups { display: grid; gap: 56px; margin-top: 56px; }
-    .group-head { display: flex; gap: 16px; align-items: center; margin-bottom: 24px; }
-    .group-icon { width: 48px; height: 48px; border-radius: 14px; background: var(--navy); color: var(--amber); display: grid; place-items: center; flex: none; }
-    .group-icon svg { width: 26px; height: 26px; }
-    .group-head h3 { font-size: 22px; }
-    .group-head p { margin: 2px 0 0; color: var(--muted); }
-    .cards { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
-    .card { border: 1px solid var(--line); border-radius: 18px; padding: 24px; background: #fff; }
-    .card h4 { margin: 0 0 8px; font-size: 17px; }
-    .card p { margin: 0; color: var(--muted); font-size: 15px; }
-
-    /* Steps */
-    .how { background: var(--navy); color: #fff; }
-    .how .eyebrow { color: var(--amber); }
-    .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 48px; counter-reset: step; text-align: left; }
-    .step { background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.12); border-radius: 20px; padding: 32px; }
-    .step::before { counter-increment: step; content: counter(step); display: grid; place-items: center; width: 44px; height: 44px; border-radius: 50%; background: var(--amber); color: var(--navy); font-weight: 800; font-size: 20px; margin-bottom: 20px; }
-    .step h3 { font-size: 20px; margin-bottom: 8px; }
-    .step p { margin: 0; color: #c9d1e1; }
-
-    /* Promise */
-    .promise { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; }
-    .promise-list { display: grid; gap: 16px; }
-    .promise-item { display: flex; gap: 16px; padding: 20px 24px; border-radius: 18px; background: var(--bg-soft); }
-    .promise-item svg { width: 26px; height: 26px; color: var(--navy); flex: none; margin-top: 2px; }
-    .promise-item h3 { font-size: 17px; margin-bottom: 4px; }
-    .promise-item p { margin: 0; color: var(--muted); font-size: 15px; }
+    /* App section, styled like a page inside the app (Shopify admin look) */
+    .app { background: #f1f1f1; color: #303030; }
+    .app-head { display: grid; grid-template-columns: auto 1fr auto; gap: 20px; align-items: center; }
+    .app-head > img { width: 64px; height: 64px; border-radius: 16px; }
+    .badge { display: inline-block; font-size: 12px; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; color: #9a5b00; background: var(--amber-soft); padding: 3px 10px; border-radius: 999px; margin-bottom: 6px; }
+    .app-head h2 { color: #1a1a1a; }
+    .app-head .lead { margin-top: 4px; color: #616161; font-size: 16px; }
+    .app-label { display: block; color: #616161; font-size: 12px; font-weight: 650; letter-spacing: .06em; text-transform: uppercase; margin: 32px 0 12px; }
+    .p-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .p-card { background: #fff; border-radius: 12px; padding: 18px; box-shadow: 0 1px 0 rgba(26,26,26,.07), 0 1px 3px rgba(26,26,26,.12); }
+    .p-card h3 { font-size: 16px; color: #303030; margin: 10px 0 4px; }
+    .p-card > p { margin: 0 0 12px; color: #616161; font-size: 14px; line-height: 1.5; }
+    .pill-cat { display: inline-flex; align-items: center; gap: 6px; border-radius: 999px; font-size: 12px; font-weight: 600; line-height: 18px; padding: 2px 10px; border: 1px solid; }
+    .pill-cat::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: currentColor; }
+    .cat-pricing { background: #e3eefb; color: #184f95; border-color: #b7d3f6; }
+    .cat-stock { background: #fdebe2; color: #9a3a12; border-color: #f6c3aa; }
+    .cat-content { background: #dff5ec; color: #0b6346; border-color: #a9e2cb; }
+    .chips { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 6px; }
+    .chips li { font-size: 13px; line-height: 18px; color: #303030; background: #f7f7f7; border: 1px solid #e3e3e3; border-radius: 8px; padding: 3px 8px; }
+    .p-card ul.feat { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+    .feat li { font-size: 14px; line-height: 1.45; color: #616161; display: grid; grid-template-columns: 22px 1fr; gap: 8px; }
+    .feat li::before { content: attr(data-s); display: grid; place-items: center; width: 22px; height: 22px; border-radius: 6px; background: #f1f1f1; color: #303030; font-size: 12px; font-weight: 700; }
+    .feat b { color: #303030; font-weight: 650; }
+    .p-head { display: flex; align-items: center; gap: 10px; }
+    .p-head span { display: grid; place-items: center; width: 32px; height: 32px; border-radius: 9px; background: #0b6346; color: #fff; flex: none; }
+    .p-head span svg { width: 18px; height: 18px; }
+    .p-head h3 { margin: 0; }
+    .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; counter-reset: step; scroll-margin-top: 80px; }
+    .step { display: grid; grid-template-columns: auto 1fr; gap: 2px 12px; align-items: center; }
+    .step::before { counter-increment: step; content: counter(step); grid-row: span 2; align-self: start; display: grid; place-items: center; width: 26px; height: 26px; border-radius: 50%; background: #0b6346; color: #fff; font-size: 13px; font-weight: 700; }
+    .step h3 { margin: 0; }
+    .step p { margin: 0; color: #616161; font-size: 14px; line-height: 1.5; }
+    .more { margin: 24px 0 0; color: #616161; font-size: 15px; text-align: center; }
+    .more a { color: var(--navy); font-weight: 600; }
 
     /* FAQ */
-    .faq { background: var(--bg-soft); }
-    .faq-list { max-width: 780px; margin: 48px auto 0; display: grid; gap: 12px; }
-    details { background: #fff; border: 1px solid var(--line); border-radius: 16px; padding: 0 24px; }
-    summary { cursor: pointer; list-style: none; padding: 20px 0; font-weight: 600; font-size: 17px; display: flex; justify-content: space-between; gap: 16px; }
+    .faq { display: grid; grid-template-columns: 1fr 1.6fr; gap: 48px; align-items: start; }
+    .faq-list { display: grid; gap: 10px; }
+    details { background: var(--bg-soft); border-radius: 14px; padding: 0 20px; }
+    summary { cursor: pointer; list-style: none; padding: 16px 0; font-weight: 600; display: flex; justify-content: space-between; gap: 16px; }
     summary::-webkit-details-marker { display: none; }
-    summary::after { content: "+"; font-size: 24px; line-height: 1; color: var(--muted); }
+    summary::after { content: "+"; font-size: 22px; line-height: 1; color: var(--muted); }
     details[open] summary::after { content: "−"; }
-    details p { margin: 0 0 20px; color: var(--muted); }
-    details a { color: var(--navy); }
+    details p { margin: 0 0 16px; color: var(--muted); font-size: 15px; }
+    details a, .faq-side a { color: var(--navy); }
 
     /* CTA */
-    .cta-box { background: var(--navy); color: #fff; border-radius: 32px; padding: 64px 48px; text-align: center; position: relative; overflow: hidden; }
-    .cta-box::before { content: ""; position: absolute; width: 360px; height: 360px; border-radius: 50%; border: 48px solid rgba(245,166,35,.14); left: -120px; bottom: -200px; }
+    .cta-box { background: var(--navy); color: #fff; border-radius: 24px; padding: 36px 40px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 20px 32px; position: relative; overflow: hidden; }
+    .cta-box::before { content: ""; position: absolute; width: 280px; height: 280px; border-radius: 50%; border: 40px solid rgba(245,166,35,.14); right: -90px; top: -150px; }
     .cta-box > * { position: relative; }
-    .cta-box p { color: #c9d1e1; font-size: 18px; margin: 16px auto 32px; max-width: 34em; }
+    .cta-box h2 { font-size: clamp(22px, 2.6vw, 28px); }
+    .cta-box p { color: #c9d1e1; margin: 6px 0 0; }
+    .cta { padding-top: 0; }
 
     /* Footer */
-    footer { border-top: 1px solid var(--line); padding: 48px 0; color: var(--muted); font-size: 15px; }
-    .foot { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 32px; }
-    .foot .brand { color: var(--ink); }
-    .foot ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 12px 28px; }
+    footer { border-top: 1px solid var(--line); padding: 28px 0; color: var(--muted); font-size: 14px; }
+    .foot { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px 32px; }
+    .foot .brand { color: var(--ink); font-size: 18px; }
+    .foot .brand img { width: 26px; height: 26px; }
+    .foot ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px 24px; }
     .foot a { text-decoration: none; }
     .foot ul a:hover { color: var(--ink); }
-    .fine { margin-top: 32px; font-size: 13px; }
+    .fine { margin: 16px 0 0; font-size: 13px; }
 
-    @media (max-width: 960px) {
-      .promise, .apps-grid { grid-template-columns: 1fr; }
-      .hero-inner { padding-top: 56px; }
-      .cards { grid-template-columns: repeat(2, 1fr); }
-      .steps, .facts { grid-template-columns: 1fr; }
+    @media (max-width: 900px) {
+      .p-grid, .steps { grid-template-columns: 1fr; }
+      .faq { grid-template-columns: 1fr; gap: 24px; }
+      .app-head { grid-template-columns: auto 1fr; }
+      .app-head .btn { grid-column: 1 / -1; justify-self: start; }
     }
     @media (max-width: 720px) {
       .wrap { padding: 0 16px; }
-      .scan { padding: 16px 12px 0; margin-top: 44px; } .scan i { width: 36px; height: 36px; border-width: 4px !important; border-bottom-width: 0 !important; } .scan i:nth-child(1) { border-right-width: 0 !important; } .scan i:nth-child(2) { border-left-width: 0 !important; } .scan-line { left: 12px; right: 12px; }
       .nav ul { display: none; }
-      section { padding: 64px 0; }
-      .cards { grid-template-columns: 1fr; }
-      .app-card { grid-template-columns: 1fr; padding: 28px; }
-      .cta-box { padding: 48px 24px; border-radius: 24px; }
+      section { padding: 52px 0; }
+      .hero-inner { padding-top: 40px; }
+      .scan { padding: 14px 10px 0; margin-top: 32px; }
+      .scan i { width: 30px; height: 30px; border-width: 4px 0 0 4px !important; }
+      .scan i:nth-child(2) { border-width: 4px 4px 0 0 !important; }
+      .scan-line { left: 10px; right: 10px; }
+      .app-head { grid-template-columns: 1fr; gap: 14px; }
+      .app-head > img { width: 60px; height: 60px; }
+      .cta-box { padding: 28px 24px; }
     }
     @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .btn { transition: none; } .scan-line { animation: none; } }
   </style>
@@ -180,33 +171,28 @@
     <symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
     <symbol id="i-search" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="10.5" cy="10.5" r="6"/><path d="M15 15l5 5"/></symbol>
     <symbol id="i-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="12" cy="12" r="8"/><path d="M12 7.5V12l3 2"/></symbol>
-    <symbol id="i-eye" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></symbol>
-    <symbol id="i-undo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 14L4 9l5-5"/><path d="M4 9h11a5 5 0 010 10h-3"/></symbol>
-    <symbol id="i-lock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 018 0v4"/></symbol>
-    <symbol id="i-gift" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="5" rx="1"/><path d="M5 13v8h14v-8M12 8v13M12 8S10.5 3 8 4.5 9.5 8 12 8zm0 0s1.5-5 4-3.5S14.5 8 12 8z"/></symbol>
   </svg>
 
   <header>
     <div class="wrap nav">
       <a class="brand" href="#top" aria-label="Shoply Apps home"><img src="assets/shoply-apps-logo.svg" alt="">shoply apps</a>
       <ul>
-        <li><a href="#apps">Apps</a></li>
-        <li><a href="#features">Features</a></li>
+        <li><a href="#app">Our app</a></li>
         <li><a href="#how">How it works</a></li>
         <li><a href="#faq">FAQ</a></li>
       </ul>
-      <a class="btn btn-dark" href="#apps">Explore apps</a>
+      <a class="btn btn-dark" href="#app">Explore apps</a>
     </div>
   </header>
 
   <main id="top">
     <section class="hero">
       <div class="wrap hero-inner">
-        <a class="pill" href="#apps"><b>NEW</b> Meet our first app, Shoply: Item Scan &amp; Analytics →</a>
+        <a class="pill" href="#app"><b>NEW</b> Meet our first app, Shoply: Item Scan &amp; Analytics →</a>
         <h1>Find the products quietly <em>costing you money</em></h1>
-        <p class="lead">Shoply Apps builds simple Shopify apps that check your store for you. Shoply: Item Scan &amp; Analytics scans every product and shows what to fix first: prices below cost, stock gaps and weak product pages.</p>
+        <p class="lead">Shoply Apps builds simple Shopify apps that check your store for you. Our first app scans every product and shows what to fix first: prices below cost, stock gaps and weak product pages.</p>
         <div class="hero-actions">
-          <a class="btn btn-amber" href="#apps">Explore apps <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          <a class="btn btn-amber" href="#app">Explore apps <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
           <a class="btn btn-ghost" href="#how">How it works</a>
         </div>
         <div class="scan">
@@ -252,141 +238,104 @@
     <div class="strip">
       <ul class="wrap">
         <li><svg aria-hidden="true"><use href="#i-check"/></svg>Built only on Shopify's own tools</li>
-        <li><svg aria-hidden="true"><use href="#i-check"/></svg>No outside services, no API keys</li>
-        <li><svg aria-hidden="true"><use href="#i-check"/></svg>Free, every feature included</li>
+        <li><svg aria-hidden="true"><use href="#i-check"/></svg>Scanning changes nothing</li>
         <li><svg aria-hidden="true"><use href="#i-check"/></svg>Every change can be undone</li>
+        <li><svg aria-hidden="true"><use href="#i-check"/></svg>Free, every feature included</li>
       </ul>
     </div>
 
-    <section>
-      <div class="wrap center">
-        <p class="eyebrow">Why Shoply Apps</p>
-        <h2>Stop losing money to problems you can't see</h2>
-        <p class="lead" style="margin-top:16px">A product priced below cost, a bestseller about to sell out, a page with no description. Each one is easy to miss in a big catalog, and each one costs you sales. Our apps find them for you.</p>
-        <div class="facts">
-          <div class="fact"><strong>1 scan</strong><span>checks every product in your catalog, and only reads it</span></div>
-          <div class="fact"><strong>0</strong><span>changes to your store without your OK, and you check each one first</span></div>
-          <div class="fact"><strong>€0</strong><span>to install. Every feature included, no paid plans</span></div>
-        </div>
-      </div>
-    </section>
-
-    <section class="apps" id="apps">
+    <section class="app" id="app">
       <div class="wrap">
-        <div class="center">
-          <p class="eyebrow">Our apps</p>
-          <h2>Apps that look after your catalog</h2>
+        <div class="app-head">
+          <img src="assets/logo.svg" alt="Shoply: Item Scan &amp; Analytics icon">
+          <div>
+            <span class="badge">Coming soon to the Shopify App Store</span>
+            <h2>Shoply: Item Scan &amp; Analytics</h2>
+            <p class="lead">Scans your whole catalog, ranks every problem by what it costs you, and helps you fix it in a click or in bulk.</p>
+          </div>
+          <a class="btn btn-dark" href="mailto:info@shoplyapps.com?subject=Notify%20me%20when%20Shoply%3A%20Item%20Scan%20%26%20Analytics%20is%20live">Notify me <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
         </div>
-        <div class="apps-grid">
-          <article class="app-card">
-            <img src="assets/logo.svg" alt="Shoply: Item Scan &amp; Analytics icon">
-            <div>
-              <span class="badge">Coming soon to the Shopify App Store</span>
-              <h3>Shoply: Item Scan &amp; Analytics</h3>
-              <p>Scans your whole catalog and ranks every problem by what it costs you, then helps you fix it in a click or in bulk.</p>
-              <ul class="ticks">
-                <li><svg aria-hidden="true"><use href="#i-check"/></svg>Stop selling at a loss: spot prices below cost or under your margin target</li>
-                <li><svg aria-hidden="true"><use href="#i-check"/></svg>Never miss a sale: see sold-out, oversold and low-stock products</li>
-                <li><svg aria-hidden="true"><use href="#i-check"/></svg>Better product pages: fix descriptions, photos, SEO and Google Shopping details</li>
-              </ul>
-              <a class="btn btn-dark" href="#features">See all features <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
-            </div>
-          </article>
-          <aside class="next-card">
-            <h3>More apps on the way</h3>
-            <p>We're building more apps for Shopify merchants. Tell us what would help your store most.</p>
-            <a href="mailto:info@shoplyapps.com?subject=App%20idea">Share an idea →</a>
-          </aside>
+        <span class="app-label">What it checks: 27 checks in 3 categories</span>
+        <div class="p-grid">
+          <div class="p-card">
+            <span class="pill-cat cat-pricing">Pricing &amp; margin</span>
+            <h3>Stop selling at a loss</h3>
+            <p>Prices below cost or under your margin target, before they eat into profit.</p>
+            <ul class="chips">
+              <li>Sold below cost</li><li>Sold at cost</li><li>Free (price 0)</li><li>Below margin target</li><li>Missing cost per item</li><li>Compare-at price not higher</li><li>Odd variant price gaps</li>
+            </ul>
+          </div>
+          <div class="p-card">
+            <span class="pill-cat cat-stock">Stock</span>
+            <h3>Never miss a sale</h3>
+            <p>Sold-out, oversold and low-stock products, and what's about to sell out.</p>
+            <ul class="chips">
+              <li>Oversold</li><li>Out of stock</li><li>Taking orders with no stock</li><li>Low stock</li><li>Will sell out soon</li><li>Not selling in 60 days</li><li>Inventory not tracked</li><li>Stock on products not for sale</li>
+            </ul>
+          </div>
+          <div class="p-card">
+            <span class="pill-cat cat-content">Descriptions &amp; content</span>
+            <h3>Better product pages</h3>
+            <p>Descriptions, photos, SEO and the details Google Shopping needs.</p>
+            <ul class="chips">
+              <li>No description</li><li>Short description</li><li>No image</li><li>Images without alt text</li><li>No SEO description</li><li>SEO title too long</li><li>Duplicate title</li><li>Title too long for Google</li><li>No product type</li><li>No brand</li><li>No barcode (GTIN)</li><li>No product category</li>
+            </ul>
+          </div>
         </div>
-      </div>
-    </section>
 
-    <section id="features">
-      <div class="wrap">
-        <div class="center">
-          <p class="eyebrow">Shoply: Item Scan &amp; Analytics</p>
-          <h2>Everything you need for a healthy catalog</h2>
-          <p class="lead" style="margin-top:16px">Find what's wrong, fix it fast, and let the app keep watch.</p>
-        </div>
-        <div class="groups">
-          <div>
-            <div class="group-head">
-              <span class="group-icon"><svg aria-hidden="true"><use href="#i-search"/></svg></span>
-              <div><h3>Find what's wrong</h3><p>See every problem in your catalog, ranked by what it costs you.</p></div>
-            </div>
-            <div class="cards">
-              <div class="card"><h4>Catalog health</h4><p>A health score and ranked priorities, starting with what costs you money, with an estimate of the money at stake each month.</p></div>
-              <div class="card"><h4>Analytics</h4><p>Charts for prices, margins, stock, sales and content. Click any bar to see the products behind it.</p></div>
-              <div class="card"><h4>Sales insights</h4><p>Spot products about to sell out and stock that hasn't sold in 60 days, based on your recent orders.</p></div>
-              <div class="card"><h4>SEO and Google Shopping</h4><p>Alt text, SEO titles and descriptions, duplicate titles, and Google Shopping basics like barcodes and categories.</p></div>
-            </div>
+        <span class="app-label">What you can do with it</span>
+        <div class="p-grid">
+          <div class="p-card">
+            <div class="p-head"><span><svg aria-hidden="true"><use href="#i-search"/></svg></span><h3>See what matters</h3></div>
+            <p style="margin-top:8px">Every problem ranked by what it costs you.</p>
+            <ul class="feat">
+              <li data-s="✚"><span><b>Catalog health:</b> a score, ranked priorities and the money at stake each month.</span></li>
+              <li data-s="▦"><span><b>Analytics:</b> prices, margins, stock and sales. Click a bar to see its products.</span></li>
+              <li data-s="▤"><span><b>Product page card:</b> each product's problems on its page in your admin.</span></li>
+            </ul>
           </div>
-          <div>
-            <div class="group-head">
-              <span class="group-icon"><svg aria-hidden="true"><use href="#i-check"/></svg></span>
-              <div><h3>Fix it fast</h3><p>Fix one product or hundreds at once, and check every change first.</p></div>
-            </div>
-            <div class="cards">
-              <div class="card"><h4>Quick fixes</h4><p>Fix one problem in a click, right from the list of issues.</p></div>
-              <div class="card"><h4>Bulk price fixes</h4><p>Fix the prices of many products at once, such as raising them to your target margin, with a preview first.</p></div>
-              <div class="card"><h4>Description editor</h4><p>Write better descriptions and SEO text with a starter template, a live checklist and a preview.</p></div>
-              <div class="card"><h4>Excel import and export</h4><p>Download your catalog as an Excel file, edit prices and descriptions, and upload it. You check every change before it's saved.</p></div>
-            </div>
+          <div class="p-card">
+            <div class="p-head"><span><svg aria-hidden="true"><use href="#i-check"/></svg></span><h3>Fix it fast</h3></div>
+            <p style="margin-top:8px">One product or hundreds, checked before saving.</p>
+            <ul class="feat">
+              <li data-s="✓"><span><b>Quick fixes:</b> one click, right from the list of problems.</span></li>
+              <li data-s="$"><span><b>Bulk price fixes:</b> raise prices to your target margin, with a preview.</span></li>
+              <li data-s="✎"><span><b>Description editor:</b> template, live checklist and preview.</span></li>
+              <li data-s="⇅"><span><b>Excel import and export:</b> edit in Excel, review every change.</span></li>
+            </ul>
           </div>
-          <div>
-            <div class="group-head">
-              <span class="group-icon"><svg aria-hidden="true"><use href="#i-clock"/></svg></span>
-              <div><h3>Stay on top of it</h3><p>Let the app watch your catalog and tell you when something needs you.</p></div>
-            </div>
-            <div class="cards">
-              <div class="card"><h4>Scheduled scans</h4><p>Scan automatically every day or week, at a time that suits your store.</p></div>
-              <div class="card"><h4>Alerts</h4><p>Find out when products start selling at a loss, sell out or are about to, plus a weekly summary. Get them by email with Shopify Flow's free email action.</p></div>
-              <div class="card"><h4>Product page card</h4><p>See each product's problems on its page in your Shopify admin.</p></div>
-              <div class="card"><h4>Change history and undo</h4><p>Every change the app makes is logged with the old value, and you can undo it.</p></div>
-            </div>
+          <div class="p-card">
+            <div class="p-head"><span><svg aria-hidden="true"><use href="#i-clock"/></svg></span><h3>Stay on top of it</h3></div>
+            <p style="margin-top:8px">The app keeps watch and tells you when to act.</p>
+            <ul class="feat">
+              <li data-s="◷"><span><b>Scheduled scans:</b> every day or week, at a time you choose.</span></li>
+              <li data-s="!"><span><b>Alerts:</b> by email through Shopify Flow, plus a weekly summary.</span></li>
+              <li data-s="↶"><span><b>History and undo:</b> every change logged with its old value.</span></li>
+            </ul>
           </div>
         </div>
-      </div>
-    </section>
 
-    <section class="how" id="how">
-      <div class="wrap center">
-        <p class="eyebrow">How it works</p>
-        <h2>From install to a healthier store in minutes</h2>
+        <span class="app-label" id="how">How it works</span>
         <div class="steps">
-          <div class="step"><h3>Install</h3><p>Add Shoply: Item Scan &amp; Analytics to your store from Shopify. It opens from Apps in your Shopify admin.</p></div>
-          <div class="step"><h3>Scan</h3><p>One scan checks every product. It only reads your catalog and changes nothing.</p></div>
-          <div class="step"><h3>Fix what matters first</h3><p>Work through your priorities, starting with what costs you money. Every change the app makes can be undone.</p></div>
+          <div class="p-card step"><h3>Install</h3><p>Add the app from Shopify. It opens from Apps in your admin.</p></div>
+          <div class="p-card step"><h3>Scan</h3><p>One scan checks every product. It only reads and changes nothing.</p></div>
+          <div class="p-card step"><h3>Fix what matters first</h3><p>Start with what costs you money. Every change can be undone.</p></div>
         </div>
+        <p class="more">More apps are on the way. <a href="mailto:info@shoplyapps.com?subject=App%20idea">Tell us what would help your store →</a></p>
       </div>
     </section>
 
-    <section>
-      <div class="wrap promise">
-        <div>
-          <p class="eyebrow">Our promise</p>
-          <h2>Safe to try on your real store</h2>
-          <p class="lead" style="margin-top:16px">We build our apps the way we'd want them on our own store: careful with your products and careful with your data.</p>
-        </div>
-        <div class="promise-list">
-          <div class="promise-item"><svg aria-hidden="true"><use href="#i-eye"/></svg><div><h3>Scanning changes nothing</h3><p>A scan only reads your catalog. The app changes a product only when you ask it to.</p></div></div>
-          <div class="promise-item"><svg aria-hidden="true"><use href="#i-undo"/></svg><div><h3>Every change can be undone</h3><p>The app logs each change with the old value, so you can put it back.</p></div></div>
-          <div class="promise-item"><svg aria-hidden="true"><use href="#i-lock"/></svg><div><h3>No outside services</h3><p>The app works only with Shopify's own APIs. No third-party services and no trackers.</p></div></div>
-          <div class="promise-item"><svg aria-hidden="true"><use href="#i-gift"/></svg><div><h3>Free, with every feature</h3><p>No paid plans and no locked features. You can leave an optional tip if the app helps you.</p></div></div>
-        </div>
-      </div>
-    </section>
-
-    <section class="faq" id="faq">
-      <div class="wrap">
-        <div class="center">
+    <section id="faq">
+      <div class="wrap faq">
+        <div class="faq-side">
           <p class="eyebrow">FAQ</p>
           <h2>Questions merchants ask</h2>
+          <p class="lead">Something else? Email <a href="mailto:info@shoplyapps.com">info@shoplyapps.com</a>.</p>
         </div>
         <div class="faq-list">
           <details>
-            <summary>How much does Shoply: Item Scan &amp; Analytics cost?</summary>
-            <p>It's free to install, and every feature is included at no charge. If it helps your store, you can leave an optional tip.</p>
+            <summary>How much does it cost?</summary>
+            <p>Shoply: Item Scan &amp; Analytics is free to install, and every feature is included. If it helps your store, you can leave an optional tip.</p>
           </details>
           <details>
             <summary>Will the app change my products?</summary>
@@ -394,30 +343,28 @@
           </details>
           <details>
             <summary>When can I install it?</summary>
-            <p>Shoply: Item Scan &amp; Analytics is coming soon to the Shopify App Store. Email us at <a href="mailto:info@shoplyapps.com?subject=Notify%20me">info@shoplyapps.com</a> and we'll let you know when it's live.</p>
+            <p>It's coming soon to the Shopify App Store. Email <a href="mailto:info@shoplyapps.com?subject=Notify%20me">info@shoplyapps.com</a> and we'll let you know when it's live.</p>
           </details>
           <details>
             <summary>How do I get alerts by email?</summary>
-            <p>The app sends its alerts to Shopify Flow. Add Flow's free "Send internal email" action, and the alerts arrive in your inbox.</p>
+            <p>The app sends its alerts to Shopify Flow. Add Flow's free "Send internal email" action, and they arrive in your inbox.</p>
           </details>
           <details>
             <summary>Does it share my store's data?</summary>
-            <p>No. The app works only with Shopify's own APIs and doesn't send your data to outside services. Our <a href="privacy.html">privacy policy</a> explains exactly what we store and why.</p>
-          </details>
-          <details>
-            <summary>Who is behind Shoply Apps?</summary>
-            <p>Shoply Apps was founded by Ignas Pilybas and Romas Gabdrafikas in Lithuania. We build apps that help Shopify merchants run healthier stores.</p>
+            <p>No. The app works only with Shopify's own APIs and doesn't send your data to outside services. Our <a href="privacy.html">privacy policy</a> explains what we store and why.</p>
           </details>
         </div>
       </div>
     </section>
 
-    <section>
+    <section class="cta">
       <div class="wrap">
         <div class="cta-box">
-          <h2>Be the first to try Shoply: Item Scan &amp; Analytics</h2>
-          <p>It's free, every feature is included, and it's coming soon to the Shopify App Store. Email us and we'll tell you when it's live.</p>
-          <a class="btn btn-amber" href="mailto:info@shoplyapps.com?subject=Notify%20me%20when%20Item%20Scan%20%26%20Analytics%20is%20live">Notify me <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          <div>
+            <h2>Be the first to try it</h2>
+            <p>Free, every feature included, coming soon to the Shopify App Store.</p>
+          </div>
+          <a class="btn btn-amber" href="mailto:info@shoplyapps.com?subject=Notify%20me%20when%20Shoply%3A%20Item%20Scan%20%26%20Analytics%20is%20live">Notify me <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
         </div>
       </div>
     </section>
@@ -426,13 +373,9 @@
   <footer>
     <div class="wrap">
       <div class="foot">
-        <div>
-          <a class="brand" href="#top" aria-label="Shoply Apps home"><img src="assets/shoply-apps-logo.svg" alt="">shoply apps</a>
-          <p style="margin:12px 0 0">Shopify apps that find what's costing you money.</p>
-        </div>
+        <a class="brand" href="#top" aria-label="Shoply Apps home"><img src="assets/shoply-apps-logo.svg" alt="">shoply apps</a>
         <ul>
-          <li><a href="#apps">Apps</a></li>
-          <li><a href="#features">Features</a></li>
+          <li><a href="#app">Our app</a></li>
           <li><a href="#faq">FAQ</a></li>
           <li><a href="privacy.html">Privacy</a></li>
           <li><a href="terms.html">Terms</a></li>
