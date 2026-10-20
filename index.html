@@ -141,6 +141,17 @@
     .more { margin: 24px 0 0; color: #616161; font-size: 15px; text-align: center; }
     .more a { color: var(--navy); font-weight: 600; }
 
+    /* "…ly" band: the word before "ly" swaps, the amber "ly" stays put, ending on "Build with Shoply" */
+    .ly { background: var(--navy); color: #fff; padding: 64px 0; text-align: center; position: relative; overflow: hidden; }
+    .ly::before { content: ""; position: absolute; inset: 0; background-image: linear-gradient(rgba(255,255,255,.04) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.04) 1px, transparent 1px); background-size: 40px 40px; }
+    .ly-line { position: relative; display: flex; justify-content: center; align-items: baseline; margin: 0; font-weight: 800; font-size: clamp(28px, 6.4vw, 64px); letter-spacing: -0.035em; line-height: 1.2; }
+    .ly-stem { display: grid; text-align: right; overflow: hidden; padding-bottom: .08em; }
+    .ly-stem > span { grid-area: 1 / 1; white-space: nowrap; opacity: 0; transform: translateY(100%); transition: transform .5s cubic-bezier(.2,.7,.2,1), opacity .5s ease; }
+    .ly-stem > span.is-on { opacity: 1; transform: none; }
+    .ly-stem > span.is-off { transform: translateY(-100%); }
+    .ly-end { color: var(--amber); }
+    .sr-only { position: absolute; width: 1px; height: 1px; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
     /* FAQ */
     .faq { display: grid; grid-template-columns: 1fr 1.6fr; gap: 48px; align-items: start; }
     .faq-list { display: grid; gap: 10px; }
@@ -200,7 +211,7 @@
       .shelf-row img, .shelf-row i { width: 40px; height: 40px; }
       .cta-box { padding: 28px 24px; }
     }
-    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .btn { transition: none; } .scan-line { animation: none; } }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .btn { transition: none; } .scan-line { animation: none; } .ly-stem > span { transition: none; } }
   </style>
 </head>
 <body>
@@ -374,6 +385,12 @@
       </div>
     </section>
 
+    <section class="ly">
+      <div class="wrap">
+        <p class="ly-line"><span class="sr-only">Work creatively, sell smartly, price wisely, restock quickly, fix instantly, check daily, grow steadily. Build with Shoply.</span><span class="ly-stem" aria-hidden="true"><span>Work Creative</span><span>Sell Smart</span><span>Price Wise</span><span>Restock Quick</span><span>Fix Instant</span><span>Check Dai</span><span>Grow Steadi</span><span class="is-on">Build with Shop</span></span><span class="ly-end" aria-hidden="true">ly</span></p>
+      </div>
+    </section>
+
     <section id="faq">
       <div class="wrap faq">
         <div class="faq-side">
@@ -434,5 +451,28 @@
       <p class="fine">© 2026 Shoply Apps. Shopify is a trademark of Shopify Inc.</p>
     </div>
   </footer>
+  <script>
+    // Cycle the "…ly" words; the last one ("Build with Shop") holds longer. Runs only while on screen.
+    (function () {
+      var stem = document.querySelector('.ly-stem');
+      if (!stem || (window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches)) return;
+      var words = stem.children, last = words.length - 1, i = 0, timer = null;
+      words[last].className = '';
+      words[0].className = 'is-on';
+      function show(n) {
+        var next = words[n];
+        words[i].className = 'is-off';
+        next.style.transition = 'none'; next.className = ''; void next.offsetWidth; next.style.transition = '';
+        next.className = 'is-on';
+        i = n;
+      }
+      function tick() { show((i + 1) % words.length); timer = setTimeout(tick, i === last ? 4000 : 1600); }
+      function start() { if (!timer) timer = setTimeout(tick, 1600); }
+      if (!('IntersectionObserver' in window)) return start();
+      new IntersectionObserver(function (e) {
+        if (e[0].isIntersecting) start(); else { clearTimeout(timer); timer = null; }
+      }).observe(stem);
+    })();
+  </script>
 </body>
 </html>
