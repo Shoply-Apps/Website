@@ -27,6 +27,13 @@ Our first app, **Shoply: Item Scan & Analytics**, is coming soon to the Shopify 
 - [How to increase your Shopify conversion rate: 15 practical fixes](https://shoplyapps.com/blog/increase-shopify-conversion-rate/)
 - [Shopify SEO for beginners: how to get your store found on Google](https://shoplyapps.com/blog/shopify-seo-guide-for-beginners/)
 
+### Shipping and checkout
+
+- [Shopify shipping settings explained: zones, rates and delivery times](https://shoplyapps.com/blog/shopify-shipping-settings-guide/)
+- [How to set a free shipping threshold that protects your margin](https://shoplyapps.com/blog/free-shipping-threshold/)
+- [Why shoppers abandon carts on Shopify, and how to fix it](https://shoplyapps.com/blog/reduce-cart-abandonment-shopify/)
+- [Shopify abandoned cart recovery: emails that bring shoppers back](https://shoplyapps.com/blog/shopify-abandoned-cart-recovery/)
+
 ### Catalog health: pricing, stock and product pages
 
 - [Shopify catalog health: a monthly checklist to protect your margins](https://shoplyapps.com/blog/shopify-catalog-health-checklist/)

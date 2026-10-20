@@ -13,7 +13,9 @@
   <meta property="og:title" content="Shopify shipping settings explained: zones, rates and delivery times">
   <meta property="og:description" content="Shopify shipping settings explained for beginners: shipping profiles, zones, flat, weight-based and free rates, product weights and honest delivery times.">
   <meta property="og:url" content="https://shoplyapps.com/blog/shopify-shipping-settings-guide/">
-  <meta property="og:image" content="https://shoplyapps.com/assets/og-image.png">
+  <meta property="og:image" content="https://shoplyapps.com/assets/blog/shopify-shipping-settings-guide.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
   <meta property="article:published_time" content="2026-10-20">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="stylesheet" href="/assets/blog.css">
@@ -29,7 +31,7 @@
         "dateModified": "2026-10-20",
         "url": "https://shoplyapps.com/blog/shopify-shipping-settings-guide/",
         "mainEntityOfPage": "https://shoplyapps.com/blog/shopify-shipping-settings-guide/",
-        "image": "https://shoplyapps.com/assets/og-image.png",
+        "image": "https://shoplyapps.com/assets/blog/shopify-shipping-settings-guide.jpg",
         "inLanguage": "en",
         "author": { "@type": "Organization", "@id": "https://shoplyapps.com/#org", "name": "Shoply Apps", "url": "https://shoplyapps.com/" },
         "publisher": { "@id": "https://shoplyapps.com/#org" }
@@ -45,10 +47,10 @@
       {
         "@type": "FAQPage",
         "mainEntity": [
-          {"@type": "Question", "name": "Why can't some customers check out on my Shopify store?", "acceptedAnswer": {"@type": "Answer", "text": "Usually because their address is not in any shipping zone, or the zone has no rate for the products in their cart. Add the country or region to a zone and give every zone in every shipping profile at least one rate."}},
-          {"@type": "Question", "name": "Does Shopify use product weight to calculate shipping?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Weight-based rates and carrier-calculated rates use the weight entered on each product variant, plus any packaging weight you set. Missing or zero weights make shipping look cheaper than it really is."}},
+          {"@type": "Question", "name": "Why can't some customers check out on my Shopify store?", "acceptedAnswer": {"@type": "Answer", "text": "Usually their address is not in any shipping zone, or the zone has no rate for the products in their cart. Add the country or region to a zone and give every zone in every profile at least one rate."}},
+          {"@type": "Question", "name": "Does Shopify use product weight to calculate shipping?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Weight-based and carrier-calculated rates use the weight entered on each product variant, plus any packaging weight you set. Missing or zero weights make shipping look cheaper than it is."}},
           {"@type": "Question", "name": "Should I use flat rate or weight-based shipping?", "acceptedAnswer": {"@type": "Answer", "text": "Use a flat rate if your products are similar in size and weight. Use weight-based rates if weights vary a lot, so heavy orders do not cost you more to ship than the customer pays."}},
-          {"@type": "Question", "name": "Who pays duties and import taxes on international orders?", "acceptedAnswer": {"@type": "Answer", "text": "It depends on how you set up your store and checkout. Either you include them in the price or the customer may be charged on delivery. Decide up front and state it clearly in your shipping policy."}}
+          {"@type": "Question", "name": "Who pays duties and import taxes on international orders?", "acceptedAnswer": {"@type": "Answer", "text": "It depends on how you set up your store and checkout: either they are included in the price or the customer may be charged on delivery. Decide up front and state it in your shipping policy."}}
         ]
       }
     ]
@@ -74,13 +76,15 @@
       <h1>Shopify shipping settings explained: zones, rates and delivery times</h1>
       <p class="meta">By the Shoply Apps team · <time datetime="2026-10-20">20 October 2026</time> · 10 min read</p>
 
+      <figure class="post-hero"><img src="/assets/blog/shopify-shipping-settings-guide.webp" width="1200" height="630" alt="Shopify shipping profile with domestic, Europe and rest of world rates and delivery times" fetchpriority="high"></figure>
+
       <section class="tldr">
         <h2>Key takeaways</h2>
         <ul>
           <li>Shopify shipping settings are built from shipping profiles (groups of products), locations (where you ship from), zones (where you ship to) and rates (what customers pay).</li>
-          <li>Every zone needs at least one rate; if a customer's address is in no zone, or a zone has no rate, they cannot check out.</li>
+          <li>Every zone needs at least one rate; if a customer's address is in no zone, or the zone has no rate, they cannot check out.</li>
           <li>Use flat rates when products weigh about the same and weight-based or carrier-calculated rates when weights vary; carrier rates depend on your plan and region.</li>
-          <li>Enter a real weight for every variant, including packaging, and set rates that cover what shipping actually costs you.</li>
+          <li>Enter a real weight for every variant, include packaging, and set rates that cover what shipping actually costs you.</li>
           <li>Show processing plus transit time on product pages and at checkout, and say who pays duties on international orders.</li>
         </ul>
       </section>
@@ -99,12 +103,12 @@
       <p>When a customer enters their address, Shopify finds the matching zone and shows the rates that apply to the cart. If no zone covers the address, the customer cannot complete the order.</p>
 
       <h2 id="shipping-profiles">What are shipping profiles, and when do you need a custom one?</h2>
-      <p>Every store starts with a general shipping profile, and new products go into it automatically. You only need a custom profile when some products ship in a genuinely different way from the rest.</p>
+      <p>Every store starts with a general shipping profile, which new products join automatically. You only need a custom profile for products that ship differently from the rest.</p>
       <p>Typical reasons: heavy or bulky items that cost far more to send, fragile items that need special packaging or a specific courier, products shipped from a different place, and products you only sell locally, such as fresh food.</p>
       <p>Keep it simple: each extra profile is another set of zones and rates to maintain. Many small stores only need the general profile.</p>
 
       <h2 id="locations">Which locations do you ship from?</h2>
-      <p>A location is any address that holds stock or fulfills orders. Shopify uses your locations to decide where an order ships from, and carrier-calculated rates use the origin address to work out distance.</p>
+      <p>A location is any address that holds stock or fulfills orders. Shopify uses it as the ship-from point, and carrier-calculated rates use it to work out distance.</p>
       <p>Check that each address is correct, including the postal code, and that locations which should fulfill online orders are set to do so.</p>
 
       <h2 id="shipping-zones">How do you set up shipping zones?</h2>
@@ -115,7 +119,7 @@
         <li><strong>Nearby countries:</strong> neighbours or a trading region where delivery is cheaper and faster.</li>
         <li><strong>Rest of world:</strong> only if you are ready to handle longer delivery times and import charges.</li>
       </ol>
-      <p>Only add countries you can really deliver to at a price that works, and give every zone at least one rate.</p>
+      <p>Only add countries you can really serve, and give every zone at least one rate.</p>
 
       <h2 id="shopify-shipping-rates">What types of Shopify shipping rates can you use?</h2>
       <p>Shopify shipping rates come in two broad families: rates you set yourself, and rates calculated by a carrier at checkout. You can mix them in the same zone, for example a free standard option and a paid express option.</p>
@@ -131,7 +135,7 @@
           <tr><td>Carrier-calculated</td><td>Live prices from a carrier, based on weight, origin and destination</td><td>Stores with varied parcels and many destinations</td></tr>
         </tbody>
       </table>
-      <p>Carrier-calculated rates are not available on every plan or in every country, so check whether they are available on your plan before you build your setup around them. Free shipping is not free for you: the cost moves into your margin. Our guide on <a href="/blog/free-shipping-threshold/">setting a free shipping threshold that protects your margin</a> shows how to pick the minimum order value.</p>
+      <p>Carrier-calculated rates are not available on every plan or in every country, so check whether they are available on your plan. Free shipping still costs you; our guide on <a href="/blog/free-shipping-threshold/">setting a free shipping threshold that protects your margin</a> shows how to pick the minimum order value.</p>
 
       <h2 id="local-delivery-pickup">Should you offer local delivery or local pickup?</h2>
       <p>If customers can reach your shop, studio or stock room, local options are worth turning on. You set them up per location.</p>
@@ -145,7 +149,7 @@
       <ul>
         <li><strong>Weigh each variant.</strong> A large size or a set of three weighs more than the single item.</li>
         <li><strong>Include packaging.</strong> Boxes, padding and mailers add weight. Shopify lets you save package sizes and a default package weight in your shipping settings, so check that it matches what you really use.</li>
-        <li><strong>Check imports.</strong> Products added by CSV or from a supplier often arrive with no weight at all.</li>
+        <li><strong>Check imports.</strong> CSV and supplier imports often arrive with no weight.</li>
       </ul>
       <h3>What is dimensional weight?</h3>
       <p>Dimensional (or volumetric) weight is a weight carriers calculate from a parcel's size. Many carriers charge for whichever is higher, real or dimensional weight, so a large, light box can cost more than you expect. Use the smallest box that protects the product and check your carrier's rules.</p>
@@ -164,31 +168,31 @@
         </tbody>
       </table>
       <p class="formula">Monthly postage cost = (60 × $5) + (30 × $8) + (10 × $14) = $300 + $240 + $140 = $680</p>
-      <p><strong>Option A: flat rate of $6.</strong> The store collects 100 × $6 = $600 and pays $680, so it loses $80 a month on shipping. Every heavy order loses $8, and light-order customers pay $1 more than the real cost.</p>
-      <p><strong>Option B: weight-based rates</strong> of $5, $8 and $14 matching the table. The store collects exactly $680 and breaks even on shipping. Light-order customers see a lower price, which can help them buy.</p>
+      <p><strong>Option A: flat rate of $6.</strong> The store collects 100 × $6 = $600 and pays $680, losing $80 a month. Every heavy order loses $8, while light-order customers pay $1 more than the real cost.</p>
+      <p><strong>Option B: weight-based rates</strong> of $5, $8 and $14. The store collects exactly $680 and breaks even, and light-order customers see a lower price.</p>
       <p>Here weight-based rates fit best because parcels range from under 0.5 kg to 5 kg. If nearly all orders were under 0.5 kg, a flat rate would be simpler and just as good. Packaging matters too: a 0.45 kg candle in a 0.1 kg box ships as 0.55 kg and lands in the next band.</p>
 
       <h2 id="delivery-times">How should you show delivery times?</h2>
       <p>Show realistic delivery times on your product pages and at checkout, and add your processing time to the transit time. A vague or missing answer makes shoppers hesitate.</p>
       <ul>
         <li><strong>Name rates clearly</strong>, for example "Standard (5 to 8 business days)" rather than "Shipping".</li>
-        <li><strong>Count processing time.</strong> If you need two days to pack an order, a "3-day" rate really takes five.</li>
+        <li><strong>Count processing time.</strong> Two days of packing plus a "3-day" rate means five days.</li>
         <li><strong>Say it on the product page</strong> and in a shipping policy page, so customers do not have to start checkout to find out.</li>
         <li><strong>Be honest about busy periods</strong> and international orders.</li>
       </ul>
       <p>Unclear delivery information is one of the conversion problems covered in our guide on <a href="/blog/increase-shopify-conversion-rate/">how to increase your Shopify conversion rate</a>.</p>
 
       <h2 id="international-shipping">What should you know about international shipping?</h2>
-      <p>International orders take longer, cost more and may be charged duties and import taxes when they arrive. Who pays those charges depends on how you set up your store and checkout, so decide that up front and tell customers clearly.</p>
+      <p>International orders take longer, cost more and may be charged duties and import taxes when they arrive. Decide who pays them and tell customers clearly.</p>
       <ul>
         <li>State on your shipping policy page whether the price includes duties and taxes or whether the customer may be charged on delivery.</li>
         <li>Expect customs paperwork; check what your carrier needs.</li>
-        <li>Check that your products can legally be sent to each country you add.</li>
+        <li>Check your products can legally be sent to each country.</li>
         <li>Register your business and handle sales tax or VAT as your country and your customers' countries require; ask a local accountant if you are unsure.</li>
       </ul>
 
       <h2 id="dropshipping-shipping">How should dropshippers set up shipping?</h2>
-      <p>Dropshippers should set rates that cover what their supplier really charges for delivery, not what feels attractive. If you are new to the model, our <a href="/blog/how-to-start-dropshipping-on-shopify/">step-by-step guide to starting dropshipping on Shopify</a> covers the basics.</p>
+      <p>Dropshippers should set rates that cover what their supplier really charges for delivery. New to the model? Our <a href="/blog/how-to-start-dropshipping-on-shopify/">step-by-step guide to starting dropshipping on Shopify</a> covers the basics.</p>
       <ul>
         <li><strong>Multiple suppliers mean multiple parcels.</strong> An order with items from two suppliers usually means two shipping charges for you, even if the customer paid once.</li>
         <li><strong>Supplier shipping costs change.</strong> Recheck them regularly and update your rates.</li>
@@ -215,25 +219,25 @@
       </table>
 
       <h2 id="common-mistakes">What are the most common Shopify shipping mistakes?</h2>
-      <p>Most shipping problems come from a handful of gaps that are easy to miss when you set up quickly.</p>
+      <p>Most problems come from a few gaps that are easy to miss.</p>
       <ul>
         <li><strong>Missing weights.</strong> Variants with no weight make weight-based and carrier rates too cheap.</li>
         <li><strong>Zones with no rates.</strong> Customers in that zone reach checkout and cannot pay, which is a lost sale you may never notice.</li>
         <li><strong>Rates below your real cost.</strong> Every order quietly eats into margin. Combined with discounts, a product can end up selling at a loss; our guide on <a href="/blog/shopify-products-selling-below-cost/">finding products you're selling below cost</a> shows how to check.</li>
-        <li><strong>Unclear delivery times.</strong> Shoppers who cannot see when an order will arrive often leave instead of asking.</li>
+        <li><strong>Unclear delivery times.</strong> Shoppers who cannot see when an order will arrive often leave.</li>
       </ul>
-      <p>Shipping costs only hurt less when the product price leaves room for them. <strong>Shoply: Item Scan &amp; Analytics</strong>, coming soon to the Shopify App Store, scans every product for pricing and margin problems such as items sold below cost, below your margin target or missing a cost per item, so you can spot where shipping is likely to push an order into a loss.</p>
+      <p>Shipping only stays affordable when product prices leave room for it. <strong>Shoply: Item Scan &amp; Analytics</strong>, coming soon to the Shopify App Store, flags products sold below cost or under your margin target, where shipping is most likely to push an order into a loss.</p>
 
 
       <h2 id="faq">FAQ</h2>
       <h3>Why can't some customers check out on my Shopify store?</h3>
-      <p>Usually because their address is not in any shipping zone, or the zone has no rate for the products in their cart. Add the country or region to a zone and give every zone in every shipping profile at least one rate.</p>
+      <p>Usually their address is not in any shipping zone, or the zone has no rate for the products in their cart. Add the country or region to a zone and give every zone in every profile at least one rate.</p>
       <h3>Does Shopify use product weight to calculate shipping?</h3>
-      <p>Yes. Weight-based rates and carrier-calculated rates use the weight entered on each product variant, plus any packaging weight you set. Missing or zero weights make shipping look cheaper than it really is.</p>
+      <p>Yes. Weight-based and carrier-calculated rates use the weight entered on each product variant, plus any packaging weight you set. Missing or zero weights make shipping look cheaper than it is.</p>
       <h3>Should I use flat rate or weight-based shipping?</h3>
       <p>Use a flat rate if your products are similar in size and weight. Use weight-based rates if weights vary a lot, so heavy orders do not cost you more to ship than the customer pays.</p>
       <h3>Who pays duties and import taxes on international orders?</h3>
-      <p>It depends on how you set up your store and checkout. Either you include them in the price or the customer may be charged on delivery. Decide up front and state it clearly in your shipping policy.</p>
+      <p>It depends on how you set up your store and checkout: either they are included in the price or the customer may be charged on delivery. Decide up front and state it in your shipping policy.</p>
 
       <section class="post-cta">
         <h2>Make sure shipping never turns a sale into a loss</h2>
