@@ -141,21 +141,32 @@
     .more { margin: 24px 0 0; color: #616161; font-size: 15px; text-align: center; }
     .more a { color: var(--navy); font-weight: 600; }
 
-    /* "…ly" band: the word before "ly" swaps, the amber "ly" stays put, ending on "Build with Shoply" */
-    .ly { background: var(--navy); color: #fff; padding: 64px 0; text-align: center; position: relative; overflow: hidden; }
-    .ly::before { content: ""; position: absolute; inset: 0; background-image: linear-gradient(rgba(255,255,255,.04) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.04) 1px, transparent 1px); background-size: 40px 40px; }
-    .ly-line { position: relative; display: flex; justify-content: center; align-items: baseline; width: max-content; margin: 0 auto; font-weight: 800; font-size: clamp(28px, 6.4vw, 64px); letter-spacing: -0.035em; line-height: 1.2; }
-    .ly-stem { display: grid; text-align: right; overflow: hidden; padding-bottom: .08em; }
-    .ly-stem > span { grid-area: 1 / 1; white-space: nowrap; opacity: 0; transform: translateY(100%); transition: transform .4s cubic-bezier(.2,.7,.2,1), opacity .4s ease; }
-    .ly-stem > span.is-on { opacity: 1; transform: none; }
-    .ly-stem > span.is-off { transform: translateY(-100%); }
-    .ly-end { color: var(--amber); transition: text-shadow .5s ease; }
-    /* Final line ("Build with Shoply") pops: a springy scale, an amber underline sweeping in, a glow on "ly" */
+    /* "…ly" band: the words before an amber "ly" are typed and erased, ending on "Build with Shoply" */
+    .ly { padding: 56px 0 0; }
+    .ly-card { background: var(--navy); color: #fff; border-radius: 24px; padding: 64px 24px; text-align: center; position: relative; overflow: hidden; }
+    .ly-card::before { content: ""; position: absolute; inset: 0; background-image: linear-gradient(rgba(255,255,255,.04) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.04) 1px, transparent 1px); background-size: 40px 40px; }
+    .ly-line { position: relative; display: flex; align-items: baseline; width: max-content; max-width: 100%; margin: 0 auto; font-weight: 800; font-size: clamp(28px, 6.4vw, 64px); letter-spacing: -0.035em; line-height: 1.2; }
+    /* Every phrase sits hidden in the same cell, so the box is as wide as the longest and "ly" never moves */
+    .ly-stem { display: grid; }
+    .ly-stem > span { grid-area: 1 / 1; white-space: pre; text-align: right; }
+    .ly-stem > .g { visibility: hidden; }
+    .ly-caret { position: relative; width: 0; align-self: stretch; }
+    .ly-caret::before { content: ""; position: absolute; left: -.03em; top: .22em; bottom: .14em; width: .06em; border-radius: 2px; background: var(--amber); opacity: 0; }
+    .ly-line.is-typing .ly-caret::before, .ly-line.is-waiting .ly-caret::before { opacity: 1; }
+    .ly-line.is-waiting .ly-caret::before { animation: ly-blink 1s steps(1) infinite; }
+    .ly-end { position: relative; color: var(--amber); transition: text-shadow .5s ease; }
+    /* Final line pops: springy scale, amber underline, a light sweep across the words, a glow and a spark burst on "ly" */
     .ly-line::after { content: ""; position: absolute; left: 0; bottom: -.1em; height: .07em; width: 0; border-radius: 99px; background: var(--amber); transition: width .25s ease; }
-    .ly-line.is-final { animation: ly-pop .7s .25s ease-out both; }
-    .ly-line.is-final::after { width: 100%; transition: width .5s .4s cubic-bezier(.2,.7,.2,1); }
-    .ly-line.is-final .ly-end { text-shadow: 0 0 .35em rgba(245,166,35,.55); }
+    .ly-line.is-final { animation: ly-pop .7s .1s ease-out both; }
+    .ly-line.is-final::after { width: 100%; transition: width .5s .3s cubic-bezier(.2,.7,.2,1); }
+    .ly-line.is-final .ly-end { text-shadow: 0 0 .35em rgba(245,166,35,.6); }
+    .ly-line.is-final .t { background: linear-gradient(100deg, #fff 0 40%, #ffd58a 50%, #fff 60% 100%) 100% 0 / 300% 100%; -webkit-background-clip: text; background-clip: text; color: transparent; animation: ly-shine 1.1s .9s ease-in-out forwards; }
+    .ly-burst i { position: absolute; left: 50%; top: 55%; width: .13em; height: .13em; margin: -.065em; border-radius: 50%; background: var(--amber); opacity: 0; }
+    .ly-line.is-final .ly-burst i { animation: ly-burst .8s .35s ease-out forwards; }
+    @keyframes ly-blink { 50% { opacity: 0; } }
     @keyframes ly-pop { 0% { transform: scale(1); } 45% { transform: scale(1.14); } 75% { transform: scale(.97); } 100% { transform: scale(1); } }
+    @keyframes ly-shine { to { background-position: 0 0; } }
+    @keyframes ly-burst { 0% { opacity: 1; transform: rotate(var(--a)) translateX(.25em) scale(1); } 100% { opacity: 0; transform: rotate(var(--a)) translateX(1.15em) scale(.3); } }
     .sr-only { position: absolute; width: 1px; height: 1px; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
 
     /* FAQ */
@@ -217,7 +228,7 @@
       .shelf-row img, .shelf-row i { width: 40px; height: 40px; }
       .cta-box { padding: 28px 24px; }
     }
-    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .btn { transition: none; } .scan-line { animation: none; } .ly-stem > span, .ly-line, .ly-line::after { transition: none; animation: none; } }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .btn { transition: none; } .scan-line { animation: none; } .ly-line, .ly-line *, .ly-line::after, .ly-caret::before { transition: none !important; animation: none !important; } }
   </style>
 </head>
 <body>
@@ -283,6 +294,14 @@
         <li><svg aria-hidden="true"><use href="#i-check"/></svg>Simple to set up and use</li>
       </ul>
     </div>
+
+    <section class="ly">
+      <div class="wrap">
+        <div class="ly-card">
+          <p class="ly-line is-final" data-words="Work Creative|Launch Bold|Price Wise|Sell Smart|Restock Quick|Fix Instant|Grow Profitab|Build with Shop"><span class="sr-only">Work creatively, launch boldly, price wisely, sell smartly, restock quickly, fix instantly, grow profitably. Build with Shoply.</span><span class="ly-stem" aria-hidden="true"><span class="g">Work Creative</span><span class="g">Launch Bold</span><span class="g">Price Wise</span><span class="g">Sell Smart</span><span class="g">Restock Quick</span><span class="g">Fix Instant</span><span class="g">Grow Profitab</span><span class="g">Build with Shop</span><span class="t">Build with Shop</span></span><span class="ly-caret" aria-hidden="true"></span><span class="ly-end" aria-hidden="true">ly<span class="ly-burst"><i style="--a:-150deg"></i><i style="--a:-105deg"></i><i style="--a:-60deg"></i><i style="--a:-15deg"></i><i style="--a:30deg"></i><i style="--a:75deg"></i><i style="--a:120deg"></i><i style="--a:165deg"></i></span></span></p>
+        </div>
+      </div>
+    </section>
 
     <section id="apps">
       <div class="wrap">
@@ -391,11 +410,6 @@
       </div>
     </section>
 
-    <section class="ly">
-      <div class="wrap">
-        <p class="ly-line is-final"><span class="sr-only">Work creatively, launch boldly, price wisely, sell smartly, restock quickly, fix instantly, grow profitably. Build with Shoply.</span><span class="ly-stem" aria-hidden="true"><span>Work Creative</span><span>Launch Bold</span><span>Price Wise</span><span>Sell Smart</span><span>Restock Quick</span><span>Fix Instant</span><span>Grow Profitab</span><span class="is-on">Build with Shop</span></span><span class="ly-end" aria-hidden="true">ly</span></p>
-      </div>
-    </section>
 
     <section id="faq">
       <div class="wrap faq">
@@ -458,28 +472,29 @@
     </div>
   </footer>
   <script>
-    // Cycle the "…ly" words; the last one ("Build with Shop") holds longer. Runs only while on screen.
+    // Type out each "…ly" phrase letter by letter, erase it, type the next; hold on "Build with Shop" with the pop. Runs only while on screen.
     (function () {
-      var stem = document.querySelector('.ly-stem');
-      if (!stem || (window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches)) return;
-      var line = stem.parentNode, words = stem.children, last = words.length - 1, i = 0, timer = null;
-      line.classList.remove('is-final');
-      words[last].className = '';
-      words[0].className = 'is-on';
-      function show(n) {
-        var next = words[n];
-        words[i].className = 'is-off';
-        next.style.transition = 'none'; next.className = ''; void next.offsetWidth; next.style.transition = '';
-        next.className = 'is-on';
-        i = n;
-        line.classList.toggle('is-final', i === last);
+      var line = document.querySelector('.ly-line');
+      if (!line || (window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches)) return;
+      var text = line.querySelector('.t'), words = line.getAttribute('data-words').split('|'), last = words.length - 1, i = 0, visible = !('IntersectionObserver' in window), pending = null;
+      function later(fn, ms) { setTimeout(function () { if (visible) fn(); else pending = fn; }, ms); }
+      function mode(m) { line.className = 'ly-line ' + m; }
+      function type() {
+        var w = words[i], n = text.textContent.length;
+        if (n < w.length) { mode('is-typing'); text.textContent = w.slice(0, n + 1); later(type, 45 + Math.random() * 45); return; }
+        if (i === last) { mode('is-final'); later(erase, 5500); } else { mode('is-waiting'); later(erase, 1000); }
       }
-      function tick() { show((i + 1) % words.length); timer = setTimeout(tick, i === last ? 3000 : 1100); }
-      function start() { if (!timer) timer = setTimeout(tick, 1100); }
-      if (!('IntersectionObserver' in window)) return start();
-      new IntersectionObserver(function (e) {
-        if (e[0].isIntersecting) start(); else { clearTimeout(timer); timer = null; }
-      }).observe(stem);
+      function erase() {
+        var t = text.textContent;
+        if (t) { mode('is-typing'); text.textContent = t.slice(0, -1); later(erase, 28); return; }
+        i = (i + 1) % words.length; mode('is-waiting'); later(type, 300);
+      }
+      text.textContent = ''; mode('is-waiting'); pending = type;
+      if (!visible) new IntersectionObserver(function (e) {
+        visible = e[0].isIntersecting;
+        if (visible && pending) { var fn = pending; pending = null; setTimeout(fn, 400); }
+      }).observe(line);
+      else { pending = null; later(type, 400); }
     })();
   </script>
 </body>
