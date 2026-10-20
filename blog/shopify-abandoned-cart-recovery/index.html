@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Shopify abandoned cart recovery: emails that bring shoppers back · Shoply Apps</title>
+  <meta name="description" content="Shopify abandoned cart recovery explained: cart vs checkout, a 3-email sequence with example copy, when to offer a discount and which numbers to track.">
+  <link rel="canonical" href="https://shoplyapps.com/blog/shopify-abandoned-cart-recovery/">
+  <link rel="icon" href="/assets/shoply-apps-favicon.svg" type="image/svg+xml">
+  <meta name="theme-color" content="#15223d">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Shoply Apps">
+  <meta property="og:title" content="Shopify abandoned cart recovery: emails that bring shoppers back">
+  <meta property="og:description" content="Shopify abandoned cart recovery explained: cart vs checkout, a 3-email sequence with example copy, when to offer a discount and which numbers to track.">
+  <meta property="og:url" content="https://shoplyapps.com/blog/shopify-abandoned-cart-recovery/">
+  <meta property="og:image" content="https://shoplyapps.com/assets/og-image.png">
+  <meta property="article:published_time" content="2026-10-20">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="stylesheet" href="/assets/blog.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BlogPosting",
+        "headline": "Shopify abandoned cart recovery: emails that bring shoppers back",
+        "description": "Shopify abandoned cart recovery explained: cart vs checkout, a 3-email sequence with example copy, when to offer a discount and which numbers to track.",
+        "datePublished": "2026-10-20",
+        "dateModified": "2026-10-20",
+        "url": "https://shoplyapps.com/blog/shopify-abandoned-cart-recovery/",
+        "mainEntityOfPage": "https://shoplyapps.com/blog/shopify-abandoned-cart-recovery/",
+        "image": "https://shoplyapps.com/assets/og-image.png",
+        "inLanguage": "en",
+        "author": { "@type": "Organization", "@id": "https://shoplyapps.com/#org", "name": "Shoply Apps", "url": "https://shoplyapps.com/" },
+        "publisher": { "@id": "https://shoplyapps.com/#org" }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://shoplyapps.com/" },
+          { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://shoplyapps.com/blog/" },
+          { "@type": "ListItem", "position": 3, "name": "Abandoned cart recovery", "item": "https://shoplyapps.com/blog/shopify-abandoned-cart-recovery/" }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {"@type": "Question", "name": "Can Shopify email shoppers who only added items to their cart?", "acceptedAnswer": {"@type": "Answer", "text": "Usually not. Shopify can only email someone it can identify, so a shopper who added items but never started checkout or logged in is anonymous. Recovery emails mostly go to abandoned checkouts, where the shopper typed in an email address."}},
+          {"@type": "Question", "name": "Where do I find abandoned checkouts in Shopify?", "acceptedAnswer": {"@type": "Answer", "text": "In your Shopify admin, look under Orders for abandoned checkouts. Each one shows the customer's details, the items and a recovery link you can send by email. Automated recovery emails are set up in marketing automations or notification settings, depending on your setup and plan."}},
+          {"@type": "Question", "name": "Should the first abandoned cart email include a discount?", "acceptedAnswer": {"@type": "Answer", "text": "Usually not. Many shoppers simply got distracted, so a reminder is often enough. If you use a discount, save it for the last email, keep it modest and check the margin on the discounted order first."}},
+          {"@type": "Question", "name": "How do I calculate my abandoned checkout recovery rate?", "acceptedAnswer": {"@type": "Answer", "text": "Divide recovered orders by abandoned checkouts for the same period. For example, 9 recovered orders from 90 abandoned checkouts is a 10% recovery rate. Track revenue recovered alongside it."}}
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header>
+    <div class="wrap nav">
+      <a class="brand" href="/" aria-label="Shoply Apps home"><img src="/assets/shoply-apps-logo.svg" alt="">shoply apps</a>
+      <ul>
+        <li><a href="/#apps">Our apps</a></li>
+        <li><a href="/#item-scan">Item Scan &amp; Analytics</a></li>
+        <li class="keep"><a href="/blog/" aria-current="page">Blog</a></li>
+      </ul>
+      <a class="btn" href="/#apps">See our apps</a>
+    </div>
+  </header>
+
+  <main>
+    <article class="post">
+      <p class="crumbs"><a href="/">Home</a> / <a href="/blog/">Blog</a></p>
+      <h1>Shopify abandoned cart recovery: emails that bring shoppers back</h1>
+      <p class="meta">By the Shoply Apps team · <time datetime="2026-10-20">20 October 2026</time> · 10 min read</p>
+
+      <section class="tldr">
+        <h2>Key takeaways</h2>
+        <ul>
+          <li>An abandoned cart means items were added but checkout never started; an abandoned checkout means the shopper started checkout and entered contact details but didn't pay.</li>
+          <li>Shopify can recover abandoned checkouts by email because it has the shopper's address; anonymous cart abandoners usually can't be emailed unless they are logged-in or known customers.</li>
+          <li>A common starting sequence is three emails at about 1 hour, 24 hours and 48–72 hours: a reminder, a reassurance, and a final nudge.</li>
+          <li>Hold back discounts until the last email, if at all, because a 10% code can cut a fifth or more of the profit on an order.</li>
+          <li>Track recovery rate (recovered orders ÷ abandoned checkouts) and revenue recovered, and only email people who are allowed to receive it.</li>
+        </ul>
+      </section>
+
+      <p>Shopify abandoned cart recovery is the practice of reminding shoppers who left without paying, usually by email, so they come back and finish the order. It works best for one specific group: shoppers who started checkout and typed in their email address. This guide explains who you can and can't reach, gives you a ready-to-adapt three-email sequence, and shows how to measure whether it is working without giving away your margin.</p>
+
+      <h2 id="cart-vs-checkout">What is the difference between an abandoned cart and an abandoned checkout?</h2>
+      <p>An abandoned cart is when a shopper adds products to their cart and leaves without starting checkout. An abandoned checkout is when they go further: they start checkout, enter contact details such as an email address, and then leave before paying.</p>
+      <p>The difference matters because you can only email someone you can identify. At the cart stage most shoppers are anonymous: Shopify knows a cart exists, but not who it belongs to. The exception is a shopper who is logged in to a customer account or is otherwise known to your store. Once a shopper types their email address into checkout, Shopify can link the cart to a person, which is why most "abandoned cart emails" are really abandoned checkout emails.</p>
+      <table>
+        <thead>
+          <tr><th></th><th>Abandoned cart</th><th>Abandoned checkout</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>What happened</td><td>Items added, checkout not started</td><td>Checkout started, contact details entered, not paid</td></tr>
+          <tr><td>Do you have an email?</td><td>Usually not, unless they are a logged-in or known customer</td><td>Yes, if they entered one</td></tr>
+          <tr><td>Can you send a recovery email?</td><td>Rarely</td><td>Yes, subject to consent rules and your settings</td></tr>
+          <tr><td>Best fix</td><td>Improve the store so fewer people leave</td><td>Recovery emails plus store fixes</td></tr>
+        </tbody>
+      </table>
+      <p>For the anonymous group, the fix is on your site, not in the inbox. Our guide on <a href="/blog/reduce-cart-abandonment-shopify/">why shoppers abandon carts on Shopify, and how to fix it</a> covers surprise shipping costs, slow pages and the other common reasons people leave.</p>
+
+      <h2 id="shopify-built-in-recovery">How does abandoned checkout recovery work in Shopify?</h2>
+      <p>Shopify records abandoned checkouts in your admin and has built-in abandoned checkout emails that can be sent automatically. Where you switch them on depends on your setup: look in your Shopify admin's marketing automations or notification settings. Features and options vary, so check what is available on your plan.</p>
+      <p>Things to check when you set it up:</p>
+      <ul>
+        <li><strong>Who receives it.</strong> Depending on your settings, automated emails may go to everyone who abandons checkout or only to shoppers who agreed to receive marketing. Choose the option that fits the rules where you sell (more on that below).</li>
+        <li><strong>Timing.</strong> See which send delays you can choose, and whether you can add more than one email.</li>
+        <li><strong>The template.</strong> Edit the wording to match your store's voice; the default text is generic.</li>
+      </ul>
+      <p>You can also recover checkouts by hand. In your admin, open the list of abandoned checkouts under Orders, click one, and you will see the customer's details, the items and a recovery link that reopens their checkout. You can send that link by email from the admin. Doing a few manually is a good way to learn what your shoppers abandon before you automate anything.</p>
+
+      <h2 id="three-email-sequence">What is a good abandoned cart email sequence?</h2>
+      <p>A common starting point is three emails: a reminder after about 1 hour, a reassurance email after about 24 hours, and a final nudge after 48–72 hours. Treat these timings as a test, not a rule; your shoppers may respond better to a different rhythm.</p>
+      <table>
+        <thead>
+          <tr><th>Email</th><th>Suggested timing</th><th>Goal</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>1. Reminder</td><td>About 1 hour</td><td>Catch people who got distracted while the decision is fresh</td></tr>
+          <tr><td>2. Reassurance</td><td>About 24 hours</td><td>Answer doubts about shipping, returns, sizing or quality</td></tr>
+          <tr><td>3. Final nudge</td><td>About 48–72 hours</td><td>Give a last reason to buy, possibly a small incentive</td></tr>
+        </tbody>
+      </table>
+      <p>Stop the sequence as soon as the shopper completes the order. Below is example copy for a fictional store, Fernway Home, which sells handmade ceramic mugs. Swap in your own products and tone.</p>
+
+      <h3>Email 1: the reminder (about 1 hour)</h3>
+      <p><strong>Subject:</strong> You left something in your cart</p>
+      <blockquote>
+        <p>Hi Sam,</p>
+        <p>Your Speckled Stoneware Mug is still waiting for you. We've saved your cart, so you can pick up right where you left off.</p>
+        <p>[Product image, name, quantity and price]</p>
+        <p>[Button: Return to your cart]</p>
+        <p>Questions? Just reply to this email.<br>The Fernway Home team</p>
+      </blockquote>
+      <p>The goal is a simple, helpful reminder. No pressure, no discount.</p>
+
+      <h3>Email 2: the reassurance (about 24 hours)</h3>
+      <p><strong>Subject:</strong> Any questions about your mug?</p>
+      <blockquote>
+        <p>Hi Sam,</p>
+        <p>Not sure yet? Here's what you might want to know:</p>
+        <p>Each mug is made by hand, so the speckles on yours will be unique. It's dishwasher safe and holds 350 ml. We ship within 2 working days, and you can return it within 30 days if it isn't right.</p>
+        <p>[Product image and cart summary]</p>
+        <p>[Button: Complete your order]</p>
+        <p>The Fernway Home team</p>
+      </blockquote>
+      <p>The goal is to remove doubts. Only include delivery times and return terms that are actually true for your store.</p>
+
+      <h3>Email 3: the final nudge (about 48–72 hours)</h3>
+      <p><strong>Subject:</strong> Your cart is about to expire</p>
+      <blockquote>
+        <p>Hi Sam,</p>
+        <p>We'll be clearing saved carts soon, so this is our last reminder about your Speckled Stoneware Mug. If you'd still like it, it's one click away.</p>
+        <p>[Product image and cart summary]</p>
+        <p>[Button: Finish checking out]</p>
+        <p>If now isn't the right time, no problem. We won't email you about this cart again.<br>The Fernway Home team</p>
+      </blockquote>
+      <p>The goal is a polite, final prompt. Only say a cart will expire if that is true for your setup, and if you offer a discount, this is the email for it.</p>
+
+      <h2 id="when-to-offer-discount">Should you offer a discount in an abandoned cart email?</h2>
+      <p>Usually not in the first email, and sometimes not at all. Many shoppers simply got interrupted, so a reminder alone may bring them back, and a code in every recovery email teaches regular customers to abandon on purpose and wait for one.</p>
+      <p>A discount can make sense in the last email when your margins can take it, for higher-priced items where hesitation is common, or for first-time shoppers. It makes less sense on thin-margin products, for repeat customers who would likely buy anyway, or when you already discount often.</p>
+      <p>Here is what a 10% code costs on an example order (your numbers will differ):</p>
+      <table>
+        <thead>
+          <tr><th>Example order</th><th>No discount</th><th>With 10% code</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Customer pays</td><td>$60.00</td><td>$54.00</td></tr>
+          <tr><td>Product cost</td><td>$30.00</td><td>$30.00</td></tr>
+          <tr><td>Shipping you pay</td><td>$6.00</td><td>$6.00</td></tr>
+          <tr><td>Profit before fees</td><td>$24.00</td><td>$18.00</td></tr>
+        </tbody>
+      </table>
+      <p>The code takes $6 off the price, but that $6 comes straight out of profit: $24 drops to $18, a 25% cut in what you keep, before payment fees. On a product with a thinner margin, the same code can push the order below cost. Before you add a code, work out the margin at the discounted price using our guide to <a href="/blog/dropshipping-profit-margins/">dropshipping profit margins</a>, and check you aren't already <a href="/blog/shopify-products-selling-below-cost/">selling products below cost</a>.</p>
+
+      <h2 id="email-best-practice">What makes an abandoned checkout email work?</h2>
+      <p>The best recovery emails make it effortless to return: they show exactly what was left behind and offer one obvious way back. Use this checklist:</p>
+      <ul>
+        <li><strong>Show the cart.</strong> Include product images, names, variants and prices so the shopper recognises what they chose.</li>
+        <li><strong>One clear button.</strong> A single link back to the checkout, not a menu of links to your homepage and social accounts.</li>
+        <li><strong>Mobile-friendly.</strong> Many people read email on their phone, so use a single column, readable text and a button that's easy to tap. Send yourself a test and open it on a phone.</li>
+        <li><strong>Plain-language subject lines.</strong> Say what the email is about, like "You left something in your cart". Avoid all caps and fake urgency.</li>
+        <li><strong>A real reply address.</strong> Let shoppers ask a question by hitting reply.</li>
+        <li><strong>Accurate product content.</strong> The email pulls in your product image and title, so missing images or messy titles show up here too.</li>
+      </ul>
+
+      <h2 id="consent-and-privacy">Do you need consent to send abandoned cart emails?</h2>
+      <p>It depends on where you and your customers are. Rules on marketing email differ by country; in the EU, for example, the GDPR and ePrivacy rules affect when you can email people and how you handle their data. Some places treat a cart reminder differently from general marketing, others don't.</p>
+      <p>Keep it simple and safe:</p>
+      <ul>
+        <li>Find out what applies where you sell, and ask a local legal adviser if you're unsure.</li>
+        <li>Use Shopify's settings to limit automated emails to shoppers who agreed to marketing if your rules require it.</li>
+        <li>Include a working unsubscribe link and honour unsubscribes promptly.</li>
+        <li>Explain in your privacy policy how you use checkout data.</li>
+      </ul>
+
+      <h2 id="metrics-to-track">How do you measure Shopify abandoned cart recovery?</h2>
+      <p>Track two numbers: recovery rate and revenue recovered. Together they tell you whether the emails work and whether they are worth the effort.</p>
+      <p class="formula">Recovery rate = Recovered orders ÷ Abandoned checkouts<br>Revenue recovered = Total value of recovered orders</p>
+      <p>A worked example with made-up numbers: in one month your store has 90 abandoned checkouts. Nine of those shoppers come back and complete their order, with an average order value of $55.</p>
+      <ul>
+        <li>Recovery rate = 9 ÷ 90 = 10%</li>
+        <li>Revenue recovered = 9 × $55 = $495</li>
+      </ul>
+      <p>Compare months, and change one thing at a time, such as the timing of email 2 or a new subject line, so you can see what made the difference. If you add a discount, also track the profit on recovered orders, not just the revenue.</p>
+
+      <h2 id="keep-products-in-stock">Why do recovered shoppers still fail to buy?</h2>
+      <p>Often because the product is no longer available when they click back. A recovery email that leads to a sold-out item wastes the click and frustrates the shopper. Keep popular products in stock, watch items that are about to sell out, and don't let shoppers check out products you can't ship. Our guide to <a href="/blog/shopify-out-of-stock-oversold/">out-of-stock and oversold products on Shopify</a> explains how to stay ahead of it.</p>
+      <p>We're building <strong>Shoply: Item Scan &amp; Analytics</strong>, coming soon to the Shopify App Store, which flags products that are out of stock, low on stock or likely to sell out soon, as well as products missing images or priced below your margin target, so the shoppers you win back can actually buy.</p>
+
+      <h2 id="faq">FAQ</h2>
+      <h3>Can Shopify email shoppers who only added items to their cart?</h3>
+      <p>Usually not. Shopify can only email someone it can identify, so a shopper who added items but never started checkout or logged in is anonymous. Recovery emails mostly go to abandoned checkouts, where the shopper typed in an email address.</p>
+      <h3>Where do I find abandoned checkouts in Shopify?</h3>
+      <p>In your Shopify admin, look under Orders for abandoned checkouts. Each one shows the customer's details, the items and a recovery link you can send by email. Automated recovery emails are set up in marketing automations or notification settings, depending on your setup and plan.</p>
+      <h3>Should the first abandoned cart email include a discount?</h3>
+      <p>Usually not. Many shoppers simply got distracted, so a reminder is often enough. If you use a discount, save it for the last email, keep it modest and check the margin on the discounted order first.</p>
+      <h3>How do I calculate my abandoned checkout recovery rate?</h3>
+      <p>Divide recovered orders by abandoned checkouts for the same period. For example, 9 recovered orders from 90 abandoned checkouts is a 10% recovery rate. Track revenue recovered alongside it.</p>
+
+      <section class="post-cta">
+        <h2>Make sure recovered shoppers can check out</h2>
+        <p>Shoply: Item Scan &amp; Analytics, coming soon to the Shopify App Store, checks every product for stock, pricing and content problems, such as items about to sell out, prices below your margin target or missing images, and ranks them by the money at stake each month.</p>
+        <a class="btn btn-amber" href="mailto:info@shoplyapps.com?subject=Notify%20me%20when%20Shoply%3A%20Item%20Scan%20%26%20Analytics%20is%20live">Notify me at launch</a>
+      </section>
+
+      <nav class="related" aria-label="Related articles">
+        <h2>Keep reading</h2>
+        <ul>
+          <li><a href="/blog/reduce-cart-abandonment-shopify/">Why shoppers abandon carts on Shopify, and how to fix it</a></li>
+          <li><a href="/blog/increase-shopify-conversion-rate/">How to increase your Shopify conversion rate: 15 practical fixes</a></li>
+          <li><a href="/blog/dropshipping-profit-margins/">Dropshipping profit margins: how to price products so you actually make money</a></li>
+        </ul>
+      </nav>
+    </article>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <div class="foot">
+        <a class="brand" href="/" aria-label="Shoply Apps home"><img src="/assets/shoply-apps-logo.svg" alt="">shoply apps</a>
+        <ul>
+          <li><a href="/#apps">Our apps</a></li>
+          <li><a href="/blog/">Blog</a></li>
+          <li><a href="/#faq">FAQ</a></li>
+          <li><a href="/privacy.html">Privacy</a></li>
+          <li><a href="/terms.html">Terms</a></li>
+          <li><a href="mailto:info@shoplyapps.com">info@shoplyapps.com</a></li>
+        </ul>
+      </div>
+      <p class="fine">© 2026 Shoply Apps. Shopify is a trademark of Shopify Inc.</p>
+    </div>
+  </footer>
+</body>
+</html>

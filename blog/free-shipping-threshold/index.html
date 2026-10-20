@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>How to set a free shipping threshold that protects your margin · Shoply Apps</title>
+  <meta name="description" content="Set a free shipping threshold that lifts order value without hurting your margin: pick the number from your AOV, check the maths and set it up in Shopify.">
+  <link rel="canonical" href="https://shoplyapps.com/blog/free-shipping-threshold/">
+  <link rel="icon" href="/assets/shoply-apps-favicon.svg" type="image/svg+xml">
+  <meta name="theme-color" content="#15223d">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Shoply Apps">
+  <meta property="og:title" content="How to set a free shipping threshold that protects your margin">
+  <meta property="og:description" content="Set a free shipping threshold that lifts order value without hurting your margin: pick the number from your AOV, check the maths and set it up in Shopify.">
+  <meta property="og:url" content="https://shoplyapps.com/blog/free-shipping-threshold/">
+  <meta property="og:image" content="https://shoplyapps.com/assets/og-image.png">
+  <meta property="article:published_time" content="2026-10-20">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="stylesheet" href="/assets/blog.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BlogPosting",
+        "headline": "How to set a free shipping threshold that protects your margin",
+        "description": "Set a free shipping threshold that lifts order value without hurting your margin: pick the number from your AOV, check the maths and set it up in Shopify.",
+        "datePublished": "2026-10-20",
+        "dateModified": "2026-10-20",
+        "url": "https://shoplyapps.com/blog/free-shipping-threshold/",
+        "mainEntityOfPage": "https://shoplyapps.com/blog/free-shipping-threshold/",
+        "image": "https://shoplyapps.com/assets/og-image.png",
+        "inLanguage": "en",
+        "author": { "@type": "Organization", "@id": "https://shoplyapps.com/#org", "name": "Shoply Apps", "url": "https://shoplyapps.com/" },
+        "publisher": { "@id": "https://shoplyapps.com/#org" }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://shoplyapps.com/" },
+          { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://shoplyapps.com/blog/" },
+          { "@type": "ListItem", "position": 3, "name": "Free shipping threshold", "item": "https://shoplyapps.com/blog/free-shipping-threshold/" }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {"@type": "Question", "name": "What is a good free shipping threshold?", "acceptedAnswer": {"@type": "Answer", "text": "There is no single right number. A practical starting point is roughly 15–30% above your current average order value, so if your AOV is €38, test a threshold around €45. Then check the profit on an order just above it and measure the results."}},
+          {"@type": "Question", "name": "Should I offer free shipping on all orders instead?", "acceptedAnswer": {"@type": "Answer", "text": "Only if your prices cover the shipping cost on your smallest orders. Free shipping on everything is simple to explain, but small orders can lose money and it gives shoppers no reason to add more to their cart."}},
+          {"@type": "Question", "name": "How do I offer free shipping over a certain amount on Shopify?", "acceptedAnswer": {"@type": "Answer", "text": "In Settings, then Shipping and delivery, add a rate priced at 0 to your shipping zone with a minimum order price condition equal to your threshold. Keep a paid rate for smaller orders and place test orders to check what customers see."}},
+          {"@type": "Question", "name": "Can I set different thresholds for different countries?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Shipping rates are set per zone, so you can add a free rate with a different minimum order price in each zone, or leave free shipping out of zones where delivery is too expensive."}}
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header>
+    <div class="wrap nav">
+      <a class="brand" href="/" aria-label="Shoply Apps home"><img src="/assets/shoply-apps-logo.svg" alt="">shoply apps</a>
+      <ul>
+        <li><a href="/#apps">Our apps</a></li>
+        <li><a href="/#item-scan">Item Scan &amp; Analytics</a></li>
+        <li class="keep"><a href="/blog/" aria-current="page">Blog</a></li>
+      </ul>
+      <a class="btn" href="/#apps">See our apps</a>
+    </div>
+  </header>
+
+  <main>
+    <article class="post">
+      <p class="crumbs"><a href="/">Home</a> / <a href="/blog/">Blog</a></p>
+      <h1>How to set a free shipping threshold that protects your margin</h1>
+      <p class="meta">By the Shoply Apps team · <time datetime="2026-10-20">20 October 2026</time> · 10 min read</p>
+
+      <section class="tldr">
+        <h2>Key takeaways</h2>
+        <ul>
+          <li>A free shipping threshold means "free shipping on orders over a set amount", which gives shoppers a reason to add a little more to their cart.</li>
+          <li>A sensible starting point is a threshold roughly 15–30% above your current average order value (AOV), for example €45 if your AOV is €38, and then test it.</li>
+          <li>Before you launch, check that an order just above the threshold still makes a profit after product cost, the shipping you now pay, payment fees and discounts.</li>
+          <li>Low-cost, high-margin add-on products priced close to the typical gap help shoppers reach the threshold without hurting your margin.</li>
+          <li>Judge the result by AOV, conversion rate, shipping cost as a share of revenue and profit per order, comparing equal periods before and after.</li>
+        </ul>
+      </section>
+
+      <p>A free shipping threshold is a rule like "free shipping on orders over €45": below that amount the customer pays for delivery, above it you do. Set well, it nudges shoppers to buy a little more per order. Set badly, it hands away your profit on every parcel. This guide shows you how to pick the number, check the maths and set it up on Shopify.</p>
+
+      <h2 id="what-is-a-free-shipping-threshold">What is a free shipping threshold, and why can it raise order value?</h2>
+      <p>A free shipping threshold is the minimum order value a customer must reach to get free delivery. It can raise your average order value (AOV), which is your total revenue divided by the number of orders, because a shopper who is a few euros short often prefers to add another item rather than pay for shipping.</p>
+      <p>Think of it from the shopper's side. Paying €4.95 for delivery feels like money for nothing. Spending €7 more and getting a product they wanted anyway feels like a better deal. That small decision, repeated across many orders, is what a threshold is designed to encourage.</p>
+      <p>It does not work for every store. If most of your customers buy one expensive item, or your shipping costs are very high compared with your prices, a threshold may change little. That is why you test it rather than assume it.</p>
+
+      <h2 id="free-shipping-options">What are the ways to offer free shipping?</h2>
+      <p>There are three common approaches: make shipping always free and build its cost into your prices, offer free shipping over a threshold, or give free shipping only with a discount code or membership. Each one moves the shipping cost somewhere different.</p>
+      <table>
+        <thead>
+          <tr><th>Option</th><th>How it works</th><th>Pros</th><th>Cons</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Always free, built into prices</td><td>Every order ships free; product prices are raised to cover average shipping</td><td>Simple message, no surprise at checkout</td><td>Higher shelf prices; small orders can lose money; no push to add more</td></tr>
+          <tr><td>Free over a threshold</td><td>Free shipping when the order reaches a set amount, paid shipping below it</td><td>Encourages bigger orders; small orders still cover shipping</td><td>Needs margin maths and clear messaging; some shoppers still see a shipping fee</td></tr>
+          <tr><td>Free with a code or membership</td><td>Free shipping only for people with a code, a loyalty tier or a paid membership</td><td>Targeted and easy to limit; good for campaigns or repeat buyers</td><td>Most visitors never see the offer; codes get shared; more to manage</td></tr>
+        </tbody>
+      </table>
+      <p>Many stores combine them, for example a permanent threshold plus an occasional free-shipping code for email subscribers. If you are still setting up zones and rates, start with our guide to <a href="/blog/shopify-shipping-settings-guide/">Shopify shipping settings</a>.</p>
+
+      <h2 id="how-to-choose-the-threshold">How do you choose the right free shipping threshold?</h2>
+      <p>Start from your current AOV and set the threshold a little above it, so a typical shopper needs to add one small item to qualify. A threshold roughly 15–30% above your AOV is a reasonable first test, not a rule.</p>
+      <p>Worked example (example numbers): your AOV over the last 90 days is €38.</p>
+      <ul>
+        <li>15% above €38 = €43.70</li>
+        <li>30% above €38 = €49.40</li>
+        <li>A round number in that range: <strong>€45</strong></li>
+      </ul>
+      <p>Then sanity-check it against your catalog:</p>
+      <ul>
+        <li><strong>Too low:</strong> if many orders already land above it, you simply start paying shipping on orders that would have come anyway.</li>
+        <li><strong>Too high:</strong> if it is far above what most people spend, shoppers give up on the idea and nothing changes.</li>
+        <li><strong>Check your prices:</strong> look at what one common product plus one small add-on costs. If that combination lands just above the threshold, it is easy to reach.</li>
+      </ul>
+      <p>You can find your AOV in your Shopify analytics. Use a normal period, not one inflated by a big sale.</p>
+
+      <h2 id="margin-maths">How do you make sure free shipping doesn't eat your margin?</h2>
+      <p>Work out the profit on an order that only just qualifies, because that is your weakest free-shipping order. If it still makes money after every cost, the threshold is safe.</p>
+      <p class="formula">Profit = Order value after discounts − Product cost − Shipping you pay − Payment fees</p>
+      <p>The table below compares three example orders. All numbers are examples: product cost is 45% of the full price, your carrier charges you €6.50 per parcel, and the payment fee is an example of 3% + €0.30. Check your own carrier rates and payment fees, which depend on your plan and provider.</p>
+      <table>
+        <thead>
+          <tr><th>Line</th><th>A: €38 order, customer pays €4.95 shipping</th><th>B: €38 order, free shipping for everyone</th><th>C: €52 cart, 10% code, free over €45</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Products at full price</td><td>€38.00</td><td>€38.00</td><td>€52.00</td></tr>
+          <tr><td>Discount code</td><td>€0.00</td><td>€0.00</td><td>−€5.20</td></tr>
+          <tr><td>Shipping charged to customer</td><td>€4.95</td><td>€0.00</td><td>€0.00</td></tr>
+          <tr><td>Revenue</td><td>€42.95</td><td>€38.00</td><td>€46.80</td></tr>
+          <tr><td>Product cost</td><td>−€17.10</td><td>−€17.10</td><td>−€23.40</td></tr>
+          <tr><td>Shipping you pay</td><td>−€6.50</td><td>−€6.50</td><td>−€6.50</td></tr>
+          <tr><td>Payment fee (example)</td><td>−€1.59</td><td>−€1.44</td><td>−€1.70</td></tr>
+          <tr><td><strong>Profit</strong></td><td><strong>€17.76</strong></td><td><strong>€12.96</strong></td><td><strong>€15.20</strong></td></tr>
+          <tr><td>Margin</td><td>41.4%</td><td>34.1%</td><td>32.5%</td></tr>
+        </tbody>
+      </table>
+      <p>What this tells you:</p>
+      <ul>
+        <li>Order C still makes a healthy profit even with a discount code and free shipping, so a €45 threshold is safe at these costs.</li>
+        <li>Order C earns less per order than order A, where the customer paid for shipping. A threshold is a trade: you give up some shipping income in the hope of more orders and bigger baskets. That is why you must measure it.</li>
+        <li>Free shipping for everyone (order B) costs the most on small orders, unless you raise prices to cover it.</li>
+      </ul>
+      <p>Two warnings. First, decide whether your threshold is checked before or after discount codes, and test it, because a large code can push an order below the line or leave you paying shipping on a heavily discounted order. Second, make sure every product's cost is filled in, or this maths is guesswork. Our guide to <a href="/blog/dropshipping-profit-margins/">dropshipping profit margins</a> walks through pricing with all costs included.</p>
+
+      <h2 id="gap-fillers">What are gap filler products?</h2>
+      <p>Gap fillers are low-cost add-on products that help a shopper close the gap to the threshold. If many carts sit around €38 and the threshold is €45, items priced around €7–€12 are natural gap fillers.</p>
+      <p>Good gap fillers:</p>
+      <ul>
+        <li>Have a healthy margin, so the extra sale pays for part of the shipping. Example: a product that costs you €2.50 and sells for €8 has a margin of about 69%.</li>
+        <li>Fit with what people already buy: spare parts, refills, care products, socks with shoes, cases with gadgets.</li>
+        <li>Are light and small, so they do not push the parcel into a higher shipping band.</li>
+        <li>Are reliably in stock. A gap filler that is out of stock is no help at checkout.</li>
+      </ul>
+      <p>Show them where the decision happens: in the cart, on product pages as "goes well with", or in a small collection such as "Under €10".</p>
+
+      <h2 id="communicate-the-threshold">How should you tell shoppers about free shipping?</h2>
+      <p>Tell them early and remind them often: a threshold only changes behaviour if shoppers know about it before they reach checkout.</p>
+      <ul>
+        <li><strong>Announcement bar:</strong> a short line at the top of every page, such as "Free shipping on orders over €45".</li>
+        <li><strong>Cart progress message:</strong> show how far they are from the threshold, for example "You're €7 away from free shipping". Many Shopify themes can show this, or you can add it with an app from the Shopify App Store.</li>
+        <li><strong>Product pages:</strong> a line near the price or add-to-cart button repeating the offer.</li>
+        <li><strong>Shipping and FAQ pages:</strong> state the threshold, which countries it covers and any exclusions.</li>
+      </ul>
+      <p>Clear shipping costs also matter for checkout completion; unexpected costs are a common reason people leave. Our guide to <a href="/blog/increase-shopify-conversion-rate/">increasing your Shopify conversion rate</a> covers more fixes like this.</p>
+
+      <h2 id="measure-results">How do you know if your free shipping threshold is working?</h2>
+      <p>Compare a few key numbers over equal periods before and after the change, for example four weeks before and four weeks after, avoiding big sales or holidays in either period.</p>
+      <ul>
+        <li><strong>AOV:</strong> did the typical order get bigger?</li>
+        <li><strong>Conversion rate:</strong> the share of visitors who place an order. Did it hold steady or rise?</li>
+        <li><strong>Shipping cost as % of revenue:</strong> total shipping you paid divided by total revenue. Did it jump?</li>
+        <li><strong>Profit per order:</strong> revenue minus product cost, shipping and fees, divided by the number of orders.</li>
+      </ul>
+      <p>Profit is the number that decides it. A higher AOV with lower profit per order and no extra orders means the threshold is too low or your costs are too high. If nothing moves, try a different number or better gap fillers, and change one thing at a time.</p>
+
+      <h2 id="how-to-set-up-in-shopify">How do you offer free shipping over a set amount on Shopify?</h2>
+      <p>The usual way is to add a free shipping rate with a minimum order price condition to your shipping zone. Menu names change from time to time, so follow Shopify's help center if anything looks different.</p>
+      <ol>
+        <li>In your Shopify admin, go to <strong>Settings</strong> and then <strong>Shipping and delivery</strong>.</li>
+        <li>Open the shipping profile you want to change, then find the zone, for example your home country.</li>
+        <li>Add a rate, give it a clear name such as "Free shipping", and set its price to 0.</li>
+        <li>Add a condition based on order price and enter your threshold as the minimum.</li>
+        <li>Check that your paid rate still exists for orders below the threshold, and set a matching maximum on it if you do not want both rates to show.</li>
+        <li>Place a test order just below and just above the threshold, with and without a discount code, to confirm what customers see.</li>
+      </ol>
+      <p>Shopify also offers free shipping discounts, which can have a minimum purchase requirement. These are useful for time-limited campaigns or codes for a specific group.</p>
+
+      <h2 id="special-cases">What about heavy items, international orders and dropshipping?</h2>
+      <p>A single threshold rarely fits every product and country, so handle the exceptions separately.</p>
+      <ul>
+        <li><strong>Heavy or bulky items:</strong> put them in a separate shipping profile with their own rates, so one large item cannot get free shipping that costs you more than its profit.</li>
+        <li><strong>International zones:</strong> shipping abroad usually costs more, so set a higher threshold per zone, or keep paid shipping only for distant zones.</li>
+        <li><strong>Dropshipping with several suppliers:</strong> an order with items from two suppliers can mean two parcels and two shipping charges. Base your maths on the most expensive realistic combination, not the cheapest. See <a href="/blog/how-to-start-dropshipping-on-shopify/">how to start dropshipping on Shopify</a> for how supplier shipping fits in.</li>
+      </ul>
+      <p>Whatever the case, the threshold only protects your margin if your product prices and costs are right. <strong>Shoply: Item Scan &amp; Analytics</strong>, coming soon to the Shopify App Store, flags products sold below cost, below your margin target or missing a cost per item, so you can trust the numbers behind your shipping offer. If you want to check manually first, see <a href="/blog/shopify-products-selling-below-cost/">how to find products you're selling below cost</a>.</p>
+
+      <h2 id="faq">FAQ</h2>
+      <h3>What is a good free shipping threshold?</h3>
+      <p>There is no single right number. A practical starting point is roughly 15–30% above your current average order value, so if your AOV is €38, test a threshold around €45. Then check the profit on an order just above it and measure the results.</p>
+      <h3>Should I offer free shipping on all orders instead?</h3>
+      <p>Only if your prices cover the shipping cost on your smallest orders. Free shipping on everything is simple to explain, but small orders can lose money and it gives shoppers no reason to add more to their cart.</p>
+      <h3>How do I offer free shipping over a certain amount on Shopify?</h3>
+      <p>In Settings, then Shipping and delivery, add a rate priced at 0 to your shipping zone with a minimum order price condition equal to your threshold. Keep a paid rate for smaller orders and place test orders to check what customers see.</p>
+      <h3>Can I set different thresholds for different countries?</h3>
+      <p>Yes. Shipping rates are set per zone, so you can add a free rate with a different minimum order price in each zone, or leave free shipping out of zones where delivery is too expensive.</p>
+
+      <section class="post-cta">
+        <h2>Know your margins before you pay for shipping</h2>
+        <p>Shoply: Item Scan &amp; Analytics, coming soon to the Shopify App Store, scans every product for missing costs, below-cost prices and margins under your target, so your free shipping threshold is built on numbers you can trust.</p>
+        <a class="btn btn-amber" href="mailto:info@shoplyapps.com?subject=Notify%20me%20when%20Shoply%3A%20Item%20Scan%20%26%20Analytics%20is%20live">Notify me at launch</a>
+      </section>
+
+      <nav class="related" aria-label="Related articles">
+        <h2>Keep reading</h2>
+        <ul>
+          <li><a href="/blog/shopify-shipping-settings-guide/">Shopify shipping settings explained: zones, rates and delivery times</a></li>
+          <li><a href="/blog/dropshipping-profit-margins/">Dropshipping profit margins: how to price products so you actually make money</a></li>
+          <li><a href="/blog/reduce-cart-abandonment-shopify/">Why shoppers abandon carts on Shopify, and how to fix it</a></li>
+        </ul>
+      </nav>
+    </article>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <div class="foot">
+        <a class="brand" href="/" aria-label="Shoply Apps home"><img src="/assets/shoply-apps-logo.svg" alt="">shoply apps</a>
+        <ul>
+          <li><a href="/#apps">Our apps</a></li>
+          <li><a href="/blog/">Blog</a></li>
+          <li><a href="/#faq">FAQ</a></li>
+          <li><a href="/privacy.html">Privacy</a></li>
+          <li><a href="/terms.html">Terms</a></li>
+          <li><a href="mailto:info@shoplyapps.com">info@shoplyapps.com</a></li>
+        </ul>
+      </div>
+      <p class="fine">© 2026 Shoply Apps. Shopify is a trademark of Shopify Inc.</p>
+    </div>
+  </footer>
+</body>
+</html>
