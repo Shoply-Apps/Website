@@ -1,7 +1,7 @@
 ---
 # Tells cPanel what to copy into the site's folder when you click "Deploy HEAD Commit".
 # Copies only the site files; nothing else in public_html is touched or deleted.
-# Files with the same name (index.html, privacy.html, terms.html, robots.txt, sitemap.xml, llms.txt, assets/..., blog/...) are overwritten.
+# Files with the same name (index.html, privacy.html, terms.html, robots.txt, sitemap.xml, llms.txt, assets/..., blog/..., apps/...) are overwritten.
 deployment:
   tasks:
     - export DEPLOYPATH=/home/tscrtki8z231/public_html/
@@ -10,3 +10,5 @@ deployment:
     - /bin/cp -R assets/. ${DEPLOYPATH}assets/
     - /bin/mkdir -p ${DEPLOYPATH}blog
     - /bin/cp -R blog/. ${DEPLOYPATH}blog/
+    - /bin/mkdir -p ${DEPLOYPATH}apps
+    - /bin/cp -R apps/. ${DEPLOYPATH}apps/

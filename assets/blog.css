@@ -15,7 +15,7 @@
 * { box-sizing: border-box; }
 body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--sans); font-size: 17px; line-height: 1.7; -webkit-text-size-adjust: 100%; }
 a { color: var(--navy); }
-img { display: block; max-width: 100%; }
+img { display: block; max-width: 100%; height: auto; }
 .wrap { max-width: 1120px; margin: 0 auto; padding: 0 24px; }
 
 /* Header and footer (as on the homepage) */
@@ -82,7 +82,9 @@ footer { border-top: 1px solid var(--line); padding: 28px 0; color: var(--muted)
   .wrap, .post, .blog-head, .cards { padding-left: 16px; padding-right: 16px; }
   .nav { gap: 12px; }
   .nav ul li:not(.keep) { display: none; }
-  .nav ul a { padding: 8px 10px; }
+  .nav ul { gap: 6px; }
+  .nav ul a { padding: 7px 12px; font-size: 15px; background: var(--bg-soft); color: var(--navy); white-space: nowrap; }
+  .nav ul a[href="/blog/"] { background: var(--navy); color: #fff; }
   .brand { white-space: nowrap; }
   .nav .btn { display: none; }
   .nav ul { margin-left: auto; }
@@ -104,3 +106,24 @@ footer { border-top: 1px solid var(--line); padding: 28px 0; color: var(--muted)
 }
 /* Long URLs and code (e.g. UTM links) wrap instead of widening the page on phones */
 .post code, .post a, .formula { overflow-wrap: anywhere; }
+@media (max-width: 374px) { .brand { font-size: 17px; gap: 8px; } .brand img { width: 26px; height: 26px; } .nav ul a { padding: 6px 10px; font-size: 14px; } }
+/* Apps page */
+.apps-list { max-width: 720px; margin: 24px auto 0; padding: 0 24px; display: grid; gap: 16px; }
+.app-tile { display: grid; grid-template-columns: 72px 1fr; gap: 20px; border: 1px solid var(--line); border-radius: 20px; padding: 26px; }
+.app-tile h2 { font-size: 23px; line-height: 1.25; margin: 4px 0 8px; letter-spacing: -0.01em; }
+.app-tile p { margin: 0 0 12px; color: var(--muted); font-size: 16px; }
+.app-icon { width: 72px; height: 72px; border-radius: 18px; }
+.app-icon-empty { display: grid; place-items: center; border: 2px dashed #cfd4de; color: #9aa3b5; font-size: 26px; font-weight: 700; }
+.app-next { border-style: dashed; border-width: 2px; border-color: #cfd4de; }
+.soon { display: inline-block; font-size: 12px; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; color: #9a5b00; background: var(--amber-soft); padding: 3px 10px; border-radius: 999px; }
+.app-points { margin: 0 0 12px; padding-left: 1.2em; color: var(--muted); font-size: 15px; }
+.app-points li { margin: 4px 0; }
+.app-points b { color: var(--ink); }
+.app-meta { font-size: 14px !important; }
+.app-actions { display: flex; flex-wrap: wrap; gap: 10px; }
+.text-link { color: var(--navy); font-weight: 600; }
+@media (max-width: 600px) {
+  .apps-list { padding: 0 16px; }
+  .app-tile { grid-template-columns: 1fr; gap: 12px; padding: 20px; }
+  .app-icon { width: 60px; height: 60px; }
+}

@@ -12,6 +12,7 @@ Our first app, **Shoply: Item Scan & Analytics**, is coming soon to the Shopify 
 
 ## Pages
 
+- [Apps](https://shoplyapps.com/apps/): all Shoply Apps, with what each does and its status
 - [Home](https://shoplyapps.com/): what Shoply Apps does and a closer look at Item Scan & Analytics, with FAQ
 - [Privacy policy](https://shoplyapps.com/privacy.html): what data the app reads, why, where it is stored and for how long
 - [Terms of service](https://shoplyapps.com/terms.html)
