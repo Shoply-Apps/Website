@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Shoply Apps · Shopify apps that find what's costing you money</title>
-  <meta name="description" content="Shoply Apps builds simple Shopify apps. Shoply: Item Scan & Analytics checks every product in your store and shows what to fix first: prices below cost, stock gaps and weak product pages. Free, every feature included.">
+  <meta name="description" content="Shoply Apps builds simple Shopify apps. Shoply: Item Scan & Analytics checks every product in your store and shows what to fix first: prices below cost, stock gaps and weak product pages.">
   <link rel="icon" href="assets/shoply-apps-favicon.svg" type="image/svg+xml">
   <style>
     :root {
@@ -49,28 +49,30 @@
     .nav { display: flex; align-items: center; gap: 32px; height: 64px; }
     .brand { display: flex; align-items: center; gap: 10px; font-weight: 800; font-size: 21px; letter-spacing: -0.02em; text-decoration: none; }
     .brand img { width: 32px; height: 32px; }
-    .nav ul { display: flex; gap: 28px; list-style: none; margin: 0; padding: 0; color: var(--muted); font-size: 15px; }
-    .nav ul a { text-decoration: none; }
-    .nav ul a:hover { color: var(--ink); }
+    .nav ul { display: flex; gap: 8px; list-style: none; margin: 0; padding: 0; color: var(--ink); font-size: 16px; font-weight: 600; }
+    .nav ul a { text-decoration: none; padding: 8px 12px; border-radius: 999px; }
+    .nav ul a:hover { background: var(--bg-soft); color: var(--navy); }
     .nav .btn { margin-left: auto; padding: 9px 18px; font-size: 15px; }
 
-    /* Hero: navy, centred, with the app drawing inside amber scan corners */
+    /* Hero: navy, text on the left, the app drawing inside amber scan corners on the right */
     .hero { padding: 0; color: #fff; background: radial-gradient(1100px 460px at 50% -10%, #2c4374 0%, var(--navy) 60%); position: relative; overflow: hidden; }
     .hero::before { content: ""; position: absolute; inset: 0; background-image: linear-gradient(rgba(255,255,255,.04) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.04) 1px, transparent 1px); background-size: 40px 40px; mask-image: linear-gradient(#000 40%, transparent); -webkit-mask-image: linear-gradient(#000 40%, transparent); }
-    .hero-inner { position: relative; text-align: center; padding: 56px 0 0; }
-    .pill { display: inline-flex; align-items: center; gap: 8px; padding: 5px 14px 5px 5px; border: 1px solid rgba(255,255,255,.18); border-radius: 999px; font-size: 14px; color: #c9d1e1; text-decoration: none; margin-bottom: 22px; background: rgba(255,255,255,.05); }
+    .hero-inner { position: relative; display: grid; grid-template-columns: 1.15fr 1fr; gap: 48px; align-items: center; padding: 44px 24px; }
+    .pill { display: inline-flex; align-items: center; gap: 8px; padding: 5px 14px 5px 5px; border: 1px solid rgba(255,255,255,.18); border-radius: 999px; font-size: 14px; color: #c9d1e1; text-decoration: none; margin-bottom: 18px; background: rgba(255,255,255,.05); }
     .pill b { background: var(--amber); color: var(--navy); border-radius: 999px; padding: 2px 10px; font-size: 12px; letter-spacing: .04em; }
-    .hero h1 { font-weight: 800; font-size: clamp(34px, 5vw, 56px); letter-spacing: -0.035em; max-width: 14em; margin: 0 auto; }
+    .hero h1 { font-weight: 800; font-size: clamp(32px, 4vw, 48px); letter-spacing: -0.035em; }
     .hero h1 em { font-style: normal; color: var(--amber); }
-    .hero .lead { color: #c9d1e1; margin: 18px auto 28px; }
-    .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
-    .scan { position: relative; max-width: 520px; margin: 44px auto -1px; padding: 22px 22px 0; }
-    .scan i { position: absolute; width: 44px; height: 44px; border: 0 solid var(--amber); }
+    .hero .lead { color: #c9d1e1; margin: 14px 0 24px; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; }
+    .scan { position: relative; max-width: 420px; width: 100%; justify-self: end; padding: 16px; }
+    .scan i { position: absolute; width: 36px; height: 36px; border: 0 solid var(--amber); }
     .scan i:nth-child(1) { top: 0; left: 0; border-width: 5px 0 0 5px; border-top-left-radius: 12px; }
     .scan i:nth-child(2) { top: 0; right: 0; border-width: 5px 5px 0 0; border-top-right-radius: 12px; }
-    .scan-line { position: absolute; left: 22px; right: 22px; height: 3px; background: linear-gradient(90deg, transparent, var(--amber), transparent); top: 22px; opacity: .9; animation: sweep 4s ease-in-out infinite; z-index: 1; }
-    @keyframes sweep { 0%, 100% { top: 34px; } 50% { top: calc(100% - 24px); } }
-    .scan svg { width: 100%; height: auto; border-radius: 18px 18px 0 0; box-shadow: 0 -10px 60px rgba(0,0,0,.35); }
+    .scan i:nth-child(3) { bottom: 0; right: 0; border-width: 0 5px 5px 0; border-bottom-right-radius: 12px; }
+    .scan i:nth-child(4) { bottom: 0; left: 0; border-width: 0 0 5px 5px; border-bottom-left-radius: 12px; }
+    .scan-line { position: absolute; left: 16px; right: 16px; height: 3px; background: linear-gradient(90deg, transparent, var(--amber), transparent); top: 16px; opacity: .55; animation: sweep 4s ease-in-out infinite; z-index: 1; }
+    @keyframes sweep { 0%, 100% { top: 26px; } 50% { top: calc(100% - 26px); } }
+    .scan svg { width: 100%; height: auto; border-radius: 16px; box-shadow: 0 20px 50px rgba(0,0,0,.35); }
 
     /* Key points */
     .strip { padding: 22px 0; border-bottom: 1px solid var(--line); }
@@ -143,6 +145,10 @@
     .fine { margin: 16px 0 0; font-size: 13px; }
 
     @media (max-width: 900px) {
+      .hero-inner { grid-template-columns: 1fr; gap: 28px; text-align: center; }
+      .hero .lead { margin-left: auto; margin-right: auto; }
+      .hero-actions { justify-content: center; }
+      .scan { justify-self: center; max-width: 380px; }
       .p-grid, .steps { grid-template-columns: 1fr; }
       .faq { grid-template-columns: 1fr; gap: 24px; }
       .app-head { grid-template-columns: auto 1fr; }
@@ -152,11 +158,10 @@
       .wrap { padding: 0 16px; }
       .nav ul { display: none; }
       section { padding: 52px 0; }
-      .hero-inner { padding-top: 40px; }
-      .scan { padding: 14px 10px 0; margin-top: 32px; }
-      .scan i { width: 30px; height: 30px; border-width: 4px 0 0 4px !important; }
-      .scan i:nth-child(2) { border-width: 4px 4px 0 0 !important; }
-      .scan-line { left: 10px; right: 10px; }
+      .hero-inner { padding: 32px 16px 36px; }
+      .scan { padding: 12px; }
+      .scan i { width: 26px; height: 26px; }
+      .scan-line { left: 12px; right: 12px; }
       .app-head { grid-template-columns: 1fr; gap: 14px; }
       .app-head > img { width: 60px; height: 60px; }
       .cta-box { padding: 28px 24px; }
@@ -188,6 +193,7 @@
   <main id="top">
     <section class="hero">
       <div class="wrap hero-inner">
+        <div class="hero-copy">
         <a class="pill" href="#app"><b>NEW</b> Meet our first app, Shoply: Item Scan &amp; Analytics →</a>
         <h1>Find the products quietly <em>costing you money</em></h1>
         <p class="lead">Shoply Apps builds simple Shopify apps that check your store for you. Our first app scans every product and shows what to fix first: prices below cost, stock gaps and weak product pages.</p>
@@ -195,8 +201,9 @@
           <a class="btn btn-amber" href="#app">Explore apps <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
           <a class="btn btn-ghost" href="#how">How it works</a>
         </div>
+        </div>
         <div class="scan">
-          <i></i><i></i><span class="scan-line" aria-hidden="true"></span>
+          <i></i><i></i><i></i><i></i><span class="scan-line" aria-hidden="true"></span>
           <!-- Drawing of the app's Catalog health page, with example data -->
           <svg viewBox="0 0 480 400" role="img" aria-label="Drawing of the Catalog health page: a health score, problems by category and a list of what to fix first">
             <rect width="480" height="400" rx="20" fill="#fff"/>
@@ -238,9 +245,9 @@
     <div class="strip">
       <ul class="wrap">
         <li><svg aria-hidden="true"><use href="#i-check"/></svg>Built only on Shopify's own tools</li>
-        <li><svg aria-hidden="true"><use href="#i-check"/></svg>Scanning changes nothing</li>
+        <li><svg aria-hidden="true"><use href="#i-check"/></svg>Checks every product for 27 problems</li>
         <li><svg aria-hidden="true"><use href="#i-check"/></svg>Every change can be undone</li>
-        <li><svg aria-hidden="true"><use href="#i-check"/></svg>Free, every feature included</li>
+        <li><svg aria-hidden="true"><use href="#i-check"/></svg>Works right inside your Shopify admin</li>
       </ul>
     </div>
 
@@ -318,7 +325,7 @@
         <span class="app-label" id="how">How it works</span>
         <div class="steps">
           <div class="p-card step"><h3>Install</h3><p>Add the app from Shopify. It opens from Apps in your admin.</p></div>
-          <div class="p-card step"><h3>Scan</h3><p>One scan checks every product. It only reads and changes nothing.</p></div>
+          <div class="p-card step"><h3>Scan</h3><p>One scan checks every product for 27 problems and ranks them by what they cost you.</p></div>
           <div class="p-card step"><h3>Fix what matters first</h3><p>Start with what costs you money. Every change can be undone.</p></div>
         </div>
         <p class="more">More apps are on the way. <a href="mailto:info@shoplyapps.com?subject=App%20idea">Tell us what would help your store →</a></p>
@@ -335,11 +342,11 @@
         <div class="faq-list">
           <details>
             <summary>How much does it cost?</summary>
-            <p>Shoply: Item Scan &amp; Analytics is free to install, and every feature is included. If it helps your store, you can leave an optional tip.</p>
+            <p>It's free to install at launch. If we add paid plans later, we'll tell you well in advance, and Shopify always asks for your approval before any charge.</p>
           </details>
           <details>
             <summary>Will the app change my products?</summary>
-            <p>Not on its own. A scan only reads your catalog. The app changes a product only when you ask it to, you check bulk changes and Excel imports before they're saved, and every change can be undone.</p>
+            <p>Only when you ask it to. A scan looks for problems and lists them for you; it doesn't edit anything. Bulk changes and Excel imports show you every change before it's saved, and every change can be undone.</p>
           </details>
           <details>
             <summary>When can I install it?</summary>
@@ -362,7 +369,7 @@
         <div class="cta-box">
           <div>
             <h2>Be the first to try it</h2>
-            <p>Free, every feature included, coming soon to the Shopify App Store.</p>
+            <p>Coming soon to the Shopify App Store. Be the first to know when it's live.</p>
           </div>
           <a class="btn btn-amber" href="mailto:info@shoplyapps.com?subject=Notify%20me%20when%20Shoply%3A%20Item%20Scan%20%26%20Analytics%20is%20live">Notify me <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
         </div>
