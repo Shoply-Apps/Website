@@ -141,13 +141,11 @@
     .more { margin: 24px 0 0; color: #616161; font-size: 15px; text-align: center; }
     .more a { color: var(--navy); font-weight: 600; }
 
-    /* "…ly" band: the words before an amber "ly" are typed and erased, ending on "Build with Shoply" */
-    .ly { padding: 40px 0 14px; color: var(--navy); overflow: hidden; }
+    /* "…ly" band: the words before an amber "ly" are typed and erased, centered, ending on "Build with Shoply" */
+    .ly { padding: 30px 0 8px; color: var(--navy); overflow: hidden; }
+    .ly + section { padding-top: 36px; }
     .ly-line { position: relative; display: flex; align-items: baseline; width: max-content; max-width: 100%; margin: 0 auto; font-weight: 800; font-size: clamp(26px, 5vw, 48px); letter-spacing: -0.035em; line-height: 1.2; }
-    /* Every phrase sits hidden in the same cell, so the box is as wide as the longest and "ly" never moves */
-    .ly-stem { display: grid; }
-    .ly-stem > span { grid-area: 1 / 1; white-space: pre; text-align: right; }
-    .ly-stem > .g { visibility: hidden; }
+    .ly-stem { white-space: pre; }
     .ly-caret { position: relative; width: 0; align-self: stretch; }
     .ly-caret::before { content: ""; position: absolute; left: -.03em; top: .22em; bottom: .14em; width: .06em; border-radius: 2px; background: var(--amber); opacity: 0; }
     .ly-line.is-typing .ly-caret::before, .ly-line.is-waiting .ly-caret::before { opacity: 1; }
@@ -214,6 +212,8 @@
       .wrap { padding: 0 16px; }
       .nav ul { display: none; }
       section { padding: 52px 0; }
+      .ly { padding: 22px 0 6px; }
+      .ly + section { padding-top: 26px; }
       .hero-inner { padding: 32px 16px 36px; }
       .scan { padding: 12px; }
       .scan > i { width: 26px; height: 26px; }
@@ -295,7 +295,7 @@
 
     <section class="ly">
       <div class="wrap">
-        <p class="ly-line is-final" data-words="Work Creative|Launch Bold|Price Wise|Sell Smart|Restock Quick|Fix Instant|Grow Profitab|Build with Shop"><span class="sr-only">Work creatively, launch boldly, price wisely, sell smartly, restock quickly, fix instantly, grow profitably. Build with Shoply.</span><span class="ly-stem" aria-hidden="true"><span class="g">Work Creative</span><span class="g">Launch Bold</span><span class="g">Price Wise</span><span class="g">Sell Smart</span><span class="g">Restock Quick</span><span class="g">Fix Instant</span><span class="g">Grow Profitab</span><span class="g">Build with Shop</span><span class="t">Build with Shop</span></span><span class="ly-caret" aria-hidden="true"></span><span class="ly-end" aria-hidden="true">ly<span class="ly-burst"><i style="--a:-150deg"></i><i style="--a:-105deg"></i><i style="--a:-60deg"></i><i style="--a:-15deg"></i><i style="--a:30deg"></i><i style="--a:75deg"></i><i style="--a:120deg"></i><i style="--a:165deg"></i></span></span></p>
+        <p class="ly-line is-final" data-words="Work Creative|Launch Bold|Price Wise|Sell Smart|Restock Quick|Fix Instant|Grow Profitab|Build with Shop"><span class="sr-only">Work creatively, launch boldly, price wisely, sell smartly, restock quickly, fix instantly, grow profitably. Build with Shoply.</span><span class="ly-stem" aria-hidden="true"><span class="t">Build with Shop</span></span><span class="ly-caret" aria-hidden="true"></span><span class="ly-end" aria-hidden="true">ly<span class="ly-burst"><i style="--a:-150deg"></i><i style="--a:-105deg"></i><i style="--a:-60deg"></i><i style="--a:-15deg"></i><i style="--a:30deg"></i><i style="--a:75deg"></i><i style="--a:120deg"></i><i style="--a:165deg"></i></span></span></p>
       </div>
     </section>
 
