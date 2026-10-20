@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>How to find Shopify products you're selling below cost (and fix them) · Shoply Apps</title>
+  <meta name="description" content="Find Shopify products you're selling below cost: fill in cost per item, check margin vs markup, spot losses in a CSV export and reprice to a target margin.">
+  <link rel="canonical" href="https://shoplyapps.com/blog/shopify-products-selling-below-cost/">
+  <link rel="icon" href="/assets/shoply-apps-favicon.svg" type="image/svg+xml">
+  <meta name="theme-color" content="#15223d">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Shoply Apps">
+  <meta property="og:title" content="How to find Shopify products you're selling below cost (and fix them)">
+  <meta property="og:description" content="Find Shopify products you're selling below cost: fill in cost per item, check margin vs markup, spot losses in a CSV export and reprice to a target margin.">
+  <meta property="og:url" content="https://shoplyapps.com/blog/shopify-products-selling-below-cost/">
+  <meta property="og:image" content="https://shoplyapps.com/assets/og-image.png">
+  <meta property="article:published_time" content="2026-10-20">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="stylesheet" href="/assets/blog.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BlogPosting",
+        "headline": "How to find Shopify products you're selling below cost (and fix them)",
+        "description": "Find Shopify products you're selling below cost: fill in cost per item, check margin vs markup, spot losses in a CSV export and reprice to a target margin.",
+        "datePublished": "2026-10-20",
+        "dateModified": "2026-10-20",
+        "url": "https://shoplyapps.com/blog/shopify-products-selling-below-cost/",
+        "mainEntityOfPage": "https://shoplyapps.com/blog/shopify-products-selling-below-cost/",
+        "image": "https://shoplyapps.com/assets/og-image.png",
+        "inLanguage": "en",
+        "author": { "@type": "Organization", "@id": "https://shoplyapps.com/#org", "name": "Shoply Apps", "url": "https://shoplyapps.com/" },
+        "publisher": { "@id": "https://shoplyapps.com/#org" }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://shoplyapps.com/" },
+          { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://shoplyapps.com/blog/" },
+          { "@type": "ListItem", "position": 3, "name": "Selling below cost", "item": "https://shoplyapps.com/blog/shopify-products-selling-below-cost/" }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {"@type": "Question", "name": "Where do I enter cost per item in Shopify?", "acceptedAnswer": {"@type": "Answer", "text": "Open the product in your Shopify admin and look in the pricing section of each variant. Enter what you paid for one unit in the cost per item field. Customers never see it, and Shopify uses it to show profit and margin."}},
+          {"@type": "Question", "name": "Is a 50% markup the same as a 50% margin?", "acceptedAnswer": {"@type": "Answer", "text": "No. A 50% markup on a $10 cost gives a $15 price, which is a 33.3% margin. To get a 50% margin you need a $20 price, because margin is profit divided by price, not by cost."}},
+          {"@type": "Question", "name": "What price do I need for a 40% margin?", "acceptedAnswer": {"@type": "Answer", "text": "Divide the cost by 0.6, which is 1 minus 0.40. A product that costs $15 needs a price of $25 for a 40% margin, before discounts, shipping and payment fees."}},
+          {"@type": "Question", "name": "Can a Shopify product be sold for $0?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. If a product's price is set to 0 and it is available, customers can add it to the cart and check out without paying for it, so check for zero prices regularly."}}
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header>
+    <div class="wrap nav">
+      <a class="brand" href="/" aria-label="Shoply Apps home"><img src="/assets/shoply-apps-logo.svg" alt="">shoply apps</a>
+      <ul>
+        <li><a href="/#apps">Our apps</a></li>
+        <li><a href="/#item-scan">Item Scan &amp; Analytics</a></li>
+        <li class="keep"><a href="/blog/" aria-current="page">Blog</a></li>
+      </ul>
+      <a class="btn" href="/#apps">See our apps</a>
+    </div>
+  </header>
+
+  <main>
+    <article class="post">
+      <p class="crumbs"><a href="/">Home</a> / <a href="/blog/">Blog</a></p>
+      <h1>How to find Shopify products you're selling below cost (and fix them)</h1>
+      <p class="meta">By the Shoply Apps team · <time datetime="2026-10-20">20 October 2026</time> · 9 min read</p>
+
+      <section class="tldr">
+        <h2>Key takeaways</h2>
+        <ul>
+          <li>A product sells below cost when its price is lower than the cost per item you paid, so every sale loses money before shipping and fees.</li>
+          <li>Enter cost per item for every variant in your Shopify admin; once it is there, Shopify shows the profit and margin next to the price.</li>
+          <li>Margin is (price − cost) ÷ price and markup is (price − cost) ÷ cost, so a 40% markup gives only a 28.6% margin.</li>
+          <li>To find problems across your store, export products to CSV, add a margin column and flag rows below cost, at cost, at $0 or missing a cost.</li>
+          <li>To hit a target margin, set price = cost ÷ (1 − target margin), then round up and recheck after discounts, shipping and fees.</li>
+        </ul>
+      </section>
+
+      <section class="tldr">
+        <h2>Key takeaways</h2>
+        <ul>
+          <li>Every Shopify product page needs a clear, unique product title, its own SEO title and meta description, a real description, alt text on every image, a product type and category, and a short, readable URL handle.</li>
+          <li>Keep SEO titles to roughly 50–60 characters and meta descriptions to roughly 150–160, because Google cuts off longer text by pixel width.</li>
+          <li>Write descriptions in your own words with a simple structure: who it is for, key benefits, specs, materials and size, then care and shipping.</li>
+          <li>Alt text should describe what is in the image in plain words, not repeat a list of keywords.</li>
+          <li>Specific facts, consistent product names and answers to common questions make your pages easier for both shoppers and AI search tools to understand and quote.</li>
+        </ul>
+      </section>
+
+      <p>Product pages are where search traffic turns into sales, yet they are often the least finished part of a Shopify store. This checklist walks through each field on a product page, what good looks like, and the mistakes we see most often.</p>
+
+      <h2 id="product-title">What makes a good Shopify product title?</h2>
+      <p>A good product title says exactly what the item is, in the words a shopper would search for, and is unique across your catalog.</p>
+      <ul>
+        <li><strong>Be specific.</strong> Include the product name plus the detail that sets it apart, such as material, size or model.</li>
+        <li><strong>Avoid duplicates.</strong> If five products are all called "Classic Mug", neither shoppers nor Google can tell them apart. Add the colour, size or design.</li>
+        <li><strong>Skip the clutter.</strong> No ALL CAPS, no "BEST SELLER!!!", no stacks of keywords.</li>
+      </ul>
+      <p>Example:</p>
+      <ul>
+        <li>Before: <em>Mug</em></li>
+        <li>After: <em>Stoneware Coffee Mug, 350 ml, Speckled Sage</em></li>
+      </ul>
+
+      <h2 id="seo-title-meta-description">How long should the SEO title and meta description be?</h2>
+      <p>Aim for roughly 50–60 characters for the SEO title and roughly 150–160 characters for the meta description. Google truncates by pixel width rather than an exact character count, so these are guides, not hard limits.</p>
+      <p>The <strong>SEO title</strong> (also called the page title) is the clickable blue headline in search results. The <strong>meta description</strong> is the short summary underneath. On Shopify you edit both in the product's search engine listing section, near the bottom of the product page in your admin. If you leave them empty, Shopify fills them in automatically, typically from the product title and the start of the description, which often reads awkwardly.</p>
+      <ul>
+        <li><strong>SEO title:</strong> put the most important words first, then add your store name if there is room. Example: <em>Stoneware Coffee Mug 350 ml, Speckled Sage | Fern &amp; Kiln</em>.</li>
+        <li><strong>Meta description:</strong> one or two sentences that say what it is and why someone should click. Example: <em>Handmade stoneware mug that holds 350 ml, with a speckled sage glaze. Dishwasher safe. Ships in 2 business days.</em></li>
+        <li><strong>Make each one unique.</strong> Copying the same description across a range of products wastes the space.</li>
+      </ul>
+      <p>Google sometimes rewrites titles and snippets, so you cannot fully control what appears, but a clear version gives it the best material.</p>
+
+      <h2 id="product-description">Why do empty or very short product descriptions hurt?</h2>
+      <p>An empty or two-line description leaves shoppers without the details they need to buy, and gives search engines very little to understand what the page is about. Both lead to fewer sales from the same traffic.</p>
+      <p>You don't need long essays. A simple, repeatable structure works for most products:</p>
+      <ol>
+        <li><strong>Who it is for:</strong> one sentence on the person or use case.</li>
+        <li><strong>Key benefits:</strong> two to four short points on why it is worth buying.</li>
+        <li><strong>Specs:</strong> dimensions, capacity, weight, compatibility.</li>
+        <li><strong>Materials and size:</strong> what it is made of, sizing notes or a fit guide.</li>
+        <li><strong>Care and shipping:</strong> how to wash or maintain it, and when it ships.</li>
+      </ol>
+      <p>Avoid pasting the manufacturer's text word for word. The same paragraph is likely on many other stores, so your page has nothing of its own to offer. Rewrite it in your voice and add details only you know, such as how it fits or what customers ask about.</p>
+
+      <h2 id="image-alt-text">What should you write in image alt text?</h2>
+      <p>Alt text (alternative text) is a short written description of an image. Screen readers read it aloud to visually impaired shoppers, and search engines use it to understand the image. Describe what is actually in the picture, in plain words.</p>
+      <p>You can add alt text to each image in the product's media section in Shopify. Some good and bad examples:</p>
+      <table>
+        <thead>
+          <tr><th>Bad alt text</th><th>Good alt text</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>(empty)</td><td>Speckled sage stoneware mug on a wooden table</td></tr>
+          <tr><td>IMG_4821.jpg</td><td>Side view of the mug showing the curved handle</td></tr>
+          <tr><td>mug coffee mug best mug ceramic mug buy mug</td><td>Mug filled with coffee next to a slice of cake, for scale</td></tr>
+        </tbody>
+      </table>
+      <p>Keep it to a sentence. Mention colour or variant when the image shows a specific one, and don't start with "Image of", since screen readers already announce that it is an image.</p>
+
+      <h2 id="product-type-category">What are product type and product category for?</h2>
+      <p>Product type and product category both organise your catalog, but they do different jobs.</p>
+      <ul>
+        <li><strong>Product type</strong> is a free-text label you choose, such as "Mug" or "Tote bag". It is handy for automated collections and storefront filters, so keep the spelling consistent ("Mug", not "Mugs" on some products and "mug" on others).</li>
+        <li><strong>Product category</strong> is picked from Shopify's standard list of categories. It helps Shopify and connected channels, such as Google, understand exactly what you sell. We cover this in more detail in <a href="/blog/google-shopping-product-data-shopify/">Google Shopping on Shopify: GTIN, brand and product category explained</a>.</li>
+      </ul>
+
+      <h2 id="url-handle">What is a good URL handle?</h2>
+      <p>The URL handle is the last part of a product's web address, for example <code>/products/stoneware-coffee-mug-sage</code>. A good handle is short, lowercase, uses hyphens between words and describes the product.</p>
+      <ul>
+        <li>Shopify creates the handle from the first title you type, so check it if you renamed the product later.</li>
+        <li>Remove filler such as "copy-of" or random numbers left over from duplicating products.</li>
+        <li>Change handles on established products only when needed. When you edit one, Shopify offers to create a redirect from the old address; keep that option on so old links and search results still work.</li>
+      </ul>
+
+      <h2 id="ai-search">How do you make product pages easy for AI search tools to quote?</h2>
+      <p>AI search tools such as ChatGPT, Perplexity and Google AI Overviews pull answers from pages that state clear, specific facts. The same habits that help shoppers help these tools understand and quote your products.</p>
+      <ul>
+        <li><strong>Use specific facts.</strong> "Holds 350 ml, 9.5 cm tall, dishwasher and microwave safe" is easier to quote than "perfect size for your morning brew".</li>
+        <li><strong>Keep names consistent.</strong> Use the same product name in the title, description, image alt text and SEO title. Switching between "sage mug", "green cup" and "Fern mug" makes it harder to tell they are one product.</li>
+        <li><strong>Answer common questions on the page.</strong> If customers often ask whether it fits a car cup holder or how long shipping takes, add a short question-and-answer section to the description.</li>
+        <li><strong>Make it readable as text.</strong> Important details like sizes and materials should be written out, not only shown inside an image.</li>
+      </ul>
+      <p>There is no guarantee any tool will quote a given page, but clear, factual content gives you the best chance.</p>
+
+      <h2 id="checklist-table">Product page SEO checklist at a glance</h2>
+      <p>Use this as a quick check before you publish a product.</p>
+      <table>
+        <thead>
+          <tr><th>Field</th><th>What good looks like</th><th>Common mistake</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Product title</td><td>Specific and unique: name plus the detail that sets it apart</td><td>Same title on several products, or keyword stuffing</td></tr>
+          <tr><td>SEO title</td><td>Roughly 50–60 characters, key words first</td><td>Left on default or far too long, so it gets cut off</td></tr>
+          <tr><td>Meta description</td><td>Roughly 150–160 characters, says what it is and why to click</td><td>Empty, or identical across many products</td></tr>
+          <tr><td>Description</td><td>Who it is for, benefits, specs, materials and size, care and shipping</td><td>Empty, one line, or copied from the manufacturer</td></tr>
+          <tr><td>Image alt text</td><td>One plain sentence describing the image</td><td>Missing, a file name, or a list of keywords</td></tr>
+          <tr><td>Product type</td><td>Consistent label used across similar products</td><td>Blank, or spelled differently on each product</td></tr>
+          <tr><td>Product category</td><td>The most specific matching category from Shopify's list</td><td>Not set at all</td></tr>
+          <tr><td>URL handle</td><td>Short, lowercase, hyphenated, descriptive</td><td>"copy-of-" prefixes or random numbers</td></tr>
+        </tbody>
+      </table>
+      <p>Checking this by hand works for a small catalog. Once you have hundreds of products, it is easy to miss gaps. Our upcoming app, Shoply: Item Scan &amp; Analytics, will flag issues like missing descriptions, images without alt text, missing SEO descriptions, SEO titles that are too long, duplicate titles and missing product types or categories across your whole catalog. It is also worth adding these checks to a regular routine, like the one in our <a href="/blog/shopify-catalog-health-checklist/">monthly catalog health checklist</a>.</p>
+
+      <h2 id="faq">FAQ</h2>
+      <h3>Does Shopify fill in the SEO title and meta description automatically?</h3>
+      <p>Yes. If you leave them empty, Shopify typically uses the product title and the start of the product description. Writing your own usually gives a clearer, better-fitting result in search.</p>
+      <h3>How long should a Shopify product description be?</h3>
+      <p>There is no fixed length. Aim for enough to cover who it is for, key benefits, specs, materials and size, and care and shipping. For most products that is a few short paragraphs or a short paragraph plus a list.</p>
+      <h3>Can I use the manufacturer's product description?</h3>
+      <p>You can use it as a source of facts, but rewrite it in your own words. Copied text appears on many other sites, so it does little to help your page stand out to shoppers or search engines.</p>
+      <h3>Should I change URL handles on existing products?</h3>
+      <p>Only when the current handle is clearly wrong or messy. When you do, keep Shopify's redirect option on so links and search results pointing to the old address still work.</p>
+
+      <h2 id="faq">FAQ</h2>
+      <h3>Where do I enter cost per item in Shopify?</h3>
+      <p>Open the product in your Shopify admin and look in the pricing section of each variant. Enter what you paid for one unit in the cost per item field. Customers never see it, and Shopify uses it to show profit and margin.</p>
+      <h3>Is a 50% markup the same as a 50% margin?</h3>
+      <p>No. A 50% markup on a $10 cost gives a $15 price, which is a 33.3% margin. To get a 50% margin you need a $20 price, because margin is profit divided by price, not by cost.</p>
+      <h3>What price do I need for a 40% margin?</h3>
+      <p>Divide the cost by 0.6, which is 1 minus 0.40. A product that costs $15 needs a price of $25 for a 40% margin, before discounts, shipping and payment fees.</p>
+      <h3>Can a Shopify product be sold for $0?</h3>
+      <p>Yes. If a product's price is set to 0 and it is available, customers can add it to the cart and check out without paying for it, so check for zero prices regularly.</p>
+
+      <section class="post-cta">
+        <h2>Find every product you sell at a loss</h2>
+        <p>Shoply: Item Scan &amp; Analytics, coming soon to the Shopify App Store, scans your whole catalog for products sold below cost, at cost, at $0 or missing a cost, and helps you raise prices to your target margin in bulk with a preview and undo.</p>
+        <a class="btn btn-amber" href="mailto:info@shoplyapps.com?subject=Notify%20me%20when%20Shoply%3A%20Item%20Scan%20%26%20Analytics%20is%20live">Notify me at launch</a>
+      </section>
+
+      <nav class="related" aria-label="Related articles">
+        <h2>Keep reading</h2>
+        <ul>
+          <li><a href="/blog/shopify-catalog-health-checklist/">Shopify catalog health: a monthly checklist to protect your margins</a></li>
+          <li><a href="/blog/shopify-out-of-stock-oversold/">Out of stock and oversold on Shopify: how to stop losing sales</a></li>
+        </ul>
+      </nav>
+    </article>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <div class="foot">
+        <a class="brand" href="/" aria-label="Shoply Apps home"><img src="/assets/shoply-apps-logo.svg" alt="">shoply apps</a>
+        <ul>
+          <li><a href="/#apps">Our apps</a></li>
+          <li><a href="/blog/">Blog</a></li>
+          <li><a href="/#faq">FAQ</a></li>
+          <li><a href="/privacy.html">Privacy</a></li>
+          <li><a href="/terms.html">Terms</a></li>
+          <li><a href="mailto:info@shoplyapps.com">info@shoplyapps.com</a></li>
+        </ul>
+      </div>
+      <p class="fine">© 2026 Shoply Apps. Shopify is a trademark of Shopify Inc.</p>
+    </div>
+  </footer>
+</body>
+</html>

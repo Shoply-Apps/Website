@@ -6,6 +6,131 @@
   <title>Shoply Apps · Simple Shopify apps for healthier stores</title>
   <meta name="description" content="Shoply Apps builds focused Shopify apps that work inside your admin and use only Shopify's own tools. Our first app, Shoply: Item Scan & Analytics, finds the products quietly costing you money.">
   <link rel="icon" href="assets/shoply-apps-favicon.svg" type="image/svg+xml">
+  <link rel="canonical" href="https://shoplyapps.com/">
+  <meta name="theme-color" content="#15223d">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Shoply Apps">
+  <meta property="og:title" content="Shoply Apps · Simple Shopify apps for healthier stores">
+  <meta property="og:description" content="Focused Shopify apps that work inside your admin. Our first app, Shoply: Item Scan &amp; Analytics, finds the products quietly costing you money.">
+  <meta property="og:url" content="https://shoplyapps.com/">
+  <meta property="og:image" content="https://shoplyapps.com/assets/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Shoply Apps: Build with Shoply">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="alternate" type="text/plain" href="https://shoplyapps.com/llms.txt" title="LLM-friendly summary">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://shoplyapps.com/#org",
+        "name": "Shoply Apps",
+        "url": "https://shoplyapps.com/",
+        "logo": "https://shoplyapps.com/assets/shoply-apps-logo.png",
+        "email": "info@shoplyapps.com",
+        "description": "Shoply Apps builds focused Shopify apps that work inside the Shopify admin and use only Shopify's own tools.",
+        "founder": [
+          {
+            "@type": "Person",
+            "name": "Ignas Pilybas"
+          },
+          {
+            "@type": "Person",
+            "name": "Romas Gabdrafikas"
+          }
+        ],
+        "foundingLocation": {
+          "@type": "Place",
+          "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "LT"
+          }
+        }
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://shoplyapps.com/#website",
+        "url": "https://shoplyapps.com/",
+        "name": "Shoply Apps",
+        "publisher": {
+          "@id": "https://shoplyapps.com/#org"
+        },
+        "inLanguage": "en"
+      },
+      {
+        "@type": "SoftwareApplication",
+        "@id": "https://shoplyapps.com/#item-scan",
+        "name": "Shoply: Item Scan & Analytics",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "Shopify",
+        "description": "A Shopify app that scans every product for 27 problems in pricing and margin, stock, and descriptions and content, ranks them by what they cost the store each month, and helps fix them in a click or in bulk.",
+        "featureList": [
+          "27 catalog checks in 3 categories: pricing and margin, stock, descriptions and content",
+          "Catalog health score with problems ranked by money at stake each month",
+          "One-click and bulk fixes, including raising prices to a target margin with a preview",
+          "Description editor with template, live checklist and preview",
+          "Excel import and export with review of every change",
+          "Scheduled daily or weekly scans",
+          "Email alerts through Shopify Flow and a weekly summary",
+          "Change history with undo"
+        ],
+        "publisher": {
+          "@id": "https://shoplyapps.com/#org"
+        },
+        "url": "https://shoplyapps.com/#item-scan",
+        "image": "https://shoplyapps.com/assets/logo.svg"
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://shoplyapps.com/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Which apps do you offer?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Our first app, Shoply: Item Scan & Analytics, is coming soon to the Shopify App Store. More apps are in the works, and we'd love to hear what would help your store."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How much do your apps cost?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Shoply: Item Scan & Analytics is free to install at launch. If we add paid plans later, we'll tell you well in advance, and Shopify always asks for your approval before any charge."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Will your apps change my store?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Only when you ask them to. Item Scan & Analytics, for example, looks for problems and lists them for you; it edits a product only when you choose a fix, shows bulk changes before they're saved, and lets you undo every change."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you share my store's data?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. Our apps work only with Shopify's own APIs and don't send your data to outside services. Our privacy policy explains what we store and why."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How can I reach you?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Email info@shoplyapps.com with questions, feedback or ideas for new apps."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
   <style>
     :root {
       --navy: #15223d;
@@ -165,6 +290,16 @@
     @keyframes ly-burst { 0% { opacity: 1; transform: rotate(var(--a)) translateX(.25em) scale(1); } 100% { opacity: 0; transform: rotate(var(--a)) translateX(1.15em) scale(.3); } }
     .sr-only { position: absolute; width: 1px; height: 1px; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
 
+    /* From the blog */
+    .posts { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 28px; }
+    .post-card { display: flex; flex-direction: column; gap: 6px; border: 1px solid var(--line); border-radius: 18px; padding: 22px; text-decoration: none; }
+    .post-card:hover { border-color: var(--amber); }
+    .post-card small { color: #9a5b00; font-size: 12px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; }
+    .post-card b { font-size: 18px; line-height: 1.3; letter-spacing: -0.01em; }
+    .post-card span { color: var(--muted); font-size: 15px; line-height: 1.5; }
+    .posts-more { margin: 20px 0 0; text-align: center; }
+    .posts-more a { color: var(--navy); font-weight: 600; }
+
     /* FAQ */
     .faq { display: grid; grid-template-columns: 1fr 1.6fr; gap: 48px; align-items: start; }
     .faq-list { display: grid; gap: 10px; }
@@ -202,7 +337,7 @@
       .hero .lead { margin-left: auto; margin-right: auto; }
       .hero-actions { justify-content: center; }
       .scan { justify-self: center; max-width: 380px; }
-      .p-grid, .steps, .apps-grid { grid-template-columns: 1fr; }
+      .p-grid, .steps, .apps-grid, .posts { grid-template-columns: 1fr; }
       .faq { grid-template-columns: 1fr; gap: 24px; }
       .app-head { grid-template-columns: auto 1fr; }
       .app-head .btn { grid-column: 1 / -1; justify-self: start; }
@@ -210,7 +345,9 @@
     @media (max-width: 720px) {
       .strip ul { grid-template-columns: max-content; }
       .wrap { padding: 0 16px; }
-      .nav ul { display: none; }
+      .nav { gap: 12px; }
+      .nav ul li:not(.keep) { display: none; }
+      .nav ul a { padding: 8px 10px; }
       section { padding: 52px 0; }
       .ly { padding: 22px 0 6px; }
       .ly + section { padding-top: 26px; }
@@ -244,6 +381,7 @@
       <ul>
         <li><a href="#apps">Our apps</a></li>
         <li><a href="#item-scan">Item Scan &amp; Analytics</a></li>
+        <li class="keep"><a href="/blog/">Blog</a></li>
         <li><a href="#faq">FAQ</a></li>
       </ul>
       <a class="btn btn-dark" href="#apps">See our apps</a>
@@ -407,6 +545,22 @@
     </section>
 
 
+    <section id="blog">
+      <div class="wrap">
+        <div class="center">
+          <p class="eyebrow">From the blog</p>
+          <h2>Guides for healthier Shopify catalogs</h2>
+          <p class="lead">Practical checklists for pricing, stock and product pages, from the team building Item Scan &amp; Analytics.</p>
+        </div>
+        <div class="posts">
+          <a class="post-card" href="/blog/shopify-catalog-health-checklist/"><small>Checklist</small><b>Shopify catalog health: a monthly checklist to protect your margins</b><span>27 checks across pricing, stock and content, and how to fix the costly ones first.</span></a>
+          <a class="post-card" href="/blog/shopify-products-selling-below-cost/"><small>Pricing &amp; margin</small><b>How to find Shopify products you're selling below cost</b><span>Find missing costs and loss-making prices, then set prices to a target margin.</span></a>
+          <a class="post-card" href="/blog/shopify-out-of-stock-oversold/"><small>Stock</small><b>Out of stock and oversold on Shopify: how to stop losing sales</b><span>Days of stock left, reorder points and the settings that cause overselling.</span></a>
+        </div>
+        <p class="posts-more"><a href="/blog/">All articles →</a></p>
+      </div>
+    </section>
+
     <section id="faq">
       <div class="wrap faq">
         <div class="faq-side">
@@ -458,6 +612,7 @@
         <a class="brand" href="/" aria-label="Shoply Apps home"><img src="assets/shoply-apps-logo.svg" alt="">shoply apps</a>
         <ul>
           <li><a href="#apps">Our apps</a></li>
+          <li><a href="/blog/">Blog</a></li>
           <li><a href="#faq">FAQ</a></li>
           <li><a href="privacy.html">Privacy</a></li>
           <li><a href="terms.html">Terms</a></li>

@@ -1,0 +1,25 @@
+# Shoply Apps
+
+> Shoply Apps builds focused Shopify apps that work inside the Shopify admin and use only Shopify's own APIs, with no outside services or trackers. Founded in Lithuania by Ignas Pilybas and Romas Gabdrafikas. Contact: info@shoplyapps.com.
+
+Our first app, **Shoply: Item Scan & Analytics**, is coming soon to the Shopify App Store and will be free to install at launch. It scans every product in a Shopify store for 27 problems in 3 categories, ranks them by the money at stake each month, and helps fix them in a click or in bulk. Every change is logged and can be undone.
+
+- Pricing & margin: sold below cost, sold at cost, free (price 0), below margin target, missing cost per item, compare-at price not higher, odd variant price gaps.
+- Stock: oversold, out of stock, taking orders with no stock, low stock, will sell out soon, not selling in 60 days, inventory not tracked, stock on products not for sale.
+- Descriptions & content: no description, short description, no image, images without alt text, no SEO description, SEO title too long, duplicate title, title too long for Google, no product type, no brand, no barcode (GTIN), no product category.
+- Other features: catalog health score, bulk price fixes to a target margin with a preview, description editor with a live checklist, Excel import and export, scheduled daily or weekly scans, email alerts through Shopify Flow, a weekly summary, change history with undo.
+- Data: the app and its database run in Frankfurt, Germany (EU). It does not store customers' personal data.
+
+## Pages
+
+- [Home](https://shoplyapps.com/): what Shoply Apps does and a closer look at Item Scan & Analytics, with FAQ
+- [Privacy policy](https://shoplyapps.com/privacy.html): what data the app reads, why, where it is stored and for how long
+- [Terms of service](https://shoplyapps.com/terms.html)
+
+## Blog: guides for Shopify merchants
+
+- [Shopify catalog health: a monthly checklist to protect your margins](https://shoplyapps.com/blog/shopify-catalog-health-checklist/)
+- [How to find Shopify products you're selling below cost (and fix them)](https://shoplyapps.com/blog/shopify-products-selling-below-cost/)
+- [Out of stock and oversold on Shopify: how to stop losing sales](https://shoplyapps.com/blog/shopify-out-of-stock-oversold/)
+- [Shopify product page SEO checklist: titles, descriptions and alt text](https://shoplyapps.com/blog/shopify-product-page-seo-checklist/)
+- [Google Shopping on Shopify: GTIN, brand and product category explained](https://shoplyapps.com/blog/google-shopping-product-data-shopify/)

@@ -10,4 +10,4 @@ cPanel clones this repo (Git Version Control, path `repositories/Website`). To p
 `.cpanel.yml` tells cPanel which files to copy into `public_html` (the folder shoplyapps.com is served from). When you add a new file or folder to the site, add it to `.cpanel.yml` too.
 
 ## Working together
-Every change goes on its own branch and PR, never straight to `main`.
+Changes are committed and pushed straight to `main` (see `CLAUDE.md`).

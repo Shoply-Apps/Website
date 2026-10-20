@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Out of stock and oversold on Shopify: how to stop losing sales · Shoply Apps</title>
+  <meta name="description" content="Out of stock, oversold or still selling with no stock? How Shopify inventory settings work, when to reorder, and a weekly routine to stop losing sales.">
+  <link rel="canonical" href="https://shoplyapps.com/blog/shopify-out-of-stock-oversold/">
+  <link rel="icon" href="/assets/shoply-apps-favicon.svg" type="image/svg+xml">
+  <meta name="theme-color" content="#15223d">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Shoply Apps">
+  <meta property="og:title" content="Out of stock and oversold on Shopify: how to stop losing sales">
+  <meta property="og:description" content="Out of stock, oversold or still selling with no stock? How Shopify inventory settings work, when to reorder, and a weekly routine to stop losing sales.">
+  <meta property="og:url" content="https://shoplyapps.com/blog/shopify-out-of-stock-oversold/">
+  <meta property="og:image" content="https://shoplyapps.com/assets/og-image.png">
+  <meta property="article:published_time" content="2026-10-20">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="stylesheet" href="/assets/blog.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BlogPosting",
+        "headline": "Out of stock and oversold on Shopify: how to stop losing sales",
+        "description": "Out of stock, oversold or still selling with no stock? How Shopify inventory settings work, when to reorder, and a weekly routine to stop losing sales.",
+        "datePublished": "2026-10-20",
+        "dateModified": "2026-10-20",
+        "url": "https://shoplyapps.com/blog/shopify-out-of-stock-oversold/",
+        "mainEntityOfPage": "https://shoplyapps.com/blog/shopify-out-of-stock-oversold/",
+        "image": "https://shoplyapps.com/assets/og-image.png",
+        "inLanguage": "en",
+        "author": { "@type": "Organization", "@id": "https://shoplyapps.com/#org", "name": "Shoply Apps", "url": "https://shoplyapps.com/" },
+        "publisher": { "@id": "https://shoplyapps.com/#org" }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://shoplyapps.com/" },
+          { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://shoplyapps.com/blog/" },
+          { "@type": "ListItem", "position": 3, "name": "Out of stock and oversold", "item": "https://shoplyapps.com/blog/shopify-out-of-stock-oversold/" }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {"@type": "Question", "name": "What does oversold mean on Shopify?", "acceptedAnswer": {"@type": "Answer", "text": "Oversold means a variant's available quantity has gone below zero: you have taken more orders than you have units. It usually happens when \"Continue selling when out of stock\" is on, or when stock counts in Shopify don't match what is on the shelf."}},
+          {"@type": "Question", "name": "Should I turn on \"Continue selling when out of stock\"?", "acceptedAnswer": {"@type": "Answer", "text": "Only for products you can deliver without stock on hand, such as pre-orders, made-to-order items or items your supplier ships quickly. For everything else, leave it off so the product shows as sold out instead of taking orders you can't fill."}},
+          {"@type": "Question", "name": "How do I know when to reorder a product?", "acceptedAnswer": {"@type": "Answer", "text": "Use a reorder point: average daily sales × supplier lead time in days + safety stock. When units on hand drop to that number, place the order. For example, 4 units a day × 14 days + 20 safety stock = reorder at 76 units."}},
+          {"@type": "Question", "name": "What counts as dead stock?", "acceptedAnswer": {"@type": "Answer", "text": "A common rule of thumb is any product with stock on hand that hasn't sold in 60 days. It ties up cash and shelf space, so discount it, bundle it, promote it or stop reordering it."}}
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header>
+    <div class="wrap nav">
+      <a class="brand" href="/" aria-label="Shoply Apps home"><img src="/assets/shoply-apps-logo.svg" alt="">shoply apps</a>
+      <ul>
+        <li><a href="/#apps">Our apps</a></li>
+        <li><a href="/#item-scan">Item Scan &amp; Analytics</a></li>
+        <li class="keep"><a href="/blog/" aria-current="page">Blog</a></li>
+      </ul>
+      <a class="btn" href="/#apps">See our apps</a>
+    </div>
+  </header>
+
+  <main>
+    <article class="post">
+      <p class="crumbs"><a href="/">Home</a> / <a href="/blog/">Blog</a></p>
+      <h1>Out of stock and oversold on Shopify: how to stop losing sales</h1>
+      <p class="meta">By the Shoply Apps team · <time datetime="2026-10-20">20 October 2026</time> · 7 min read</p>
+
+      <section class="tldr">
+        <h2>Key takeaways</h2>
+        <ul>
+          <li><strong>Out of stock</strong> means zero units available; <strong>oversold</strong> means the count has gone below zero because you took orders you can't fill from stock.</li>
+          <li>Turn on "Continue selling when out of stock" only for pre-orders, made-to-order or fast-restock items; leave it off everywhere else.</li>
+          <li>Days of stock left = units on hand ÷ average daily sales; reorder point = average daily sales × lead time in days + safety stock.</li>
+          <li>Check weekly for oversold, out-of-stock and low-stock variants, products with inventory not tracked, dead stock (no sales in 60 days) and stock on products that aren't for sale.</li>
+        </ul>
+      </section>
+
+      <p>Running out of a best seller costs you sales. Overselling it costs you sales and a customer's trust. Both usually come from a few inventory settings and a missing reorder habit, and both are fixable in an afternoon.</p>
+
+      <h2 id="out-of-stock-vs-oversold">What is the difference between out of stock and oversold?</h2>
+      <p>Out of stock means a variant has zero units available to sell. Oversold means the available quantity has gone below zero, so you have accepted more orders than you have units.</p>
+      <p>Shopify tracks inventory per <strong>variant</strong> (one sellable version of a product, such as "Blue / Medium"). <strong>Negative inventory</strong>, for example -3, is the number of units you owe customers with nothing on the shelf.</p>
+      <p>Out of stock is a lost-sale problem: shoppers see "Sold out" (in most themes) and leave. Oversold is a fulfilment problem: someone has paid and is waiting for something you don't have.</p>
+
+      <h2 id="continue-selling">When is "Continue selling when out of stock" fine, and when is it risky?</h2>
+      <p>"Continue selling when out of stock" is a per-variant setting that lets customers keep ordering after stock reaches zero. It is fine when you can reliably deliver without stock on hand, and risky when you can't.</p>
+      <p>You will find it in your Shopify admin by opening a product and looking at the variant's inventory section, next to the option to track quantity.</p>
+      <p>It is usually fine for:</p>
+      <ul>
+        <li><strong>Pre-orders</strong>, where the customer knows the ship date before paying.</li>
+        <li><strong>Made-to-order</strong> or print-on-demand items, where you make each one after the order arrives.</li>
+        <li><strong>Fast restock</strong> items your supplier can ship within days, if your delivery promise allows for that.</li>
+      </ul>
+      <p>It is risky when it was switched on by accident or left on after a pre-order ended. The product page looks normal, orders keep coming in, and the count quietly goes negative. Each of those orders becomes a delay, a cancellation or a refund.</p>
+      <p>A good habit: every variant with this setting on should have a reason you can name. If not, turn it off.</p>
+
+      <h2 id="inventory-not-tracked">What happens when inventory isn't tracked?</h2>
+      <p>If quantity tracking is off for a variant, Shopify never marks it as sold out and never warns you. It will keep selling no matter how many you actually have.</p>
+      <p>That makes sense for digital products and services. For physical products it is a common hidden cause of overselling, because there is no count to warn you. Make sure every physical product has tracking on and a realistic quantity entered.</p>
+
+      <h2 id="four-states">How do the four inventory states compare?</h2>
+      <p>Here they are side by side.</p>
+      <table>
+        <thead>
+          <tr><th>State</th><th>What it means</th><th>What shoppers see</th><th>Usual fix</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Out of stock</td><td>Available is 0, selling stops</td><td>Sold out</td><td>Reorder, or hide it if it won't come back</td></tr>
+          <tr><td>Oversold</td><td>Available is below 0</td><td>Often nothing unusual</td><td>Restock or contact customers, then fix the setting or the count</td></tr>
+          <tr><td>Taking orders with no stock</td><td>Continue selling is on and available is 0 or less</td><td>Product still for sale</td><td>Keep only for pre-order or made-to-order; otherwise turn off</td></tr>
+          <tr><td>Not tracked</td><td>Shopify doesn't count units</td><td>Always for sale</td><td>Turn on tracking for physical products</td></tr>
+        </tbody>
+      </table>
+
+      <h2 id="low-stock-threshold">What is a good low-stock threshold?</h2>
+      <p>A low-stock threshold is the quantity at which you want a warning. A fixed number like 5 is a start, but the better threshold is based on how fast each product sells.</p>
+      <p>Five units of a product that sells one a month is plenty. Five units of one that sells ten a day is half a day of stock. That is why the next two formulas matter more than any single number.</p>
+      <p>If you want automatic warnings, Shopify Flow can be set up to send an alert when a variant's inventory drops below a quantity you choose.</p>
+
+      <h2 id="days-of-stock-left">How do you estimate how many days of stock you have left?</h2>
+      <p>Divide units on hand by average daily sales. The result is roughly how many days until the variant sells out at its current pace.</p>
+      <p class="formula">Days of stock left = units on hand ÷ average daily sales</p>
+      <p><strong>Worked example.</strong> You have 84 units of a linen tote. It sold 120 units in the last 30 days.</p>
+      <ul>
+        <li>Average daily sales = 120 ÷ 30 = 4 units a day</li>
+        <li>Days of stock left = 84 ÷ 4 = 21 days</li>
+      </ul>
+      <p>Use a recent window, such as the last 30 days. If the product was sold out for part of that window, count only the days it was for sale, or the average will understate real demand.</p>
+
+      <h2 id="reorder-point">When should you reorder? Use a reorder point</h2>
+      <p>Reorder when units on hand drop to your reorder point: average daily sales multiplied by your supplier's lead time, plus a safety buffer.</p>
+      <p class="formula">Reorder point = average daily sales × lead time (days) + safety stock</p>
+      <p><strong>Lead time</strong> is the number of days from placing a purchase order to having stock ready to sell. <strong>Safety stock</strong> is extra stock that covers slow deliveries or a busy week. A simple way to set it is a few extra days of sales.</p>
+      <p><strong>Worked example.</strong> Same tote: 4 units a day. Your supplier takes 14 days, and you want 5 extra days of cover.</p>
+      <ul>
+        <li>Stock used during lead time = 4 × 14 = 56 units</li>
+        <li>Safety stock = 4 × 5 = 20 units</li>
+        <li>Reorder point = 56 + 20 = 76 units</li>
+      </ul>
+      <p>You have 84 units, 8 above the reorder point, so order within about 2 days. Wait until you hit zero and you face roughly two weeks sold out.</p>
+
+      <h2 id="dead-stock">What is dead stock, and why does it matter?</h2>
+      <p>Dead stock is inventory that isn't selling. A practical rule is any variant with units on hand and no sales in the last 60 days.</p>
+      <p>Dead stock ties up cash you could spend restocking best sellers. Feature it in an email, bundle it with a product that does sell, discount it, or stop reordering it. If you discount, keep the price above your cost per item; our guide on <a href="/blog/shopify-products-selling-below-cost/">products selling below cost</a> shows how to check.</p>
+
+      <h3>Stock sitting on products that aren't for sale</h3>
+      <p>A related leak: units on hand for products that customers can't buy. That includes products in draft or archived status, and active products that aren't available on any sales channel. The stock exists, it cost you money, and nobody can see it.</p>
+      <p>Sometimes that is deliberate, such as an upcoming launch. Often it is a product someone unpublished and forgot. Either make it available, sell the stock another way, or write it off.</p>
+
+      <h2 id="weekly-routine">What should a weekly inventory routine look like?</h2>
+      <p>Twenty minutes once a week catches most of these problems early:</p>
+      <ol>
+        <li><strong>Oversold:</strong> find any variant with negative available stock. Contact affected customers first, then fix the cause.</li>
+        <li><strong>Taking orders with no stock:</strong> list variants with "Continue selling when out of stock" on. Confirm each has a reason.</li>
+        <li><strong>Out of stock:</strong> reorder best sellers, and hide or archive anything that won't come back.</li>
+        <li><strong>Will sell out soon:</strong> calculate days of stock left for your top sellers and compare against lead time. Place orders for anything at or below its reorder point.</li>
+        <li><strong>Not tracked:</strong> make sure every physical product has quantity tracking on.</li>
+        <li><strong>Dead stock:</strong> flag variants with no sales in 60 days and decide what to do with each.</li>
+        <li><strong>Not for sale:</strong> check draft, archived and unpublished products that still hold stock.</li>
+      </ol>
+      <p>By hand, this gets slow once you have hundreds of variants. Shoply: Item Scan &amp; Analytics, our app coming soon to the Shopify App Store, runs these stock checks across every product and ranks what it finds by what it costs you per month. For the wider picture beyond stock, see our <a href="/blog/shopify-catalog-health-checklist/">monthly catalog health checklist</a>.</p>
+
+      <h2 id="faq">FAQ</h2>
+      <h3>What does oversold mean on Shopify?</h3>
+      <p>Oversold means a variant's available quantity has gone below zero: you have taken more orders than you have units. It usually happens when "Continue selling when out of stock" is on, or when stock counts in Shopify don't match what is on the shelf.</p>
+      <h3>Should I turn on "Continue selling when out of stock"?</h3>
+      <p>Only for products you can deliver without stock on hand, such as pre-orders, made-to-order items or items your supplier ships quickly. For everything else, leave it off so the product shows as sold out instead of taking orders you can't fill.</p>
+      <h3>How do I know when to reorder a product?</h3>
+      <p>Use a reorder point: average daily sales × supplier lead time in days + safety stock. When units on hand drop to that number, place the order. For example, 4 units a day × 14 days + 20 safety stock = reorder at 76 units.</p>
+      <h3>What counts as dead stock?</h3>
+      <p>A common rule of thumb is any product with stock on hand that hasn't sold in 60 days. It ties up cash and shelf space, so discount it, bundle it, promote it or stop reordering it.</p>
+
+      <section class="post-cta">
+        <h2>Catch stock problems before your customers do</h2>
+        <p>Shoply: Item Scan &amp; Analytics checks every product for oversold, out-of-stock, low-stock and dead stock, plus products taking orders with no stock, and can email you alerts. It is coming soon to the Shopify App Store and will be free to install at launch.</p>
+        <a class="btn btn-amber" href="mailto:info@shoplyapps.com?subject=Notify%20me%20when%20Shoply%3A%20Item%20Scan%20%26%20Analytics%20is%20live">Notify me at launch</a>
+      </section>
+
+      <nav class="related" aria-label="Related articles">
+        <h2>Keep reading</h2>
+        <ul>
+          <li><a href="/blog/shopify-catalog-health-checklist/">Shopify catalog health: a monthly checklist to protect your margins</a></li>
+          <li><a href="/blog/shopify-products-selling-below-cost/">How to find Shopify products you're selling below cost (and fix them)</a></li>
+        </ul>
+      </nav>
+    </article>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <div class="foot">
+        <a class="brand" href="/" aria-label="Shoply Apps home"><img src="/assets/shoply-apps-logo.svg" alt="">shoply apps</a>
+        <ul>
+          <li><a href="/#apps">Our apps</a></li>
+          <li><a href="/blog/">Blog</a></li>
+          <li><a href="/#faq">FAQ</a></li>
+          <li><a href="/privacy.html">Privacy</a></li>
+          <li><a href="/terms.html">Terms</a></li>
+          <li><a href="mailto:info@shoplyapps.com">info@shoplyapps.com</a></li>
+        </ul>
+      </div>
+      <p class="fine">© 2026 Shoply Apps. Shopify is a trademark of Shopify Inc.</p>
+    </div>
+  </footer>
+</body>
+</html>
