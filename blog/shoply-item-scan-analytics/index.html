@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Shoply: Item Scan &amp; Analytics: what it does and why we built it · Shoply Apps</title>
+  <meta name="description" content="Shoply Item Scan &amp; Analytics is a Shopify catalog audit app that checks every product for 27 problems and ranks them by the money at stake each month.">
+  <link rel="canonical" href="https://shoplyapps.com/blog/shoply-item-scan-analytics/">
+  <link rel="icon" href="/assets/shoply-apps-favicon.svg" type="image/svg+xml">
+  <meta name="theme-color" content="#15223d">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Shoply Apps">
+  <meta property="og:title" content="Shoply: Item Scan &amp; Analytics: what it does and why we built it">
+  <meta property="og:description" content="Shoply Item Scan &amp; Analytics is a Shopify catalog audit app that checks every product for 27 problems and ranks them by the money at stake each month.">
+  <meta property="og:url" content="https://shoplyapps.com/blog/shoply-item-scan-analytics/">
+  <meta property="og:image" content="https://shoplyapps.com/assets/blog/shoply-item-scan-analytics.jpg">
+  <meta property="article:published_time" content="2026-10-20">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="stylesheet" href="/assets/blog.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BlogPosting",
+        "headline": "Shoply: Item Scan & Analytics: what it does and why we built it",
+        "description": "Shoply Item Scan & Analytics is a Shopify catalog audit app that checks every product for 27 problems and ranks them by the money at stake each month.",
+        "datePublished": "2026-10-20",
+        "dateModified": "2026-10-20",
+        "url": "https://shoplyapps.com/blog/shoply-item-scan-analytics/",
+        "mainEntityOfPage": "https://shoplyapps.com/blog/shoply-item-scan-analytics/",
+        "image": "https://shoplyapps.com/assets/blog/shoply-item-scan-analytics.jpg",
+        "inLanguage": "en",
+        "author": { "@type": "Organization", "@id": "https://shoplyapps.com/#org", "name": "Shoply Apps", "url": "https://shoplyapps.com/" },
+        "publisher": { "@id": "https://shoplyapps.com/#org" }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://shoplyapps.com/" },
+          { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://shoplyapps.com/blog/" },
+          { "@type": "ListItem", "position": 3, "name": "Shoply: Item Scan & Analytics", "item": "https://shoplyapps.com/blog/shoply-item-scan-analytics/" }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {"@type": "Question", "name": "Is Shoply: Item Scan & Analytics available yet?", "acceptedAnswer": {"@type": "Answer", "text": "Not yet. It is coming soon to the Shopify App Store and will be free to install at launch. If paid plans are added later, merchants will be told well in advance, and Shopify always asks for your approval before any charge."}},
+          {"@type": "Question", "name": "Will the app change my products automatically?", "acceptedAnswer": {"@type": "Answer", "text": "No. It only changes a product when you choose a fix. Bulk changes are shown to you before they are saved, and every change is logged with its old value so it can be undone."}},
+          {"@type": "Question", "name": "Does it store my customers' personal data?", "acceptedAnswer": {"@type": "Answer", "text": "No. It reads orders only to total units sold and revenue per variant over the last 60 days. The app and its database run in Frankfurt, Germany, and uninstalling deletes your store's data straight away."}},
+          {"@type": "Question", "name": "Does it send my products to Google Shopping?", "acceptedAnswer": {"@type": "Answer", "text": "No. It checks the product data Google Shopping relies on, such as barcode (GTIN), brand and product category, but it does not submit feeds to Google Merchant Center."}}
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header>
+    <div class="wrap nav">
+      <a class="brand" href="/" aria-label="Shoply Apps home"><img src="/assets/shoply-apps-logo.svg" alt="">shoply apps</a>
+      <ul>
+        <li><a href="/#apps">Our apps</a></li>
+        <li><a href="/#item-scan">Item Scan &amp; Analytics</a></li>
+        <li class="keep"><a href="/blog/" aria-current="page">Blog</a></li>
+      </ul>
+      <a class="btn" href="/#apps">See our apps</a>
+    </div>
+  </header>
+
+  <main>
+    <article class="post">
+      <p class="crumbs"><a href="/">Home</a> / <a href="/blog/">Blog</a></p>
+      <h1>Shoply: Item Scan &amp; Analytics: what it does and why we built it</h1>
+      <p class="meta">By the Shoply Apps team · <time datetime="2026-10-20">20 October 2026</time> · 9 min read</p>
+
+      <figure class="post-hero"><img src="/assets/blog/shoply-item-scan-analytics.webp" width="1200" height="630" alt="Shoply Item Scan and Analytics scan results ranking catalog problems by money at stake, with a bulk fix button" fetchpriority="high"></figure>
+
+      <section class="tldr">
+        <h2>Key takeaways</h2>
+        <ul>
+          <li>Shoply: Item Scan &amp; Analytics is a Shopify catalog audit app that checks every product for 27 problems across pricing and margin, stock, and descriptions and content.</li>
+          <li>It ranks every problem by what it costs you per month, so you fix the expensive ones first, and gives your catalog a health score.</li>
+          <li>Fixes are one click or in bulk with a preview; it only changes a product when you choose a fix, and every change can be undone.</li>
+          <li>It uses only Shopify's own APIs, runs in Frankfurt, Germany, doesn't store customers' personal data, and deletes your store's data when you uninstall.</li>
+          <li>It is coming soon to the Shopify App Store and will be free to install at launch.</li>
+        </ul>
+      </section>
+
+      <p>Shoply Item Scan &amp; Analytics is a Shopify app, made by us at Shoply Apps, that scans every product in your store for 27 common problems and ranks them by the money at stake each month. It works inside your Shopify admin, suggests fixes you can apply in one click or in bulk, and never changes a product unless you choose to. This article explains what it checks, how the ranking works, how it handles your data, and what it deliberately doesn't do.</p>
+
+      <h2 id="why-we-built-it">Why did we build a Shopify catalog audit app?</h2>
+      <p>We built it because small catalog mistakes quietly cost money, and they pile up as a store grows. A variant priced below its cost, a best-seller that shows as in stock when it isn't, a product with no description: each one is easy to fix once you see it, and easy to miss among hundreds of products.</p>
+      <p>Shoply Apps was founded in Lithuania by Ignas Pilybas and Romas Gabdrafikas. Our motivation was simple: the information you need to spot these problems already sits in your Shopify admin, but it is spread across product pages, inventory screens and order history. Checking it by hand means exporting spreadsheets and working through a list like our <a href="/blog/shopify-catalog-health-checklist/">monthly catalog health checklist</a>. That works, but most store owners don't have time to do it every month, and the list rarely tells you which problem to fix first.</p>
+      <p>So we wanted one tool that does the checking for you and answers a single question: which problems are costing me the most right now?</p>
+
+      <h2 id="what-does-it-check">What does Shoply Item Scan &amp; Analytics check?</h2>
+      <p>It checks every product for 27 problems in three categories: pricing and margin (7 checks), stock (8 checks), and descriptions and content (12 checks). Each check flags a specific, fixable issue. A <em>variant</em> is one version of a product, such as a size or colour, with its own price, cost and stock.</p>
+
+      <h3>Pricing and margin (7 checks)</h3>
+      <p>Background: <a href="/blog/shopify-products-selling-below-cost/">how to find products you're selling below cost</a>.</p>
+      <table>
+        <thead>
+          <tr><th>Check</th><th>Why it matters</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Sold below cost</td><td>Every sale loses money before shipping and fees.</td></tr>
+          <tr><td>Sold at cost</td><td>You earn nothing, and lose money once fees are paid.</td></tr>
+          <tr><td>Free (price 0)</td><td>Often a mistake that lets shoppers check out for nothing.</td></tr>
+          <tr><td>Below margin target</td><td>Profitable on paper, but under the margin you set as your minimum.</td></tr>
+          <tr><td>Missing cost per item</td><td>Without a cost, nobody can tell whether the product makes money.</td></tr>
+          <tr><td>Compare-at price not higher</td><td>A "was" price equal to or below the price confuses shoppers.</td></tr>
+          <tr><td>Odd variant price gaps</td><td>Unusual price differences between variants often point to a typo.</td></tr>
+        </tbody>
+      </table>
+
+      <h3>Stock (8 checks)</h3>
+      <p>Background: <a href="/blog/shopify-out-of-stock-oversold/">out of stock and oversold on Shopify</a>.</p>
+      <table>
+        <thead>
+          <tr><th>Check</th><th>Why it matters</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Oversold</td><td>You have taken orders you can't fill from stock.</td></tr>
+          <tr><td>Out of stock</td><td>Shoppers can't buy it, so sales go elsewhere.</td></tr>
+          <tr><td>Taking orders with no stock</td><td>Orders keep coming in while nothing is on the shelf.</td></tr>
+          <tr><td>Low stock</td><td>A warning before a product runs out.</td></tr>
+          <tr><td>Will sell out soon</td><td>Recent sales suggest stock won't last long.</td></tr>
+          <tr><td>Not selling in 60 days</td><td>Stock that ties up money without moving.</td></tr>
+          <tr><td>Inventory not tracked</td><td>Shopify can't warn you or stop overselling.</td></tr>
+          <tr><td>Stock on products not for sale</td><td>Inventory sitting on products shoppers can't buy.</td></tr>
+        </tbody>
+      </table>
+
+      <h3>Descriptions and content (12 checks)</h3>
+      <p>Background: the <a href="/blog/shopify-product-page-seo-checklist/">product page SEO checklist</a> and <a href="/blog/google-shopping-product-data-shopify/">GTIN, brand and product category for Google Shopping</a>.</p>
+      <table>
+        <thead>
+          <tr><th>Check</th><th>Why it matters</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>No description</td><td>Shoppers and search engines have nothing to go on.</td></tr>
+          <tr><td>Short description</td><td>Too little detail to answer buyers' questions.</td></tr>
+          <tr><td>No image</td><td>Shoppers want to see what they are buying.</td></tr>
+          <tr><td>Images without alt text</td><td>Hurts accessibility and image search.</td></tr>
+          <tr><td>No SEO description</td><td>Search engines pick their own snippet text instead.</td></tr>
+          <tr><td>SEO title too long</td><td>Gets cut off in search results.</td></tr>
+          <tr><td>Duplicate title</td><td>Confuses shoppers and search engines about which product is which.</td></tr>
+          <tr><td>Title too long for Google</td><td>Long product titles get shortened in Google listings.</td></tr>
+          <tr><td>No product type</td><td>Harder to filter, organise and report on.</td></tr>
+          <tr><td>No brand</td><td>Shopping listings rely on brand to match products.</td></tr>
+          <tr><td>No barcode (GTIN)</td><td>A GTIN is the global product number in a barcode; Google Shopping uses it to identify products.</td></tr>
+          <tr><td>No product category</td><td>Helps Shopify and sales channels understand what the product is.</td></tr>
+        </tbody>
+      </table>
+
+      <h2 id="money-at-stake">How does it rank problems by money at stake?</h2>
+      <p>It puts a monthly money figure on each problem and sorts the list by that figure, so the most expensive problems sit at the top. A long list of issues is hard to act on; a list ordered by cost tells you where to start.</p>
+      <p>The idea is easiest to see with an example. The numbers below are made up for illustration, and the app's exact internal calculation is not shown here.</p>
+      <p class="formula">Example: a variant priced $2 below its cost sells 40 units a month.<br>Money at stake ≈ $2 × 40 = $80 a month</p>
+      <p>Compare that with a product missing alt text on its images. It is worth fixing, but it is not losing $80 a month on every sale. With money at stake, the below-cost variant comes first.</p>
+      <p>Here is how an example scan might order three problems (illustrative numbers only):</p>
+      <table>
+        <thead>
+          <tr><th>Example problem</th><th>Example money at stake</th><th>Fix first?</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Variant $2 below cost, 40 sold a month</td><td>$80 / month</td><td>Yes</td></tr>
+          <tr><td>Variant $1 under margin target, 25 sold a month</td><td>$25 / month</td><td>Next</td></tr>
+          <tr><td>Slow seller with images missing alt text</td><td>Small</td><td>When you have time</td></tr>
+        </tbody>
+      </table>
+      <p>To put a sales figure on problems, the app reads your orders only to total units sold and revenue per variant over the last 60 days. Your scan results then add up to a catalog health score, a ranked list of priorities and the total money at stake each month.</p>
+
+      <h2 id="features">What else can it do besides scanning?</h2>
+      <p>Beyond the scan, the app helps you see what matters, fix it quickly, and keep on top of it over time.</p>
+      <h3>See what matters</h3>
+      <ul>
+        <li><strong>Catalog health:</strong> a score, ranked priorities and the money at stake each month.</li>
+        <li><strong>Analytics:</strong> charts of prices, margins, stock and sales; click a bar to see the products behind it.</li>
+        <li><strong>Product page card:</strong> each product's problems shown on its own page in the Shopify admin.</li>
+      </ul>
+      <h3>Fix it fast</h3>
+      <ul>
+        <li><strong>Quick fixes:</strong> one click from the list of problems.</li>
+        <li><strong>Bulk price fixes:</strong> raise prices to your target margin, with a preview before anything is saved. If margins are new to you, our guide to <a href="/blog/dropshipping-profit-margins/">pricing for a healthy profit margin</a> explains the maths.</li>
+        <li><strong>Description editor:</strong> a template, a live checklist and a preview.</li>
+        <li><strong>Excel import and export:</strong> edit in a spreadsheet, then review every change before saving.</li>
+      </ul>
+      <h3>Stay on top of it</h3>
+      <ul>
+        <li><strong>Scheduled scans:</strong> every day or every week, at a time you choose.</li>
+        <li><strong>Alerts:</strong> email alerts through Shopify Flow, plus a weekly summary.</li>
+        <li><strong>History and undo:</strong> every change is logged with its old value, so you can reverse it.</li>
+      </ul>
+
+      <h2 id="privacy">How does the app handle my store's data?</h2>
+      <p>It keeps data use to what the checks need and stays inside Shopify. In short:</p>
+      <ul>
+        <li>It works inside your Shopify admin and uses only Shopify's own APIs.</li>
+        <li>It uses no outside services or trackers.</li>
+        <li>The app and its database run in Frankfurt, Germany, in the EU.</li>
+        <li>It doesn't store your customers' personal data. It reads orders only to total units sold and revenue per variant over the last 60 days.</li>
+        <li>Uninstalling deletes your store's data straight away.</li>
+      </ul>
+      <p>The full details are in our <a href="/privacy.html">privacy policy</a>.</p>
+
+      <h2 id="who-its-for">Who is it for?</h2>
+      <p>It is for Shopify store owners who want a regular, prioritised check of their product data without building spreadsheets. Different stores will lean on different checks:</p>
+      <table>
+        <thead>
+          <tr><th>If your store...</th><th>The checks you'll likely use most</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Imports products from suppliers, as many dropshipping stores do</td><td>Missing cost per item, below margin target, no description, no image</td></tr>
+          <tr><td>Holds its own inventory</td><td>Oversold, low stock, will sell out soon, not selling in 60 days</td></tr>
+          <tr><td>Runs frequent sales</td><td>Compare-at price not higher, sold at cost, below margin target</td></tr>
+          <tr><td>Wants traffic from Google or Google Shopping</td><td>SEO title and description, alt text, brand, barcode (GTIN), product category</td></tr>
+          <tr><td>Has a growing catalog</td><td>Scheduled scans, weekly summary, duplicate title</td></tr>
+        </tbody>
+      </table>
+
+      <h2 id="how-it-works">How does it work?</h2>
+      <p>It works in three steps:</p>
+      <ol>
+        <li><strong>Install.</strong> The app opens from Apps in your Shopify admin.</li>
+        <li><strong>Scan.</strong> One scan checks every product for 27 problems and ranks them by cost.</li>
+        <li><strong>Fix what matters first.</strong> Work down the ranked list with quick fixes or bulk fixes, previewing changes before they are saved.</li>
+      </ol>
+
+      <h2 id="pricing">How much does it cost, and when is it available?</h2>
+      <p>Shoply: Item Scan &amp; Analytics is coming soon to the Shopify App Store and will be free to install at launch. If we add paid plans later, we will tell merchants well in advance, and Shopify always asks for your approval before any charge. Until launch, you can ask to be notified using the button at the end of this article.</p>
+
+      <h2 id="what-it-doesnt-do">What doesn't it do?</h2>
+      <p>To be clear about its limits, here is what the app is not:</p>
+      <ul>
+        <li><strong>It doesn't submit feeds to Google.</strong> It checks the product data Google Shopping relies on, but sending products to Google Merchant Center happens elsewhere.</li>
+        <li><strong>It doesn't change anything without your say-so.</strong> It only changes a product when you choose a fix, bulk changes are shown before they are saved, and every change can be undone.</li>
+        <li><strong>It isn't an inventory or ERP system.</strong> It flags stock problems in your Shopify catalog, but it doesn't manage purchasing, suppliers or warehouses. An ERP (enterprise resource planning) system is software for running those wider operations.</li>
+      </ul>
+
+      <h2 id="faq">FAQ</h2>
+      <h3>Is Shoply: Item Scan &amp; Analytics available yet?</h3>
+      <p>Not yet. It is coming soon to the Shopify App Store and will be free to install at launch. If paid plans are added later, merchants will be told well in advance, and Shopify always asks for your approval before any charge.</p>
+      <h3>Will the app change my products automatically?</h3>
+      <p>No. It only changes a product when you choose a fix. Bulk changes are shown to you before they are saved, and every change is logged with its old value so it can be undone.</p>
+      <h3>Does it store my customers' personal data?</h3>
+      <p>No. It reads orders only to total units sold and revenue per variant over the last 60 days. The app and its database run in Frankfurt, Germany, and uninstalling deletes your store's data straight away.</p>
+      <h3>Does it send my products to Google Shopping?</h3>
+      <p>No. It checks the product data Google Shopping relies on, such as barcode (GTIN), brand and product category, but it does not submit feeds to Google Merchant Center.</p>
+
+      <section class="post-cta">
+        <h2>Be first to try it</h2>
+        <p>Shoply: Item Scan &amp; Analytics is launching on the Shopify App Store soon and will be free to install at launch. Leave your email and we'll let you know when you can run your first scan.</p>
+        <a class="btn btn-amber" href="mailto:info@shoplyapps.com?subject=Notify%20me%20when%20Shoply%3A%20Item%20Scan%20%26%20Analytics%20is%20live">Notify me at launch</a>
+      </section>
+
+      <nav class="related" aria-label="Related articles">
+        <h2>Keep reading</h2>
+        <ul>
+          <li><a href="/blog/shopify-catalog-health-checklist/">Shopify catalog health: a monthly checklist to protect your margins</a></li>
+          <li><a href="/blog/shopify-products-selling-below-cost/">How to find Shopify products you're selling below cost (and fix them)</a></li>
+          <li><a href="/blog/essential-shopify-apps-new-store/">Essential Shopify apps for a new store: what you actually need</a></li>
+        </ul>
+      </nav>
+    </article>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <div class="foot">
+        <a class="brand" href="/" aria-label="Shoply Apps home"><img src="/assets/shoply-apps-logo.svg" alt="">shoply apps</a>
+        <ul>
+          <li><a href="/#apps">Our apps</a></li>
+          <li><a href="/blog/">Blog</a></li>
+          <li><a href="/#faq">FAQ</a></li>
+          <li><a href="/privacy.html">Privacy</a></li>
+          <li><a href="/terms.html">Terms</a></li>
+          <li><a href="mailto:info@shoplyapps.com">info@shoplyapps.com</a></li>
+        </ul>
+      </div>
+      <p class="fine">© 2026 Shoply Apps. Shopify is a trademark of Shopify Inc.</p>
+    </div>
+  </footer>
+</body>
+</html>
