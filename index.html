@@ -387,7 +387,7 @@
 
     <section class="ly">
       <div class="wrap">
-        <p class="ly-line"><span class="sr-only">Work creatively, launch boldly, price wisely, sell smartly, ship safely, restock quickly, act early, fix instantly, check daily, run smoothly, see clearly, reach globally, scale easily, grow profitably. Build with Shoply.</span><span class="ly-stem" aria-hidden="true"><span>Work Creative</span><span>Launch Bold</span><span>Price Wise</span><span>Sell Smart</span><span>Ship Safe</span><span>Restock Quick</span><span>Act Ear</span><span>Fix Instant</span><span>Check Dai</span><span>Run Smooth</span><span>See Clear</span><span>Reach Global</span><span>Scale Easi</span><span>Grow Profitab</span><span class="is-on">Build with Shop</span></span><span class="ly-end" aria-hidden="true">ly</span></p>
+        <p class="ly-line"><span class="sr-only">Work creatively, launch boldly, price wisely, sell smartly, restock quickly, fix instantly, grow profitably. Build with Shoply.</span><span class="ly-stem" aria-hidden="true"><span>Work Creative</span><span>Launch Bold</span><span>Price Wise</span><span>Sell Smart</span><span>Restock Quick</span><span>Fix Instant</span><span>Grow Profitab</span><span class="is-on">Build with Shop</span></span><span class="ly-end" aria-hidden="true">ly</span></p>
       </div>
     </section>
 
@@ -466,8 +466,8 @@
         next.className = 'is-on';
         i = n;
       }
-      function tick() { show((i + 1) % words.length); timer = setTimeout(tick, i === last ? 4000 : 1400); }
-      function start() { if (!timer) timer = setTimeout(tick, 1400); }
+      function tick() { show((i + 1) % words.length); timer = setTimeout(tick, i === last ? 4000 : 1600); }
+      function start() { if (!timer) timer = setTimeout(tick, 1600); }
       if (!('IntersectionObserver' in window)) return start();
       new IntersectionObserver(function (e) {
         if (e[0].isIntersecting) start(); else { clearTimeout(timer); timer = null; }
