@@ -2,6 +2,9 @@
 # Run: python3 tools/build_blog_index.py
 import re, html, json, os
 os.chdir(os.path.join(os.path.dirname(os.path.abspath(__file__)), '..'))
+# Header logo: inline SVG so its one-time animation restarts cleanly on every page load
+LOGO = r'''<svg class="logo-mark" viewBox="0 0 80 80" width="40" height="40" aria-hidden="true" focusable="false"><defs><linearGradient id="logo-trail" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#15223d" stop-opacity="0"/><stop offset="1" stop-color="#15223d"/></linearGradient></defs><path d="M40 12 A28 28 0 0 0 40 68 Z" fill="#15223d"/><path d="M40 12 A28 28 0 0 1 40 68 Z" fill="#f5a623"/><ellipse cx="40" cy="40" rx="12" ry="28" fill="none" stroke="#fff" stroke-width="3.5"/><path d="M12 40 H68" stroke="#fff" stroke-width="3.5"/><path id="logo-flight" d="M14 62 C24 82 66 82 73 56 C77 40 76 24 71 9" pathLength="1" fill="none" stroke="url(#logo-trail)" stroke-width="2.6" stroke-linecap="round" stroke-dasharray="1 1.1" stroke-dashoffset="1"><animate attributeName="stroke-dashoffset" from="1" to="0" begin="0.3s" dur="2.4s" fill="freeze" calcMode="spline" keyTimes="0;1" keySplines=".45 0 .25 1"/></path><g opacity="0"><set attributeName="opacity" to="1" begin="0.3s" fill="freeze"/><animateMotion begin="0.3s" dur="2.4s" fill="freeze" rotate="auto" calcMode="spline" keyPoints="0;1" keyTimes="0;1" keySplines=".45 0 .25 1"><mpath href="#logo-flight"/></animateMotion><g transform="rotate(90) scale(1.1)"><path d="M0 6 L-2 11 L0 9.5 L2 11 Z" fill="#f5a623"/><path d="M0 -8 C3.6 -5 3.8 1 2.6 6 H-2.6 C-3.8 1 -3.6 -5 0 -8 Z" fill="#15223d"/><path d="M-2.6 2 L-5 7 L-2.4 6 Z M2.6 2 L5 7 L2.4 6 Z" fill="#15223d"/><circle cx="0" cy="-1.5" r="1.4" fill="#fff"/></g></g></svg><script>/* reduced motion: show the finished logo at once */(function(s){if(window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches&&s&&s.pauseAnimations){s.pauseAnimations();s.setCurrentTime(5);}})(document.currentScript.previousElementSibling);</script>'''
+
 groups = [
   ('Choosing Shopify and apps', ['why-use-shopify','essential-shopify-apps-new-store','shoply-item-scan-analytics']),
   ('Starting and growing a Shopify store', ['shopify-store-launch-checklist','how-to-price-products','how-to-start-dropshipping-on-shopify','dropshipping-profit-margins','how-to-find-winning-dropshipping-products','dropshipping-vs-holding-inventory','increase-shopify-conversion-rate','shopify-seo-guide-for-beginners']),
@@ -56,7 +59,7 @@ page = f'''<!doctype html>
   <meta property="og:url" content="https://shoplyapps.com/blog/">
   <meta property="og:image" content="https://shoplyapps.com/assets/og-image.png">
   <meta name="twitter:card" content="summary_large_image">
-  <link rel="stylesheet" href="/assets/blog.css?v=7">
+  <link rel="stylesheet" href="/assets/blog.css?v=8">
   <script type="application/ld+json">
   {json.dumps(ld, ensure_ascii=False, indent=2).replace(chr(10), chr(10) + '  ')}
   </script>
@@ -64,7 +67,7 @@ page = f'''<!doctype html>
 <body>
   <header>
     <div class="wrap nav">
-      <a class="brand" href="/" aria-label="Shoply Apps home"><picture><source media="(prefers-reduced-motion: no-preference)" srcset="/assets/shoply-apps-logo-animated.svg"><img src="/assets/shoply-apps-logo.svg" width="40" height="40" alt=""></picture>shoply apps</a>
+      <a class="brand" href="/" aria-label="Shoply Apps home">{LOGO}shoply apps</a>
       <ul>
         <li class="keep"><a href="/apps/">Our apps</a></li>
         <li class="keep"><a href="/blog/" aria-current="page">Blog</a></li>
