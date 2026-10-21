@@ -22,4 +22,6 @@ python3 tools/build_blog_index.py      # blog/index.html (groups are listed at t
 python3 tools/build_feed.py            # blog/feed.xml
 python3 tools/build_homepage_guides.py # guide list used by the homepage's rotating "Free guide" line and daily cards
 ```
+
+The animated header logo lives in `tools/logo_svg.py`; after changing it run `python3 tools/apply_header_logo.py` (and `tools/build_blog_index.py`).
 Also add the guide to `sitemap.xml` and `llms.txt`.
