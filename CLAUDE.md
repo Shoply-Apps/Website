@@ -12,3 +12,8 @@
 - Images keep their proportions: give every `<img>` `width`/`height` attributes and keep `height: auto` in CSS.
 - Long text such as URLs and code must wrap (`overflow-wrap: anywhere`).
 - When `assets/blog.css` changes, bump its `?v=` number in every page that links it, so phones load the new styles.
+
+# Blog
+
+- After adding or changing a guide, run the three scripts in `tools/` (see README.md) and add it to `sitemap.xml` and `llms.txt`.
+- The homepage "Free guide" line rotates through all guides and "From the blog" shows 6 different guides each day; both read the list that `tools/build_homepage_guides.py` writes into `index.html`.

@@ -14,3 +14,12 @@ Changes are committed and pushed straight to `main` (see `CLAUDE.md`).
 
 ## Server rules
 `server-rules.htaccess` holds recommended Apache rules (404 page, https/non-www redirect, compression, caching). They are not deployed automatically: paste them at the top of `public_html/.htaccess` in cPanel File Manager.
+
+## Blog tools
+After adding, renaming or removing a guide in `blog/`, run:
+```
+python3 tools/build_blog_index.py      # blog/index.html (groups are listed at the top of the script)
+python3 tools/build_feed.py            # blog/feed.xml
+python3 tools/build_homepage_guides.py # guide list used by the homepage's rotating "Free guide" line and daily cards
+```
+Also add the guide to `sitemap.xml` and `llms.txt`.
