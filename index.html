@@ -375,7 +375,13 @@
       .scan-line { left: 12px; right: 12px; }
       .app-head { grid-template-columns: 1fr; gap: 14px; }
       .app-head > img { width: 60px; height: 60px; }
-      .app-card { grid-template-columns: 1fr; padding: 22px; }
+      .app-card { grid-template-columns: 56px 1fr; gap: 0 14px; align-items: center; padding: 20px; }
+      .app-card > img { width: 56px; height: 56px; border-radius: 14px; grid-row: 1; }
+      .app-card > div { display: contents; }
+      .app-card h3 { grid-column: 2; grid-row: 1; margin: 0; font-size: 20px; line-height: 1.25; }
+      .app-card .badge { grid-column: 1 / -1; grid-row: 2; justify-self: start; margin: 16px 0 8px; font-size: 11px; }
+      .app-card p, .app-card .cats, .app-card .more-link { grid-column: 1 / -1; }
+      .next-card { padding: 20px; }
       .shelf-row { grid-template-columns: 40px 1fr; }
       .shelf-row em { grid-column: 2; justify-self: start; }
       .shelf-row img, .shelf-row i { width: 40px; height: 40px; }
