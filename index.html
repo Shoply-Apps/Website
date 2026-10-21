@@ -182,7 +182,8 @@
     header { position: sticky; top: 0; z-index: 10; background: rgba(255,255,255,.92); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); border-bottom: 1px solid var(--line); }
     .nav { display: flex; align-items: center; gap: 32px; height: 64px; }
     .brand { display: flex; align-items: center; gap: 10px; font-weight: 800; font-size: 21px; letter-spacing: -0.02em; text-decoration: none; }
-    .brand img { width: 32px; height: 32px; }
+    .brand picture { display: block; flex: none; }
+    .brand img { width: 40px; height: 40px; }
     .nav ul { display: flex; gap: 8px; list-style: none; margin: 0; padding: 0; color: var(--ink); font-size: 16px; font-weight: 600; }
     .nav ul a { text-decoration: none; padding: 8px 12px; border-radius: 999px; }
     .nav ul a:hover { background: var(--bg-soft); color: var(--navy); }
@@ -336,7 +337,7 @@
     footer { border-top: 1px solid var(--line); padding: 28px 0; color: var(--muted); font-size: 14px; }
     .foot { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px 32px; }
     .foot .brand { color: var(--ink); font-size: 18px; }
-    .foot .brand img { width: 26px; height: 26px; }
+    .foot .brand img { width: 32px; height: 32px; }
     .foot ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px 24px; }
     .foot a { text-decoration: none; }
     .foot ul a:hover { color: var(--ink); }
@@ -392,7 +393,7 @@
       .shelf-row img, .shelf-row i { width: 40px; height: 40px; }
       .cta-box { padding: 28px 24px; }
     }
-    @media (max-width: 374px) { .brand { font-size: 17px; gap: 8px; } .brand img { width: 26px; height: 26px; } .nav ul a { padding: 6px 10px; font-size: 14px; } }
+    @media (max-width: 374px) { .brand { font-size: 17px; gap: 8px; } .brand img { width: 34px; height: 34px; } .nav ul a { padding: 6px 10px; font-size: 14px; } }
     @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .btn { transition: none; } .scan-line { animation: none; } .ly-line, .ly-line *, .ly-line::after, .ly-caret::before { transition: none !important; animation: none !important; } }
   </style>
 </head>
@@ -408,7 +409,7 @@
 
   <header>
     <div class="wrap nav">
-      <a class="brand" href="/" aria-label="Shoply Apps home"><img src="assets/shoply-apps-logo.svg" width="32" height="32" alt="">shoply apps</a>
+      <a class="brand" href="/" aria-label="Shoply Apps home"><picture><source media="(prefers-reduced-motion: no-preference)" srcset="assets/shoply-apps-logo-animated.svg"><img src="assets/shoply-apps-logo.svg" width="40" height="40" alt=""></picture>shoply apps</a>
       <ul>
         <li class="keep"><a href="/apps/">Our apps</a></li>
         <li class="keep"><a href="/blog/">Blog</a></li>
@@ -644,7 +645,7 @@
   <footer>
     <div class="wrap">
       <div class="foot">
-        <a class="brand" href="/" aria-label="Shoply Apps home"><img src="assets/shoply-apps-logo.svg" width="26" height="26" alt="">shoply apps</a>
+        <a class="brand" href="/" aria-label="Shoply Apps home"><img src="assets/shoply-apps-logo.svg" width="32" height="32" alt="">shoply apps</a>
         <ul>
           <li><a href="/apps/">Our apps</a></li>
           <li><a href="/blog/">Blog</a></li>

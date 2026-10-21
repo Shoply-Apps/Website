@@ -22,7 +22,8 @@ img { display: block; max-width: 100%; height: auto; }
 header { position: sticky; top: 0; z-index: 10; background: rgba(255,255,255,.92); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); border-bottom: 1px solid var(--line); }
 .nav { display: flex; align-items: center; gap: 32px; height: 64px; }
 .brand { display: flex; align-items: center; gap: 10px; font-weight: 800; font-size: 21px; letter-spacing: -0.02em; text-decoration: none; color: var(--ink); }
-.brand img { width: 32px; height: 32px; }
+.brand picture { display: block; flex: none; }
+.brand img { width: 40px; height: 40px; }
 .nav ul { display: flex; gap: 8px; list-style: none; margin: 0; padding: 0; font-size: 16px; font-weight: 600; }
 .nav ul a { text-decoration: none; padding: 8px 12px; border-radius: 999px; color: var(--ink); }
 .nav ul a:hover, .nav ul a[aria-current] { background: var(--bg-soft); color: var(--navy); }
@@ -34,7 +35,7 @@ header { position: sticky; top: 0; z-index: 10; background: rgba(255,255,255,.92
 footer { border-top: 1px solid var(--line); padding: 28px 0; color: var(--muted); font-size: 14px; margin-top: 64px; }
 .foot { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px 32px; }
 .foot .brand { font-size: 18px; }
-.foot .brand img { width: 26px; height: 26px; }
+.foot .brand img { width: 32px; height: 32px; }
 .foot ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px 24px; }
 .foot a { text-decoration: none; color: inherit; }
 .foot ul a:hover { color: var(--ink); }
@@ -106,7 +107,7 @@ footer { border-top: 1px solid var(--line); padding: 28px 0; color: var(--muted)
 }
 /* Long URLs and code (e.g. UTM links) wrap instead of widening the page on phones */
 .post code, .post a, .formula { overflow-wrap: anywhere; }
-@media (max-width: 374px) { .brand { font-size: 17px; gap: 8px; } .brand img { width: 26px; height: 26px; } .nav ul a { padding: 6px 10px; font-size: 14px; } }
+@media (max-width: 374px) { .brand { font-size: 17px; gap: 8px; } .brand img { width: 34px; height: 34px; } .nav ul a { padding: 6px 10px; font-size: 14px; } }
 /* Apps page */
 .apps-list { max-width: 720px; margin: 24px auto 0; padding: 0 24px; display: grid; gap: 16px; }
 .app-tile { display: grid; grid-template-columns: 72px 1fr; gap: 20px; border: 1px solid var(--line); border-radius: 20px; padding: 26px; }
