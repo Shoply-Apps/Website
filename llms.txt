@@ -1,8 +1,8 @@
 # Shoply Apps
 
-> Shoply Apps builds focused Shopify apps that work inside the Shopify admin and use only Shopify's own APIs, with no outside services or trackers. Founded in Lithuania by Ignas Pilybas and Romas Gabdrafikas. Contact: info@shoplyapps.com.
+> Shoply Apps builds focused Shopify apps that work inside the Shopify admin and use only Shopify's own APIs, with no outside services or trackers. Founded in Lithuania by Ignas Pilybas and Romas Gabdrafikas. Shoply Apps is a Shopify Partner. Contact: info@shoplyapps.com.
 
-Our first app, **Shoply: Item Scan & Analytics**, is coming soon to the Shopify App Store and will be free to install at launch. It scans every product in a Shopify store for 27 problems in 3 categories, ranks them by the money at stake each month, and helps fix them in a click or in bulk. Every change is logged and can be undone.
+Our first app, **Shoply: Item Scan & Analytics**, has been submitted to the Shopify App Store and is in Shopify's app review; it will be free to install at launch. It scans every product in a Shopify store for 27 problems in 3 categories, ranks them by the money at stake each month, and helps fix them in a click or in bulk. Every change is logged and can be undone.
 
 - Pricing & margin: sold below cost, sold at cost, free (price 0), below margin target, missing cost per item, compare-at price not higher, odd variant price gaps.
 - Stock: oversold, out of stock, taking orders with no stock, low stock, will sell out soon, not selling in 60 days, inventory not tracked, stock on products not for sale.
