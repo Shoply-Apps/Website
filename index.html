@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Shoply Apps · Shopify apps you can trust with your store</title>
-  <meta name="description" content="Shopify apps you can trust: nothing changes without your say, no trackers, every change can be undone. Item Scan &amp; Analytics finds what costs you money.">
+  <meta name="description" content="Shopify apps you can trust: nothing changes without your say, every change can be undone, and our apps add no trackers to your store.">
   <link rel="icon" href="assets/shoply-apps-favicon.svg" type="image/svg+xml">
   <link rel="icon" href="/assets/favicon-96.png" sizes="96x96" type="image/png">
   <link rel="icon" href="/assets/favicon-48.png" sizes="48x48" type="image/png">
@@ -16,7 +16,7 @@
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Shoply Apps">
   <meta property="og:title" content="Shoply Apps · Shopify apps you can trust with your store">
-  <meta property="og:description" content="Nothing changes without your say: no trackers, data in the EU, every change can be undone. Our first app finds the products quietly costing you money.">
+  <meta property="og:description" content="Nothing changes without your say. Our apps add no trackers, keep data in the EU, and let you undo every change.">
   <meta property="og:url" content="https://shoplyapps.com/">
   <meta property="og:image" content="https://shoplyapps.com/assets/og-image.png">
   <meta property="og:image:width" content="1200">
@@ -72,7 +72,7 @@
         "operatingSystem": "Shopify",
         "description": "A Shopify app that scans every product for 27 problems in pricing and margin, stock, and descriptions and content, ranks them by what they cost the store each month, and helps fix them in a click or in bulk.",
         "featureList": [
-          "27 catalog checks in 3 categories: pricing and margin, stock, descriptions and content",
+          "27 catalog checks in 3 categories: pricing and margin, stock, descriptions and content, including 3 optional Google Shopping checks",
           "Catalog health score with problems ranked by money at stake each month",
           "One-click and bulk fixes, including raising prices to a target margin with a preview",
           "Description editor with template, live checklist and preview",
@@ -128,7 +128,7 @@
             "name": "Do you share my store's data?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "No. Our apps work only with Shopify's own APIs and don't send your data to outside services. Our privacy policy explains what we store and why."
+              "text": "No. Our apps work only with Shopify's own APIs and don't send your data to outside services. The app's privacy policy explains what it stores and why."
             }
           },
           {
@@ -273,6 +273,8 @@
     .cat-stock { background: #fdebe2; color: #9a3a12; border-color: #f6c3aa; }
     .cat-content { background: #dff5ec; color: #0b6346; border-color: #a9e2cb; }
     .chips { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 6px; }
+    .chips li.opt { border-style: dashed; }
+    .opt-note { margin: 10px 0 0 !important; font-size: 12px !important; color: #616161; }
     .chips li { font-size: 13px; line-height: 18px; color: #303030; background: #f7f7f7; border: 1px solid #e3e3e3; border-radius: 8px; padding: 3px 8px; }
     .p-card ul.feat { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
     .feat li { font-size: 14px; line-height: 1.45; color: #616161; display: grid; grid-template-columns: 22px 1fr; gap: 8px; }
@@ -437,7 +439,7 @@
         <div class="hero-copy">
         <a class="pill" href="#item-scan"><b>NEW</b> Our first app is in Shopify review →</a>
         <h1>Shopify apps you can <em>trust with your store</em></h1>
-        <p class="lead">You stay in control. Nothing changes without your say, and if you make a mistake, the built-in change log lets you undo it in seconds. No outside services, no trackers.</p>
+        <p class="lead">You stay in control. Nothing changes without your say, and if you make a mistake, the built-in change log lets you undo it in seconds. Our apps use no outside services and add no trackers to your store.</p>
         <div class="hero-actions">
           <a class="btn btn-amber" href="/apps/">See our apps <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
           <a class="btn btn-ghost" href="mailto:info@shoplyapps.com?subject=Keep%20me%20posted%20about%20Shoply%20Apps">Get launch news</a>
@@ -470,7 +472,7 @@
       <ul class="wrap">
         <li><svg aria-hidden="true"><use href="#i-check"/></svg>Shopify Partner</li>
         <li><svg aria-hidden="true"><use href="#i-check"/></svg>Built on Shopify's own tools</li>
-        <li><svg aria-hidden="true"><use href="#i-check"/></svg>No outside services or trackers</li>
+        <li><svg aria-hidden="true"><use href="#i-check"/></svg>Apps add no trackers to your store</li>
         <li><svg aria-hidden="true"><use href="#i-check"/></svg>Works inside your Shopify admin</li>
       </ul>
     </div>
@@ -519,7 +521,7 @@
           </div>
           <a class="btn btn-dark" href="mailto:info@shoplyapps.com?subject=Notify%20me%20when%20Shoply%3A%20Item%20Scan%20%26%20Analytics%20is%20live">Notify me <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
         </div>
-        <span class="app-label">What it checks: 27 checks in 3 categories</span>
+        <span class="app-label">What it checks: 27 checks in 3 categories, including 3 optional Google Shopping checks</span>
         <div class="p-grid">
           <div class="p-card">
             <span class="pill-cat cat-pricing">Pricing &amp; margin</span>
@@ -542,8 +544,9 @@
             <h3>Better product pages</h3>
             <p>Descriptions, photos, SEO and the details Google Shopping needs.</p>
             <ul class="chips">
-              <li>No description</li><li>Short description</li><li>No image</li><li>Images without alt text</li><li>No SEO description</li><li>SEO title too long</li><li>Duplicate title</li><li>Title too long for Google</li><li>No product type</li><li>No brand</li><li>No barcode (GTIN)</li><li>No product category</li>
+              <li>No description</li><li>Short description</li><li>No image</li><li>Images without alt text</li><li>No SEO description</li><li>SEO title too long</li><li>Duplicate title</li><li class="opt">Title too long for Google*</li><li>No product type</li><li>No brand</li><li class="opt">No barcode (GTIN)*</li><li class="opt">No product category*</li>
             </ul>
+            <p class="opt-note">* Optional Google Shopping checks. They run when the Google Shopping setting is on.</p>
           </div>
         </div>
 
@@ -616,7 +619,7 @@
           </details>
           <details>
             <summary>Do you share my store's data?</summary>
-            <p>No. Our apps work only with Shopify's own APIs and don't send your data to outside services. Our <a href="privacy.html">privacy policy</a> explains what we store and why.</p>
+            <p>No. Our apps work only with Shopify's own APIs and don't send your data to outside services. The <a href="https://shoply-item-scan.onrender.com/privacy">app&#39;s privacy policy</a> explains what it stores and why.</p>
           </details>
           <details>
             <summary>How can I reach you?</summary>

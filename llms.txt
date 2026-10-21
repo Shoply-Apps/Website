@@ -6,7 +6,7 @@ Our first app, **Shoply: Item Scan & Analytics**, has been submitted to the Shop
 
 - Pricing & margin: sold below cost, sold at cost, free (price 0), below margin target, missing cost per item, compare-at price not higher, odd variant price gaps.
 - Stock: oversold, out of stock, taking orders with no stock, low stock, will sell out soon, not selling in 60 days, inventory not tracked, stock on products not for sale.
-- Descriptions & content: no description, short description, no image, images without alt text, no SEO description, SEO title too long, duplicate title, title too long for Google, no product type, no brand, no barcode (GTIN), no product category.
+- Descriptions & content: no description, short description, no image, images without alt text, no SEO description, SEO title too long, duplicate title, no product type, no brand, plus 3 optional Google Shopping checks that run when that setting is on: title too long for Google, no barcode (GTIN), no product category.
 - Other features: catalog health score, bulk price fixes to a target margin with a preview, description editor with a live checklist, Excel import and export, scheduled daily or weekly scans, email alerts through Shopify Flow, a weekly summary, change history with undo.
 - Data: the app and its database run in Frankfurt, Germany (EU). It does not store customers' personal data.
 
@@ -14,8 +14,10 @@ Our first app, **Shoply: Item Scan & Analytics**, has been submitted to the Shop
 
 - [Apps](https://shoplyapps.com/apps/): all Shoply Apps, with what each does and its status
 - [Home](https://shoplyapps.com/): what Shoply Apps does and a closer look at Item Scan & Analytics, with FAQ
-- [Privacy policy](https://shoplyapps.com/privacy.html): what data the app reads, why, where it is stored and for how long
-- [Terms of service](https://shoplyapps.com/terms.html)
+- [Website privacy policy](https://shoplyapps.com/privacy.html): how the website handles personal data
+- [App privacy policy](https://shoply-item-scan.onrender.com/privacy): what data Shoply: Item Scan & Analytics reads, why, where it is stored and for how long
+- [Website terms of use](https://shoplyapps.com/terms.html)
+- [App terms of service](https://shoply-item-scan.onrender.com/terms)
 
 ## Blog: guides for Shopify merchants
 
